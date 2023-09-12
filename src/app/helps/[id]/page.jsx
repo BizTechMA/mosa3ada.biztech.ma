@@ -84,7 +84,7 @@ export default async function HelpPage({ params }) {
                             </Typography>
                             <Typography variant="h6">
                                 {needs ? needs?.split(",").map((need, needInd) => (
-                                    <div style={{
+                                    <div key={needInd} style={{
                                         display: "flex",
                                         flexDirection: "row",
                                     }}>

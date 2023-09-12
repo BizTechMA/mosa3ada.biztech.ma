@@ -70,7 +70,7 @@ export default function HelpCard({ help }) {
                         flexDirection: "column"
                     }}>
                         {needs.split(",").map((need, needInd) => (
-                            <div style={{
+                            <div key={needInd} style={{
                                 display: "flex",
                                 flexDirection: "row",
                             }}>
