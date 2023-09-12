@@ -227,3 +227,13 @@
     transform: rotate(0deg);
   }
 }
+.header{
+  @media (min-width: 701px) {
+    display: flex;
+    
+  }
+  @media (max-width: 701px) {
+    display: none;
+  }
+  
+}

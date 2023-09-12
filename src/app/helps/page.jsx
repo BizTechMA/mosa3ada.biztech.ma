@@ -7,7 +7,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 import HelpCard from "./help";
-
+import Header from '@/utils/header';
 async function getHelps() {
     const jsonDirectory = path.join(process.cwd(), 'helpsData');
     const fileContents = await fs.readFile(jsonDirectory + '/helps', 'utf8');
@@ -34,6 +34,16 @@ export default async function HelpsPage() {
                     height={37}
                     priority
                 />
+            </Grid>
+            <Grid container>
+            <Grid container style={{
+                display: "flex",
+                width: "100%",
+                justifyContent:'center',
+                marginTop: 12
+        }}>
+       <Header/> 
+        </Grid>
             </Grid>
             <Grid container>
 
