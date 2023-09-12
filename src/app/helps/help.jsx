@@ -16,7 +16,7 @@ export default function HelpCard({ help }) {
   const { date, needs, city, location } = help;
 
   return (
-    <div class="card px-2 py-3 m-2 bg-base-100 shadow-xl">
+    <div className="card px-2 py-3 m-2 bg-base-100 shadow-xl">
       <CardContent>
         <Grid
           style={{
