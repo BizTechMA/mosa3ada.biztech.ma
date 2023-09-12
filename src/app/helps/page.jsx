@@ -50,8 +50,8 @@ export default async function HelpsPage() {
                 justifyContent: "center"
             }}>
                 {helps?.map((help, ind) => (
-                    <Grid xs={10} md={4}> 
-                        <HelpCard help={help} key={ind} />
+                    <Grid xs={10} md={4} key={ind}> 
+                        <HelpCard help={help} />
                     </Grid>))}
             </Grid>
         </Grid>
