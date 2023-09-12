@@ -3,10 +3,10 @@ import {
     Grid
 } from '@mui/material';
 
-import HelpCard from "./help";
 import { promises as fs } from 'fs';
 import path from 'path';
 
+import HelpCard from "./help";
 
 async function getHelps() {
     const jsonDirectory = path.join(process.cwd(), 'helpsData');
