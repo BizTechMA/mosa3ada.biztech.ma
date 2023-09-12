@@ -90,8 +90,8 @@ body {
 }
 body {
   font-family: 'Noto Kufi Arabic', sans-serif;
-  /* color: rgb(var(--foreground-rgb));
-  background: #FAF1F5 */
+  /* color: rgb(var(--foreground-rgb)); */
+  background: #FAF1F5
 } 
 
 a {
