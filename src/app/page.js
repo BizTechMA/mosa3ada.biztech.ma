@@ -6,8 +6,8 @@ import {
 import { promises as fs } from 'fs';
 import path from 'path';
 
-import HelpCard from "./helps/help";
-import Navbar from './components/navbar';
+import HelpCard from "./help";
+import Navbar from '../components/navbar';
 
 async function getHelps() {
     const jsonDirectory = path.join(process.cwd(), 'helpsData');
@@ -22,9 +22,8 @@ export default async function HelpsPage() {
 
     return (
         <Grid container>
-             <Navbar/>
+            <Navbar/>
             <Grid container>
-
                 <Grid style={{
                     display: "flex",
                     flexDirection: "row",
