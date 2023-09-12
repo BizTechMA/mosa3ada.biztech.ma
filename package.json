@@ -1,26 +1,30 @@
 {
-  "name": "mosa3ada.biztech.ma",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@fontsource/roboto": "^5.0.8",
-    "@mui/icons-material": "^5.14.8",
-    "@mui/material": "^5.14.8",
-    "date-fns": "^2.30.0",
-    "eslint": "8.49.0",
-    "eslint-config-next": "13.4.19",
-    "firebase": "^10.3.1",
-    "next": "13.4.19",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "xlsx": "^0.18.5"
-  }
+	"name": "mosa3ada.biztech.ma",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"format": "prettier . --write"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.11.1",
+		"@emotion/styled": "^11.11.0",
+		"@fontsource/roboto": "^5.0.8",
+		"@mui/icons-material": "^5.14.8",
+		"@mui/material": "^5.14.8",
+		"date-fns": "^2.30.0",
+		"eslint": "8.49.0",
+		"eslint-config-next": "13.4.19",
+		"firebase": "^10.3.1",
+		"next": "13.4.19",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"xlsx": "^0.18.5"
+	},
+	"devDependencies": {
+		"prettier": "^3.0.3"
+	}
 }
