@@ -7,6 +7,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 import HelpCard from "./help";
+import Navbar from '../components/navbar';
 
 async function getHelps() {
     const jsonDirectory = path.join(process.cwd(), 'helpsData');
@@ -21,22 +22,8 @@ export default async function HelpsPage() {
 
     return (
         <Grid container>
-            <Grid container style={{
-                display: "flex",
-                width: "100%",
-                justifyContent: "center",
-                marginTop: 50
-            }}>
-                <Image
-                    src="/mosa3ada.svg"
-                    alt="Mosa3ada Logo"
-                    width={180}
-                    height={37}
-                    priority
-                />
-            </Grid>
+            <Navbar/>
             <Grid container>
-
                 <Grid style={{
                     display: "flex",
                     flexDirection: "row",
