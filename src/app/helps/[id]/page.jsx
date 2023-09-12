@@ -34,7 +34,7 @@ export default async function HelpPage({ params }) {
       }}
     >
       <Link href={"/helps"}>
-        <Button className="bg-primary text-white m-4 mb-0 hover:bg-secondary hover:text-white" startIcon={<ArrowBackIcon />}>
+        <Button className="bg-accent text-white m-4 mb-0 hover:bg-secondary hover:text-white" startIcon={<ArrowBackIcon />}>
           <span className="mr-2">رجوع</span>
         </Button>
       </Link>
