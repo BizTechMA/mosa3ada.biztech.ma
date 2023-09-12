@@ -2,6 +2,10 @@
 
 The purpose of this project is to identify who needs help after the earthquake in Morocco.
 
+Preview: 
+https://v1.mosa3ada.biztech.ma/
+
+
 How can I help?
 this project is split into many milestones so we need to build it step by step. I've included for you below the goal and the iterations. You can also check the issues in the repo and start working on one of them. Feel free to add a suggestion or a feedback or bug.
 
