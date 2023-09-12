@@ -1,34 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mosa3ada (Call For Contribution)
 
-## Getting Started
+The purpose of this project is to identify who needs help after the earthquake in Morocco.
 
-First, run the development server:
+How can I help?
+this project is split into many milestones so we need to build it step by step. I've included for you below the goal and the iterations. You can also check the issues in the repo and start working on one of them. Feel free to add a suggestion or a feedback or bug.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+ 
+#### Iteration 1:
+The goal of this iteration is to have a listing with the needs,the location, and also a confirm an action to give to others the possibility to confirm a need. The count will help.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+#### Iteration 2:
+The goal of this iteration we will ad the Google map services to make the app more accessible and also the users can add a new listing directly.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
