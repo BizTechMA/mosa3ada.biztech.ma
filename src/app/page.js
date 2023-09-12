@@ -9,7 +9,7 @@ import getDocument from "@/utils/firebase/firestore/getData";
 
 async function getHelps() {
   // fetching a document usage example
-  (await getDocument("helps", "OrAd9ygqcxL6ob8GjIeP")).result.data();
+  (await getDocument("helps", "OrAd9ygqcxL6ob8GjIeP")).result?.data?.();
   /**
    * Logs 
    * {
