@@ -6,7 +6,7 @@ import {
 import { promises as fs } from 'fs';
 import path from 'path';
 
-import HelpCard from "./help";
+import HelpCard from "./helps/help";
 import Navbar from '../components/navbar';
 
 async function getHelps() {
