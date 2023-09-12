@@ -92,7 +92,7 @@ export default function HelpCard({ help }) {
                 <Typography variant="body2">
                     {/* تأكيد 29 */}
                 </Typography>
-                <Link href={`/helps/${help.id}`} style={{ marginRight: "auto", color: "#EE0000"}}> إقرأ المزيد </Link> 
+                <Link href={`/helps/${help.id}`} className="bg-accent px-4 py-1.5 rounded-md text-white mr-auto"> إقرأ المزيد </Link> 
             </CardActions>
         </Card>
     )
