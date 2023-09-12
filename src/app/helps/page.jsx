@@ -6,7 +6,7 @@ import {
 import { promises as fs } from 'fs';
 import path from 'path';
 
-import HelpCard from "./helps/help";
+import HelpCard from "./help";
 
 async function getHelps() {
     const jsonDirectory = path.join(process.cwd(), 'helpsData');
