@@ -22,3 +22,21 @@ export function selectedIcon(key) {
         priority
     />)
 }
+
+// format date to format
+//enums
+export const formatDates = {
+	Hours: Symbol("hours"),
+	Date: Symbol("date")
+};
+
+export function formatDate(date, formatDate) {
+    let ops = {}
+    // if you add another format use switch instead
+    if(formatDate === formatDates.Date) {
+        ops = {month: "long", day: "numeric", year: "numeric"}
+    } else if(formatDate === formatDates.Date) {
+        ops = {hour:'2-digit', minute:'2-digit'}
+    }
+    return date && new Intl.DateTimeFormat('ar-MA', ops).format(date);
+}

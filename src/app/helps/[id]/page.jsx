@@ -2,8 +2,7 @@ import Link from "next/link";
 
 import { Grid, Card, CardContent, Typography } from "@mui/material";
 
-import momentArabic from "../../../utils/momentArabic";
-import { selectedIcon } from "../../../utils";
+import { formatDate, formatDates, selectedIcon } from "../../../utils";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { promises as fs } from "fs";
@@ -71,7 +70,7 @@ export default async function HelpPage({ params }) {
               color="text.secondary"
               gutterBottom
             >
-              { date && new Intl.DateTimeFormat('ar-MA', {month: "long", day: "numeric", year: "numeric"}).format(date) }
+              { formatDate(date, formatDates.Date) }
             </Typography>
             <Typography
               sx={{ mb: 1.5 }}
@@ -80,7 +79,7 @@ export default async function HelpPage({ params }) {
                 marginRight: "auto",
               }}
             >
-              الساعة { date && new Intl.DateTimeFormat('ar-MA', {hour:'2-digit', minute:'2-digit'}).format(date) }
+              الساعة { formatDate(date, formatDates.Hours) }
             </Typography>
           </Grid>
           <Grid container>
