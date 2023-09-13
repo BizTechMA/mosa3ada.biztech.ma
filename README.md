@@ -26,7 +26,7 @@ The goal of this iteration we will ad the Google map services to make the app mo
 
 ## Want to contribute in V1? 
 
-Create a new branch from v1 branch, pick an issue and enjoy.
+Create a new branch from main branch, pick an issue, and enjoy. Thanks fo your Help.
 Don't forget to join us in the discord channel to collaborate and sync together.
 https://discord.com/invite/pjyW6Zje
 
