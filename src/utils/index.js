@@ -25,13 +25,17 @@ export const formatDates = {
 	Date: Symbol("date")
 };
 
-export function formatDate(date, formatDate) {
+export function formatDate(dateToFormat, formatDate) {
     let ops = {}
     // if you add another format use switch instead
-    if(formatDate === formatDates.Date) {
+    if (formatDate === formatDates.Date) {
         ops = {month: "long", day: "numeric", year: "numeric"}
     } else if(formatDate === formatDates.Hours) {
         ops = {hour:'2-digit', minute:'2-digit'}
     }
-    return date && new Intl.DateTimeFormat('ar-MA', ops).format(date);
+    
+    if (dateToFormat.hasOwnProperty('seconds')) {
+      dateToFormat = new Date(dateToFormat.seconds * 1000);
+    }
+    return dateToFormat && new Intl.DateTimeFormat('ar-MA', ops).format(dateToFormat);
 }
