@@ -1,11 +1,12 @@
 import Image from "next/image";
-import { Grid } from "@mui/material";
+import { Button, Container, Grid, Typography } from "@mui/material";
 
 import { promises as fs } from "fs";
 import path from "path";
 
 import HelpCard from "./helps/help";
 import getAllDocuments from "@/utils/firebase/firestore/getAllDocuments";
+import { Header } from "@/components";
 
 async function getHelps() {
   // fetching a document usage example
@@ -22,14 +23,13 @@ async function getHelps() {
         city: ''
       }
    */
-  let data = [];   
-  if(process.env.CURRENT_ENV === "PRODUCTION") {
-    data = (await getAllDocuments("helps")).map(item => ({
+  let data = [];
+  if (process.env.CURRENT_ENV === "PRODUCTION") {
+    data = (await getAllDocuments("helps")).map((item) => ({
       docId: item.id,
-      ...item.data
+      ...item.data,
     }));
-  }
-  else {
+  } else {
     const jsonDirectory = path.join(process.cwd(), "helpsData");
     const fileContents = await fs.readFile(jsonDirectory + "/helps", "utf8");
     data = JSON.parse(fileContents.toLocaleString());
@@ -40,48 +40,68 @@ async function getHelps() {
 
 export default async function HelpsPage() {
   const helps = await getHelps();
-
   return (
-    <Grid container>
-      <Grid
-        container
-        style={{
-          display: "flex",
-          width: "100%",
-          justifyContent: "center",
-          marginTop: 50,
-        }}
-      >
-        <Image
-          src="/mosa3ada.svg"
-          alt="Mosa3ada Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </Grid>
-      <Grid container>
-        <Grid
+    <>
+      <Header
+        navComponent={
+          <Image
+            src="/mosa3ada.svg"
+            alt="Mosa3ada Logo"
+            width={220}
+            height={220}
+            priority
+          />
+        }
+      />
+      <Container maxWidth="xl">
+        <div
           style={{
             display: "flex",
             flexDirection: "row",
-            marginTop: 20,
+            justifyContent: "space-between",
             alignItems: "center",
+            marginTop: 50,
           }}
-        ></Grid>
-      </Grid>
-      <Grid
-        container
-        style={{
-          justifyContent: "center",
-        }}
-      >
-        {helps?.map((help, ind) => (
-          <Grid xs={10} md={4} key={ind}>
-            <HelpCard help={help} />
+        >
+          <Typography variant="h3">قائمة الطلبات</Typography>
+          <Button color="error" variant="contained" size="large">
+            <Typography variant="h6">إضافة طلب</Typography>
+          </Button>
+        </div>
+        <Grid container>
+          <Grid
+            container
+            style={{
+              display: "flex",
+              width: "100%",
+              justifyContent: "center",
+              marginTop: 50,
+            }}
+          ></Grid>
+          <Grid container>
+            <Grid
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                marginTop: 20,
+                alignItems: "center",
+              }}
+            ></Grid>
           </Grid>
-        ))}
-      </Grid>
-    </Grid>
+          <Grid
+            container
+            style={{
+              justifyContent: "center",
+            }}
+          >
+            {helps?.map((help, ind) => (
+              <Grid xs={12} md={4} key={ind}>
+                <HelpCard help={help} />
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
+      </Container>
+    </>
   );
 }

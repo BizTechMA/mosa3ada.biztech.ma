@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Grid, Card, CardContent, Typography } from "@mui/material";
+import { Grid, Card, CardContent, Typography, Container } from "@mui/material";
 
 import momentArabic from "../../../utils/momentArabic";
 import { selectedIcon } from "../../../utils";
@@ -12,12 +12,11 @@ import path from "path";
 import getDocument from "@/utils/firebase/firestore/getDocument";
 
 async function getHelp(helpId) {
-  let help = {}
-  if(process.env.CURRENT_ENV === "PRODUCTION") {
+  let help = {};
+  if (process.env.CURRENT_ENV === "PRODUCTION") {
     const { result, error } = await getDocument("helps", helpId);
     help = result.data();
-  }
-  else {
+  } else {
     const jsonDirectory = path.join(process.cwd(), "helpsData");
     const fileContents = await fs.readFile(jsonDirectory + "/helps", "utf8");
     const parsedData = JSON.parse(fileContents.toLocaleString());
@@ -30,7 +29,6 @@ async function getHelp(helpId) {
 export default async function HelpPage({ params }) {
   const help = await getHelp(params.id);
   const { date, needs, city, location, position, address, details } = help;
-
   return (
     <div
       style={{
@@ -38,19 +36,29 @@ export default async function HelpPage({ params }) {
         flexDirection: "column",
       }}
     >
-      <Link
-        href={"/"}
+      <div
         style={{
-          marginRight: "auto",
-          marginLeft: 1,
+          backgroundColor: "white",
+          height: 50,
           display: "flex",
-          justifyContent: "center",
+          alignItems: "center",
+          justifyContent: "flex-end",
+          padding: "0 20px",
         }}
       >
-        {" "}
-        رجوع
-        <ArrowBackIcon />
-      </Link>
+        <Link
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+          }}
+          href={"/"}
+        >
+          {" "}
+          رجوع
+          <ArrowBackIcon />
+        </Link>
+      </div>
       <Card
         sx={{
           minWidth: 350,
