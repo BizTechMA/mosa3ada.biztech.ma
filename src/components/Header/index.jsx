@@ -34,7 +34,7 @@ export const Header = ({ navComponent }) => {
               >
                 Mosa3ada.ma موقع للتضامن والمساعدة المجتمعية
               </Typography>
-              <Link target="_blank" href={'https://twitter.com/BiztechMorocco'}>
+              <Link target="_blank" href={"https://twitter.com/BiztechMorocco"}>
                 <Button
                   style={{
                     fontSize: 18,
@@ -47,14 +47,14 @@ export const Header = ({ navComponent }) => {
                   تواصل معنا
                 </Button>
               </Link>
-
             </div>
             <div className={styles.imgContainer}>
               <Image
                 alt="morocco earthqauke workers"
-                src={"/images/header-img.jpeg"}
-                sizes="100vw"
-                layout="fill"
+                src="/images/header-img.jpeg"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           </div>

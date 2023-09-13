@@ -8,18 +8,19 @@
 .headerBanner {
   background-color: var(--dark-green);
   width: 100%;
-  height: 340px;
+  height: fit-content;
   margin: 0 auto;
   position: relative;
   top: 180px;
   overflow: hidden;
   border-radius: 10px;
   display: flex;
+  justify-content: space-between;
 }
 
 .headerBanner .imgContainer {
-  width: 47%;
-  height: 100%;
+  width: 575px;
+  min-height: 324px;
   position: relative;
 }
 

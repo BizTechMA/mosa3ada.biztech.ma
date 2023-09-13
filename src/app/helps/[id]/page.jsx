@@ -9,6 +9,7 @@ import {
   Divider,
   Box,
   Button,
+  colors,
 } from "@mui/material";
 
 import momentArabic from "../../../utils/momentArabic";
@@ -72,6 +73,7 @@ export default async function HelpPage({ params }) {
               alignItems: "center",
               justifyContent: "flex-end",
               gap: 10,
+              color: "black",
             }}
             href={"/"}
           >
@@ -96,11 +98,18 @@ export default async function HelpPage({ params }) {
           }}
         >
           <InfoOutlinedIcon color="primary" />
-          <span>معلومات كاملة</span>
+          <span
+            style={{
+              color: "black",
+            }}
+          >
+            معلومات كاملة
+          </span>
           <span
             style={{
               fontSize: 19,
               opacity: 0.5,
+              color: "black",
             }}
           >
             {" "}
@@ -291,7 +300,7 @@ export default async function HelpPage({ params }) {
                   </Grid>
                 </div>
                 <Divider
-                  vertical
+                  vertical="true"
                   sx={{
                     display: {
                       md: "block",
