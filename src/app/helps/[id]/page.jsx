@@ -1,6 +1,15 @@
 import Link from "next/link";
 
-import { Grid, Card, CardContent, Typography } from "@mui/material";
+import {
+  Grid,
+  Card,
+  CardContent,
+  Typography,
+  Container,
+  Divider,
+  Box,
+  Button,
+} from "@mui/material";
 
 import { formatDate, formatDates, selectedIcon } from "../../../utils";
 
@@ -9,25 +18,38 @@ import { promises as fs } from "fs";
 import path from "path";
 
 import getDocument from "@/utils/firebase/firestore/getDocument";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
+import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
+
+import styles from "./page.module.css";
 
 async function getHelp(helpId) {
-  
-  if(process.env.CURRENT_ENV === "PRODUCTION") {
+  if (process.env.CURRENT_ENV === "PRODUCTION") {
     const { result, error } = await getDocument("helps", helpId);
     return result.data();
-  }
-  else {
+  } else {
     const jsonDirectory = path.join(process.cwd(), "helpsData");
     const fileContents = await fs.readFile(jsonDirectory + "/helpsV2", "utf8");
     const parsedData = JSON.parse(fileContents.toLocaleString());
     const help = parsedData.find((item) => item.id == helpId).data;
-    return help
+    return help;
   }
 }
 
 export default async function HelpPage({ params }) {
   const help = await getHelp(params.id);
-  const { date, needs, city, location, position, address = "", details } = help;
+  const {
+    date,
+    needs,
+    city,
+    location,
+    exact_position,
+    details,
+    person_name,
+    contact,
+    in_place,
+  } = help;
 
   return (
     <div
@@ -36,102 +58,315 @@ export default async function HelpPage({ params }) {
         flexDirection: "column",
       }}
     >
-      <Link
-        href={"/"}
+      <div
         style={{
-          marginRight: "auto",
-          marginLeft: 1,
-          display: "flex",
-          justifyContent: "center",
+          backgroundColor: "white",
+          padding: "15px 20px",
         }}
       >
-        {" "}
-        رجوع
-        <ArrowBackIcon />
-      </Link>
-      <Card
-        sx={{
-          minWidth: 350,
-          minHeight: 230,
-          margin: 2,
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <CardContent>
-          <Grid
+        <Container maxWidth="xl">
+          <Link
             style={{
               display: "flex",
-              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "flex-end",
+              gap: 10,
+            }}
+            href={"/"}
+          >
+            {" "}
+            رجوع
+            <ArrowBackIcon />
+          </Link>
+        </Container>
+      </div>
+      <Container
+        maxWidth="xl"
+        style={{
+          paddingTop: 30,
+        }}
+      >
+        <Typography
+          variant="h5"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+          }}
+        >
+          <InfoOutlinedIcon color="primary" />
+          <span>معلومات كاملة</span>
+          <span
+            style={{
+              fontSize: 19,
+              opacity: 0.5,
             }}
           >
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              { formatDate(date, formatDates.Date) }
-            </Typography>
-            <Typography
-              sx={{ mb: 1.5 }}
-              color="text.secondary"
+            {" "}
+            ( 29 تأكيد)
+          </span>
+        </Typography>
+
+        <Card
+          sx={{
+            minWidth: 350,
+            minHeight: 230,
+            margin: "30px 0",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <CardContent>
+            <Grid
               style={{
-                marginRight: "auto",
+                display: "flex",
+                flexDirection: "row",
               }}
             >
-              الساعة { formatDate(date, formatDates.Hours) }
-            </Typography>
-          </Grid>
-          <Grid container>
-            <Grid item xs={12} mt={3}>
-              <Typography variant="body2">المدينة أو الجهة</Typography>
-              <Typography variant="h6">{city}</Typography>
-            </Grid>
-            <Grid item xs={12} mt={3}>
-              <Typography variant="body2">
-                إسم الدوار/الجماعة/القيادة
+              <Typography
+                sx={{ fontSize: 14 }}
+                color="text.secondary"
+                gutterBottom
+              >
+                { formatDate(date, formatDates.Date) }
               </Typography>
-              <Typography variant="h6">{location}</Typography>
+              <Typography
+                sx={{ mb: 1.5 }}
+                color="text.secondary"
+                style={{
+                  marginRight: "auto",
+                }}
+              >
+                الساعة { formatDate(date, formatDates.Hours) }
+              </Typography>
             </Grid>
-            <Grid item xs={12} mt={3}>
-              <Typography variant="body2">نوع الطلب</Typography>
-              <Typography variant="h6">
-                {needs
-                  ? needs?.map((need, needInd) => (
-                      <div
-                        key={needInd}
+            <div>
+              <Box
+                sx={{
+                  display: {
+                    md: "flex",
+                    xs: "block",
+                  },
+                }}
+              >
+                <div
+                  style={{
+                    width: "100%",
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    fontWeight={400}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 10,
+                    }}
+                  >
+                    <StarOutlinedIcon color="primary" />
+                    <span> عن طلب المساعدة</span>
+                  </Typography>
+                  <Grid
+                    columns={{
+                      md: 6,
+                      xs: 12,
+                    }}
+                    container
+                  >
+                    <Grid item xs={12} md={3} mt={3}>
+                      <Typography
+                        className={styles.helpInfoLabel}
+                        variant="body2"
+                      >
+                        المدينة أو الجهة
+                      </Typography>
+                      <Typography className={styles.helpInfoText}>
+                        <span>{city}</span>
+                        {exact_position && (
+                          <a
+                            href={`https://www.google.com/maps/search/?api=1&query=${exact_position.latitude},${exact_position.longitude}`}
+                            target="_blank"
+                          >
+                            <Button
+                              variant="outlined"
+                              style={{
+                                fontSize: 13,
+                                display: "flex",
+                                alignItems: "center",
+                                marginRight: 7,
+                                fontWeight: "bold",
+                                color: "#0E6146",
+                                marginTop: 10,
+                                gap: 5,
+                              }}
+                            >
+                              <PlaceOutlinedIcon />
+                              <span>افتح خريطة الموقع</span>
+                            </Button>
+                          </a>
+                        )}
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={3} mt={3}>
+                      <Typography
+                        className={styles.helpInfoLabel}
+                        variant="body2"
+                      >
+                        إسم الدوار/الجماعة/القيادة
+                      </Typography>
+                      <Typography className={styles.helpInfoText}>
+                        {location}
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={12} mt={3}>
+                      <Typography
+                        className={styles.helpInfoLabel}
+                        variant="body2"
+                      >
+                        نوع الطلب
+                      </Typography>
+                      <Typography
+                        component={"div"}
                         style={{
                           display: "flex",
-                          flexDirection: "row",
+                          gap: 8,
                         }}
+                        className={styles.helpInfoText}
                       >
-                        <span
-                          style={{
-                            marginRight: 3,
-                            marginLeft: 3,
-                          }}
-                        >
-                          {selectedIcon(need)}
-                        </span>
-                        <Typography variant="h5" key={needInd}>
-                          {need}
-                        </Typography>
-                      </div>
-                    ))
-                  : "--"}
-              </Typography>
-            </Grid>
-            <Grid item xs={12} mt={3}>
-              <Typography variant="body2">العنوان</Typography>
-              <Typography variant="h6">{address}</Typography>
-            </Grid>
-            <Grid item xs={12} mt={3}>
-              <Typography variant="body2">معلومات أخرى</Typography>
-              <Typography variant="h6">{details ? details : "--"}</Typography>
-            </Grid>
-          </Grid>
-        </CardContent>
-      </Card>
+                        {needs
+                          ? needs?.map((need, needInd) => (
+                              <div
+                                key={needInd}
+                                style={{
+                                  display: "flex",
+                                  flexDirection: "row",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                  border: "solid 1px #ccc",
+                                  padding: "5px 15px",
+                                  borderRadius: 8,
+                                  gap: 5,
+                                }}
+                              >
+                                <span
+                                  style={{
+                                    marginRight: 3,
+                                    marginLeft: 3,
+                                  }}
+                                >
+                                  {selectedIcon(need)}
+                                </span>
+                                <Typography variant="body1" key={needInd}>
+                                  {need}
+                                </Typography>
+                              </div>
+                            ))
+                          : "--"}
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={12} mt={3}>
+                      <Typography
+                        className={styles.helpInfoLabel}
+                        variant="body2"
+                      >
+                        معلومات أخرى
+                      </Typography>
+                      <Typography className={styles.helpInfoText}>
+                        {details || " لا يوجد"}
+                      </Typography>
+                    </Grid>
+                    <Divider
+                      sx={{
+                        display: {
+                          md: "none",
+                          xs: "block",
+                        },
+                      }}
+                      style={{
+                        width: "100%",
+                        margin: "20px 0",
+                      }}
+                    />
+                  </Grid>
+                </div>
+                <Divider
+                  vertical
+                  sx={{
+                    display: {
+                      md: "block",
+                      xs: "none",
+                    },
+                    height: 300,
+                    width: 2,
+                    margin: "0 20px",
+                    backgroundColor: "#000",
+                    opacity: "5%",
+                  }}
+                />
+                <div
+                  style={{
+                    width: "100%",
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    fontWeight={400}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 10,
+                    }}
+                  >
+                    <StarOutlinedIcon color="primary" />
+                    <span>عن واضع/واضعة الطلب</span>
+                  </Typography>
+                  <Grid
+                    columns={{
+                      md: 6,
+                      xs: 12,
+                    }}
+                    container
+                  >
+                    <Grid item xs={12} md={3} mt={3}>
+                      <Typography
+                        className={styles.helpInfoLabel}
+                        variant="body2"
+                      >
+                        الإسم الكامل
+                      </Typography>
+                      <Typography className={styles.helpInfoText}>
+                        {person_name || "لا يوجد"}
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={3} mt={3}>
+                      <Typography
+                        className={styles.helpInfoLabel}
+                        variant="body2"
+                      >
+                        هل توجد بعين المكان؟{" "}
+                      </Typography>
+                      <Typography className={styles.helpInfoText}>
+                        {in_place ? "نعم" : "لا"}
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={3} mt={3}>
+                      <Typography
+                        className={styles.helpInfoLabel}
+                        variant="body2"
+                      >
+                        رقم الهاتف{" "}
+                      </Typography>
+                      <Typography className={styles.helpInfoText}>
+                        {contact.phone_number || "لا يوجد"}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </div>
+              </Box>
+            </div>
+          </CardContent>
+        </Card>
+      </Container>
     </div>
   );
 }
