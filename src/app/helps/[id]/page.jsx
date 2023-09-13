@@ -9,18 +9,26 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { promises as fs } from "fs";
 import path from "path";
 
+import getDocument from "@/utils/firebase/firestore/getDocument";
+
 async function getHelp(helpId) {
-  const jsonDirectory = path.join(process.cwd(), "helpsData");
-  const fileContents = await fs.readFile(jsonDirectory + "/helps", "utf8");
-  const parsedData = JSON.parse(fileContents.toLocaleString());
-  const help = parsedData.find((item) => item.id == helpId);
+  let help = {}
+  if(process.env.CURRENT_ENV === "PRODUCTION") {
+    const { result, error } = await getDocument("helps", helpId);
+    help = result.data();
+  }
+  else {
+    const jsonDirectory = path.join(process.cwd(), "helpsData");
+    const fileContents = await fs.readFile(jsonDirectory + "/helps", "utf8");
+    const parsedData = JSON.parse(fileContents.toLocaleString());
+    help = parsedData.find((item) => item.id == helpId);
+  }
 
   return help;
 }
 
 export default async function HelpPage({ params }) {
   const help = await getHelp(params.id);
-
   const { date, needs, city, location, position, address, details } = help;
 
   return (
@@ -31,7 +39,7 @@ export default async function HelpPage({ params }) {
       }}
     >
       <Link
-        href={"/helps"}
+        href={"/"}
         style={{
           marginRight: "auto",
           marginLeft: 1,
@@ -91,7 +99,7 @@ export default async function HelpPage({ params }) {
               <Typography variant="body2">نوع الطلب</Typography>
               <Typography variant="h6">
                 {needs
-                  ? needs?.split(",").map((need, needInd) => (
+                  ? needs?.map((need, needInd) => (
                       <div
                         key={needInd}
                         style={{
