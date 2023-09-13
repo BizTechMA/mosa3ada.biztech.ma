@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import Image from 'next/image'
 
@@ -8,13 +9,11 @@ import {
     CardContent,
     Typography
 } from '@mui/material';
-import momentArabic from "../../utils/momentArabic";
 
 import { selectedIcon } from "../../utils";
 
 export default function HelpCard({ help }) {
     const { date, needs, city, location, docId } = help;
-
     return (
         <Card sx={{
             minWidth: 350,
@@ -29,7 +28,7 @@ export default function HelpCard({ help }) {
                     flexDirection: "row"
                 }}>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                        {momentArabic(date).format("LL")}
+                        { date && new Intl.DateTimeFormat('ar-MA', {month: "long", day: "numeric", year: "numeric"}).format(date) }
                     </Typography>
                     <Typography
                         sx={{ mb: 1.5 }}
@@ -38,7 +37,7 @@ export default function HelpCard({ help }) {
                             marginRight: "auto"
                         }}
                     >
-                        الساعة  {momentArabic(date).format("HH:MM")}
+                        الساعة { date && new Intl.DateTimeFormat('ar-MA', {hour:'2-digit', minute:'2-digit'}).format(date) }
                     </Typography>
                 </Grid>
                 <Grid container>
