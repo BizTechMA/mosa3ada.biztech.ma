@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import styles from "./header.module.css";
 import { Button, Container, Typography } from "@mui/material";
@@ -33,17 +34,20 @@ export const Header = ({ navComponent }) => {
               >
                 Mosa3ada.ma موقع للتضامن والمساعدة المجتمعية
               </Typography>
-              <Button
-                style={{
-                  fontSize: 18,
-                  marginTop: 30,
-                }}
-                size="large"
-                variant="contained"
-                color="primary"
-              >
-                تواصل معنا
-              </Button>
+              <Link target="_blank" href={'https://twitter.com/BiztechMorocco'}>
+                <Button
+                  style={{
+                    fontSize: 18,
+                    marginTop: 30,
+                  }}
+                  size="large"
+                  variant="contained"
+                  color="primary"
+                >
+                  تواصل معنا
+                </Button>
+              </Link>
+
             </div>
             <div className={styles.imgContainer}>
               <Image

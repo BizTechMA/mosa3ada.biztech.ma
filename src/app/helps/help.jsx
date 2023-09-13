@@ -117,7 +117,7 @@ export default function HelpCard({ help }) {
       >
         <HelpCardConfirmButton />
         <Link
-          href={`/helps/${linkId}`}
+          href={`/helps/${docId}`}
           style={{
             marginRight: "auto",
             color: palette.primary.red,
