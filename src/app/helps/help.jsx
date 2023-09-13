@@ -10,7 +10,7 @@ import {
     Typography
 } from '@mui/material';
 
-import { selectedIcon } from "../../utils";
+import { formatDate, formatDates, selectedIcon } from "../../utils";
 
 export default function HelpCard({ help }) {
     const { date, needs, city, location, docId } = help;
@@ -28,7 +28,7 @@ export default function HelpCard({ help }) {
                     flexDirection: "row"
                 }}>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                        { date && new Intl.DateTimeFormat('ar-MA', {month: "long", day: "numeric", year: "numeric"}).format(date) }
+                    { formatDate(date, formatDates.Date) }
                     </Typography>
                     <Typography
                         sx={{ mb: 1.5 }}
@@ -37,7 +37,7 @@ export default function HelpCard({ help }) {
                             marginRight: "auto"
                         }}
                     >
-                        الساعة { date && new Intl.DateTimeFormat('ar-MA', {hour:'2-digit', minute:'2-digit'}).format(date) }
+                        الساعة { formatDate(date, formatDates.Hours) }
                     </Typography>
                 </Grid>
                 <Grid container>
