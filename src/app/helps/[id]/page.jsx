@@ -71,7 +71,7 @@ export default async function HelpPage({ params }) {
               color="text.secondary"
               gutterBottom
             >
-              {momentArabic(date).format("LL")}
+              { date && new Intl.DateTimeFormat('ar-MA', {month: "long", day: "numeric", year: "numeric"}).format(date) }
             </Typography>
             <Typography
               sx={{ mb: 1.5 }}
@@ -80,7 +80,7 @@ export default async function HelpPage({ params }) {
                 marginRight: "auto",
               }}
             >
-              الساعة {momentArabic(date).format("HH:MM")}
+              الساعة { date && new Intl.DateTimeFormat('ar-MA', {hour:'2-digit', minute:'2-digit'}).format(date) }
             </Typography>
           </Grid>
           <Grid container>
