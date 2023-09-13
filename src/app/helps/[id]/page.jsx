@@ -1,34 +1,54 @@
+"use client"; // This is a client component 👈🏽
 import Link from "next/link";
+import { useState, useEffect, use} from "react";
 
-import { Grid, Card, CardContent, Typography } from "@mui/material";
+import { Grid, Card, CardContent, Typography, Button } from "@mui/material";
 
 import momentArabic from "../../../utils/momentArabic";
 import { selectedIcon } from "../../../utils";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { promises as fs } from "fs";
-import path from "path";
 
-import getDocument from "@/utils/firebase/firestore/getDocument";
 
-async function getHelp(helpId) {
+export default function HelpPage({ params }) {
+  const [help, setHelp] = useState({});
+  const { date, needs, city, location, position, address = "", details, confirmation_count = 0 } = help;
+  const [helpCount, setHelpCount] = useState(confirmation_count);
+  const [ip, setIp] = useState("");
+
+  useEffect( () => {
+    fetch(`/api/help/${params.id}`).then(res => res.json()).then(data => {
+      setHelp(data);})
+    fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => {
+        setIp(data.ip);
+      });
+    setHelpCount(confirmation_count);
+  }, [])
+
   
-  if(process.env.CURRENT_ENV === "PRODUCTION") {
-    const { result, error } = await getDocument("helps", helpId);
-    return result.data();
-  }
-  else {
-    const jsonDirectory = path.join(process.cwd(), "helpsData");
-    const fileContents = await fs.readFile(jsonDirectory + "/helpsV2", "utf8");
-    const parsedData = JSON.parse(fileContents.toLocaleString());
-    const help = parsedData.find((item) => item.id == helpId).data;
-    return help
-  }
-}
+  useEffect(() => {
+    // make a post request to update the h
 
-export default async function HelpPage({ params }) {
-  const help = await getHelp(params.id);
-  const { date, needs, city, location, position, address = "", details } = help;
+    if(helpCount > confirmation_count)
+      fetch(`/api/help/${params.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ confirmation_count: helpCount , ip: ip}),
+      }).then((res) => res.json()).then(data => {
+        if (data.success) {
+          alert("تم تأكيد الطلب بنجاح");
+        }
+        else {
+          alert("حدث خطأ ما");
+        }
+      });
+
+  }, [helpCount]);
+
 
   return (
     <div
@@ -132,6 +152,17 @@ export default async function HelpPage({ params }) {
             </Grid>
           </Grid>
         </CardContent>
+        <Button
+          style={{
+            backgroundColor: "#05853f",
+            color: "#fff",
+          }}
+          onClick={() => setHelpCount(helpCount + 1)}
+        >
+          <Typography
+           variant="h6"
+           >تأكيد الطلب</Typography>
+        </Button>
       </Card>
     </div>
   );
