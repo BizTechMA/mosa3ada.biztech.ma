@@ -17,11 +17,10 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { HelpCardConfirmButton } from "./ConfirmButton";
 
 export default function HelpCard({ help }) {
-  const { date, needs, city, location, docId, id } = help;
+
+  const { date, needs, city, location, docId } = help;
   const { palette } = useTheme();
 
-  let linkId = id;
-  if (process.env.CURRENT_ENV === "PRODUCTION") linkId = docId;
 
   return (
     <Card
