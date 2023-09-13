@@ -13,7 +13,11 @@ import momentArabic from "../../utils/momentArabic";
 import { selectedIcon } from "../../utils";
 
 export default function HelpCard({ help }) {
-    const { date, needs, city, location } = help;
+    const { date, needs, city, location, docId, id } = help;
+
+    let linkId = id;
+    if(process.env.CURRENT_ENV === "PRODUCTION")
+        linkId = docId;
 
     return (
         <Card sx={{
@@ -69,7 +73,7 @@ export default function HelpCard({ help }) {
                         justifyContent: "center",
                         flexDirection: "column"
                     }}>
-                        {needs.split(",").map((need, needInd) => (
+                        {needs?.map((need, needInd) => (
                             <div key={needInd} style={{
                                 display: "flex",
                                 flexDirection: "row",
@@ -92,7 +96,7 @@ export default function HelpCard({ help }) {
                 <Typography variant="body2">
                     {/* تأكيد 29 */}
                 </Typography>
-                <Link href={`/helps/${help.id}`} style={{ marginRight: "auto", color: "#EE0000"}}> إقرأ المزيد </Link> 
+                <Link href={`/helps/${linkId}`} style={{ marginRight: "auto", color: "#EE0000"}}> إقرأ المزيد </Link> 
             </CardActions>
         </Card>
     )
