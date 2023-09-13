@@ -6,14 +6,15 @@ import {
     Card,
     CardActions,
     CardContent,
-    Typography
+    Typography,
+    Icon,
 } from '@mui/material';
 import momentArabic from "../../utils/momentArabic";
 
 import { selectedIcon } from "../../utils";
 
 export default function HelpCard({ help }) {
-    const { date, needs, city, location, docId } = help;
+    const { date, needs, city, location, docId , confirmation_count = 0} = help;
 
     return (
         <Card sx={{
@@ -89,8 +90,9 @@ export default function HelpCard({ help }) {
             <CardActions style={{
                 marginTop: 'auto'
             }}>
-                <Typography variant="body2">
-                    {/* تأكيد 29 */}
+                
+                <Typography variant="h5" style={{ marginRight: "auto", color: "#1b8d3d" }}>
+                    {confirmation_count} تأكيد 
                 </Typography>
                 <Link href={`/helps/${docId}`} style={{ marginRight: "auto", color: "#EE0000"}}> إقرأ المزيد </Link> 
             </CardActions>
