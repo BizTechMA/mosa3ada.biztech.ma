@@ -7,6 +7,7 @@ import path from "path";
 import HelpCard from "./helps/help";
 import getAllDocuments from "@/utils/firebase/firestore/getAllDocuments";
 import { Header } from "@/components";
+import { Timestamp } from "firebase/firestore";
 
 async function getHelps() {
   // fetching a document usage example
@@ -28,6 +29,7 @@ async function getHelps() {
     data = (await getAllDocuments("helps")).map((item) => ({
       docId: item.id,
       ...item.data,
+      ...{date: item.data.date instanceof Timestamp ? item.data.date.toDate() : item.data.date} 
     }));
   } else {
     const jsonDirectory = path.join(process.cwd(), "helpsData");
@@ -35,6 +37,7 @@ async function getHelps() {
     data = JSON.parse(fileContents.toLocaleString()).map(item => ({
       docId: item.id,
       ...item.data
+      //...{date: Timestamp.fromDate(new Date())} to test date in real format
     }));
  }
 
