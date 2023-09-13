@@ -5,11 +5,10 @@ import { promises as fs } from "fs";
 import path from "path";
 
 import HelpCard from "./helps/help";
-import getDocument from "@/utils/firebase/firestore/getData";
+import getAllDocuments from "@/utils/firebase/firestore/getAllDocuments";
 
 async function getHelps() {
   // fetching a document usage example
-  (await getDocument("helps", "OrAd9ygqcxL6ob8GjIeP")).result?.data?.();
   /**
    * Logs 
    * {
@@ -23,11 +22,20 @@ async function getHelps() {
         city: ''
       }
    */
+  let data = [];   
+  if(process.env.CURRENT_ENV === "PRODUCTION") {
+    data = (await getAllDocuments("helps")).map(item => ({
+      docId: item.id,
+      ...item.data
+    }));
+  }
+  else {
+    const jsonDirectory = path.join(process.cwd(), "helpsData");
+    const fileContents = await fs.readFile(jsonDirectory + "/helps", "utf8");
+    data = JSON.parse(fileContents.toLocaleString());
+  }
 
-  const jsonDirectory = path.join(process.cwd(), "helpsData");
-  const fileContents = await fs.readFile(jsonDirectory + "/helps", "utf8");
-  const parsedData = JSON.parse(fileContents.toLocaleString());
-  return parsedData;
+  return data;
 }
 
 export default async function HelpsPage() {
