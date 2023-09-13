@@ -12,23 +12,24 @@ import path from "path";
 import getDocument from "@/utils/firebase/firestore/getDocument";
 
 async function getHelp(helpId) {
-  let help = {};
-  if (process.env.CURRENT_ENV === "PRODUCTION") {
+  
+  if(process.env.CURRENT_ENV === "PRODUCTION") {
     const { result, error } = await getDocument("helps", helpId);
-    help = result.data();
-  } else {
-    const jsonDirectory = path.join(process.cwd(), "helpsData");
-    const fileContents = await fs.readFile(jsonDirectory + "/helps", "utf8");
-    const parsedData = JSON.parse(fileContents.toLocaleString());
-    help = parsedData.find((item) => item.id == helpId);
+    return result.data();
   }
-
-  return help;
+  else {
+    const jsonDirectory = path.join(process.cwd(), "helpsData");
+    const fileContents = await fs.readFile(jsonDirectory + "/helpsV2", "utf8");
+    const parsedData = JSON.parse(fileContents.toLocaleString());
+    const help = parsedData.find((item) => item.id == helpId).data;
+    return help
+  }
 }
 
 export default async function HelpPage({ params }) {
   const help = await getHelp(params.id);
-  const { date, needs, city, location, position, address, details } = help;
+  const { date, needs, city, location, position, address = "", details } = help;
+
   return (
     <div
       style={{
