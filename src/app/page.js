@@ -31,11 +31,14 @@ async function getHelps() {
   }
   else {
     const jsonDirectory = path.join(process.cwd(), "helpsData");
-    const fileContents = await fs.readFile(jsonDirectory + "/helps", "utf8");
-    data = JSON.parse(fileContents.toLocaleString());
-  }
+    const fileContents = await fs.readFile(jsonDirectory + "/helpsV2", "utf8");
+    data = JSON.parse(fileContents.toLocaleString()).map(item => ({
+      docId: item.id,
+      ...item.data
+    }));
+ }
 
-  return data;
+ return data;
 }
 
 export default async function HelpsPage() {
