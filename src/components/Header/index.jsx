@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./header.module.css";
 import { Button, Container, Typography } from "@mui/material";
 
-export const Header = ({ navComponent }) => {
+const Header = ({ navComponent }) => {
   return (
     <>
       <header className={styles.container}>
@@ -64,3 +64,5 @@ export const Header = ({ navComponent }) => {
     </>
   );
 };
+
+export default Header;
