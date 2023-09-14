@@ -66,7 +66,7 @@ export default async function HelpsPage() {
             marginTop: 50,
           }}
         >
-          <Typography color="textPrimary" variant="h3">قائمة الطلبات</Typography>
+          <Typography variant="h3">قائمة الطلبات</Typography>
           {/* <Button color="error" variant="contained" size="large">
             <Typography variant="h6">إضافة طلب</Typography>
           </Button> */}
