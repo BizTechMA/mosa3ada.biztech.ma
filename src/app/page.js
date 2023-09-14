@@ -29,21 +29,14 @@ async function getHelps() {
   if (process.env.CURRENT_ENV === "PRODUCTION") {
     data = (await getAllDocuments("helps")).map((item) => ({
       docId: item.id,
-      ...item.data,
-      ...{
-        date:
-          item.data.date instanceof Timestamp
-            ? item.data.date.toDate()
-            : excelDateToJSDate(item.data.date),
-      },
+      ...item.data
     }));
   } else {
     const jsonDirectory = path.join(process.cwd(), "helpsData");
     const fileContents = await fs.readFile(jsonDirectory + "/helpsV2", "utf8");
     data = JSON.parse(fileContents.toLocaleString()).map(item => ({
       docId: item.id,
-      ...item.data,
-      ...{date: typeof item.data.date === 'number' ? excelDateToJSDate(item.data.date) : item.data.date} //to test date in real format
+      ...item.data
     }));
  }
 

@@ -1,3 +1,4 @@
+import { Timestamp } from "firebase/firestore";
 import Image from "next/image";
 
 export function selectedIcon(key) {
@@ -34,13 +35,13 @@ export function formatDate(dateToFormat, formatDate) {
         ops = {hour:'2-digit', minute:'2-digit'}
     }
     
-    if (dateToFormat.hasOwnProperty('seconds')) {
-      dateToFormat = new Date(dateToFormat.seconds * 1000);
-    }
+    dateToFormat = dateToFormat instanceof Timestamp ? dateToFormat.toDate()
+            : (dateToFormat.hasOwnProperty('seconds') ? 
+              new Date(dateToFormat.seconds * 1000 + dateToFormat.nanoseconds/1000000) : excelDateToJSDate(dateToFormat));
     return dateToFormat && new Intl.DateTimeFormat('ar-MA', ops).format(dateToFormat);
 }
 
-export function excelDateToJSDate(serial) {
+function excelDateToJSDate(serial) {
     const start = new Date(1899, 11, 30);
 
     const days = Math.floor(serial);
