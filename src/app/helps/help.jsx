@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useTheme } from "@mui/material/styles";
+import { useConfirmation } from "../../hooks/useConfimration";
 
 import {
   Grid,
@@ -8,16 +10,23 @@ import {
   CardActions,
   CardContent,
   Typography,
-  useTheme,
+  Icon,
 } from "@mui/material";
 
 import { formatDate, formatDates, selectedIcon } from "../../utils";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { HelpCardConfirmButton } from "./ConfirmButton";
+import { HelpCardConfirmButton } from "./CardConfirmButton";
 
 export default function HelpCard({ help }) {
-  const { date, needs, city, location, docId } = help;
+  const { date, needs, city, location, docId, confirmation_count = 0 } = help;
+
   const { palette } = useTheme();
+
+  const { confirmationCount, handleConfirmHelp, isLoading, isConfirmed } =
+    useConfirmation({
+      id: docId,
+      confirmation_count,
+    });
 
   return (
     <Card
@@ -37,7 +46,7 @@ export default function HelpCard({ help }) {
           }}
         >
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-            { formatDate(date, formatDates.Date) }
+            {formatDate(date, formatDates.Date)}
           </Typography>
           <Typography
             sx={{ mb: 1.5 }}
@@ -46,7 +55,7 @@ export default function HelpCard({ help }) {
               marginRight: "auto",
             }}
           >
-            الساعة { formatDate(date, formatDates.Hours) }
+            الساعة {formatDate(date, formatDates.Hours)}
           </Typography>
         </Grid>
         <Grid container>
@@ -141,7 +150,12 @@ export default function HelpCard({ help }) {
           padding: "15px 29px",
         }}
       >
-        <HelpCardConfirmButton />
+        <HelpCardConfirmButton
+          isConfirmed={isConfirmed}
+          isLoading={isLoading}
+          helpCount={confirmationCount}
+          onConfirm={handleConfirmHelp}
+        />
         <Link
           href={`/helps/${docId}`}
           style={{

@@ -14,19 +14,21 @@ import {
 import { formatDate, formatDates, selectedIcon } from "../../../utils";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { promises as fs } from "fs";
-import path from "path";
-
-import getDocument from "@/utils/firebase/firestore/getDocument";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 
 import styles from "./page.module.css";
+import getDocument from "@/utils/firebase/firestore/getDocument";
+import { ConfirmButton } from "./ConfirmButton";
 
 async function getHelp(helpId) {
-  if (process.env.CURRENT_ENV === "PRODUCTION") {
-    const { result, error } = await getDocument("helps", helpId);
+  if (
+    process.env.CURRENT_ENV === "PRODUCTION" ||
+    process.env.NEXT_PUBLIC_USE_FIREBASE === "true"
+  ) {
+    const { result } = await getDocument("helps", helpId);
+    console.log(result.data());
     return result.data();
   } else {
     const jsonDirectory = path.join(process.cwd(), "helpsData");
@@ -39,6 +41,7 @@ async function getHelp(helpId) {
 
 export default async function HelpPage({ params }) {
   const help = await getHelp(params.id);
+
   const {
     date,
     needs,
@@ -49,6 +52,7 @@ export default async function HelpPage({ params }) {
     person_name,
     contact,
     in_place,
+    confirmation_count = 0,
   } = help;
 
   return (
@@ -103,10 +107,9 @@ export default async function HelpPage({ params }) {
             }}
           >
             {" "}
-            ( 29 تأكيد)
+            ( {confirmation_count || 0} تأكيد)
           </span>
         </Typography>
-
         <Card
           sx={{
             minWidth: 350,
@@ -128,7 +131,7 @@ export default async function HelpPage({ params }) {
                 color="text.secondary"
                 gutterBottom
               >
-                { formatDate(date, formatDates.Date) }
+                {formatDate(date, formatDates.Date)}
               </Typography>
               <Typography
                 sx={{ mb: 1.5 }}
@@ -137,7 +140,7 @@ export default async function HelpPage({ params }) {
                   marginRight: "auto",
                 }}
               >
-                الساعة { formatDate(date, formatDates.Hours) }
+                الساعة {formatDate(date, formatDates.Hours)}
               </Typography>
             </Grid>
             <div>
@@ -274,6 +277,15 @@ export default async function HelpPage({ params }) {
                       <Typography className={styles.helpInfoText}>
                         {details || " لا يوجد"}
                       </Typography>
+                      <Typography
+                        className={styles.helpInfoLabel}
+                        variant="body2"
+                      >
+                        عدد التأكيدات
+                      </Typography>
+                      <Typography className={styles.helpInfoText}>
+                        {confirmation_count}
+                      </Typography>
                     </Grid>
                     <Divider
                       sx={{
@@ -357,7 +369,7 @@ export default async function HelpPage({ params }) {
                         رقم الهاتف{" "}
                       </Typography>
                       <Typography className={styles.helpInfoText}>
-                        {contact.phone_number || "لا يوجد"}
+                        {contact?.phone_number || "لا يوجد"}
                       </Typography>
                     </Grid>
                   </Grid>
@@ -366,6 +378,7 @@ export default async function HelpPage({ params }) {
             </div>
           </CardContent>
         </Card>
+        <ConfirmButton confirmation_count={confirmation_count} id={params.id} />
       </Container>
     </div>
   );
