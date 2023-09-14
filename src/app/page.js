@@ -1,42 +1,26 @@
 import Image from "next/image";
-import { Button, Container, Grid, Typography } from "@mui/material";
-
-import { promises as fs } from "fs";
-import path from "path";
+import { Container, Grid, Typography } from "@mui/material";
 
 import HelpCard from "./helps/help";
+import Header from "@/components/Header";
 import getAllDocuments from "@/utils/firebase/firestore/getAllDocuments";
-import { Header } from "@/components";
-import { Timestamp } from "firebase/firestore";
-import { excelDateToJSDate } from "@/utils";
 
 async function getHelps() {
-  // fetching a document usage example
-  /**
-   * Logs 
-   * {
-        location: '',
-        'contact ': { fb_username: '', phone_number: '', ig_username: '' },
-        date: Timestamp { seconds: 1694473200, nanoseconds: 877000000 },
-        needs: [ 'إغاثة', 'طعام وماء' ],
-        source: '',
-        exact_position: GeoPoint { _lat: 0, _long: 0 },
-        details: '',
-        city: ''
-      }
-   */
   let data = [];
-  if (process.env.CURRENT_ENV === "PRODUCTION") {
+  if (
+    process.env.CURRENT_ENV === "PRODUCTION" ||
+    process.env.NEXT_PUBLIC_USE_FIREBASE === "true"
+  ) {
     data = (await getAllDocuments("helps")).map((item) => ({
       docId: item.id,
-      ...item.data
+      ...item.data,
     }));
   } else {
     const jsonDirectory = path.join(process.cwd(), "helpsData");
     const fileContents = await fs.readFile(jsonDirectory + "/helpsV2", "utf8");
-    data = JSON.parse(fileContents.toLocaleString()).map(item => ({
+    data = JSON.parse(fileContents.toLocaleString()).map((item) => ({
       docId: item.id,
-      ...item.data
+      ...item.data,
     }));
   }
 
@@ -45,6 +29,7 @@ async function getHelps() {
 
 export default async function HelpsPage() {
   const helps = await getHelps();
+
   return (
     <>
       <Header
@@ -100,7 +85,7 @@ export default async function HelpsPage() {
             }}
           >
             {helps?.map((help, ind) => (
-              <Grid item={true} xs={12} md={4} key={ind}>
+              <Grid xs={12} md={4} key={ind}>
                 <HelpCard help={help} />
               </Grid>
             ))}
