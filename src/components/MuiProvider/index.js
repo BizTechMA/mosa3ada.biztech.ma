@@ -11,6 +11,20 @@ export const muiTheme = createTheme({
     borderRadius: 10,
   },
   components: {
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          color: "#000",
+        },
+      },
+    },
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          color: "#000",
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
