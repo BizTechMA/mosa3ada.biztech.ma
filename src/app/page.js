@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
 import { Button, Container, Grid, Typography } from "@mui/material";
+import Header from "@/components/header";
+
 import { useEffect, useState } from "react";
 
 import HelpCard from "./helps/help";
-import Header from "@/components/Header";
 
 export default  function HelpsPage() {
   const [helps, setHelps] = useState([]);
@@ -21,7 +22,7 @@ export default  function HelpsPage() {
 }, [])
   return (
     <>
-      {/* <Header
+      <Header
         navComponent={
           <Image
             src="/mosa3ada.svg"
@@ -31,7 +32,7 @@ export default  function HelpsPage() {
             priority
           />
         }
-      /> */}
+      />
       <Container maxWidth="xl">
         <div
           style={{
