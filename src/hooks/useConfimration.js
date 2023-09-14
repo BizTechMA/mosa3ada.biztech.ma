@@ -18,7 +18,7 @@ export const useConfirmation = ({ id, confirmation_count }) => {
   const handleConfirmHelp = async () => {
     const currentQuantomPtl = quantomPtl?.find((item) => item.id === id);
     if (currentQuantomPtl?.ttl > Date.now()) {
-      toast.error("لقد قمت بالتصويت على هذا الطلب من قبل");
+      toast.error("لقد قمت بتأكيد على هذا الطلب من قبل");
       return;
     }
 
@@ -45,7 +45,7 @@ export const useConfirmation = ({ id, confirmation_count }) => {
       return newPrev;
     });
 
-    toast.success("تم التصويت بنجاح");
+    toast.success("تم التأكيد بنجاح");
     setConfirmationCount((prev) => (prev ? prev + 1 : 1));
     setIsLoading(false);
   };
