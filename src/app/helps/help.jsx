@@ -10,9 +10,8 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import momentArabic from "../../utils/momentArabic";
 
-import { selectedIcon } from "../../utils";
+import { formatDate, formatDates, selectedIcon } from "../../utils";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { HelpCardConfirmButton } from "./ConfirmButton";
 
@@ -40,7 +39,7 @@ export default function HelpCard({ help }) {
           }}
         >
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-            {momentArabic(date).format("LL")}
+            { formatDate(date, formatDates.Date) }
           </Typography>
           <Typography
             sx={{ mb: 1.5 }}
@@ -49,7 +48,7 @@ export default function HelpCard({ help }) {
               marginRight: "auto",
             }}
           >
-            الساعة {momentArabic(date).format("HH:MM")}
+            الساعة { formatDate(date, formatDates.Hours) }
           </Typography>
         </Grid>
         <Grid container>

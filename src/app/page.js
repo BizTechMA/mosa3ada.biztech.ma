@@ -7,6 +7,8 @@ import path from "path";
 import HelpCard from "./helps/help";
 import getAllDocuments from "@/utils/firebase/firestore/getAllDocuments";
 import { Header } from "@/components";
+import { Timestamp } from "firebase/firestore";
+import { excelDateToJSDate } from "@/utils";
 
 async function getHelps() {
   // fetching a document usage example
@@ -27,7 +29,7 @@ async function getHelps() {
   if (process.env.CURRENT_ENV === "PRODUCTION") {
     data = (await getAllDocuments("helps")).map((item) => ({
       docId: item.id,
-      ...item.data,
+      ...item.data
     }));
   } else {
     const jsonDirectory = path.join(process.cwd(), "helpsData");
