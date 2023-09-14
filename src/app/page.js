@@ -8,6 +8,7 @@ import HelpCard from "./helps/help";
 import getAllDocuments from "@/utils/firebase/firestore/getAllDocuments";
 import { Header } from "@/components";
 import { Timestamp } from "firebase/firestore";
+import { excelDateToJSDate } from "@/utils";
 
 async function getHelps() {
   // fetching a document usage example
@@ -29,15 +30,20 @@ async function getHelps() {
     data = (await getAllDocuments("helps")).map((item) => ({
       docId: item.id,
       ...item.data,
-      ...{date: item.data.date instanceof Timestamp ? item.data.date.toDate() : item.data.date} 
+      ...{
+        date:
+          item.data.date instanceof Timestamp
+            ? item.data.date.toDate()
+            : excelDateToJSDate(item.data.date),
+      },
     }));
   } else {
     const jsonDirectory = path.join(process.cwd(), "helpsData");
     const fileContents = await fs.readFile(jsonDirectory + "/helpsV2", "utf8");
     data = JSON.parse(fileContents.toLocaleString()).map(item => ({
       docId: item.id,
-      ...item.data
-      //...{date: Timestamp.fromDate(new Date())} to test date in real format
+      ...item.data,
+      ...{date: typeof item.data.date === 'number' ? excelDateToJSDate(item.data.date) : item.data.date} //to test date in real format
     }));
  }
 
