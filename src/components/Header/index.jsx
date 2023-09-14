@@ -5,7 +5,7 @@ import styles from "./header.module.css";
 import { Button, Container, Typography } from "@mui/material";
 import  TransitionAlerts from "../Alert";
 
-export const Header = ({ navComponent }) => {
+const Header = ({ navComponent }) => {
   return (
     <>
       <TransitionAlerts></TransitionAlerts>
@@ -66,3 +66,5 @@ export const Header = ({ navComponent }) => {
     </>
   );
 };
+
+export default Header;
