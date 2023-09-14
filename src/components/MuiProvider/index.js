@@ -1,7 +1,10 @@
 "use client";
 
-import { ThemeProvider } from "@emotion/react";
+import { ThemeProvider, CacheProvider } from "@emotion/react";
 import { createTheme, responsiveFontSizes } from "@mui/material";
+import rtlPlugin from 'stylis-plugin-rtl';
+import createCache from '@emotion/cache';
+import { prefixer } from 'stylis';
 
 export const muiTheme = createTheme({
   typography: {
@@ -54,12 +57,17 @@ export const muiTheme = createTheme({
     },
   },
 });
+// Create rtl cache
+const cacheRtl = createCache({
+  key: 'muirtl',
+  stylisPlugins: [prefixer, rtlPlugin],
+});
 
 // MaterialUI Theme Provider only runs on the client side, so we need to wrap it in a component that only runs on the client side
 export const MuiProvider = ({ children }) => {
   return (
     <ThemeProvider theme={responsiveFontSizes(muiTheme)}>
-      {children}
+      <CacheProvider  value={cacheRtl}>{children}</CacheProvider>
     </ThemeProvider>
   );
 };
