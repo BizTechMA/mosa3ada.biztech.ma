@@ -39,3 +39,16 @@ export function formatDate(dateToFormat, formatDate) {
     }
     return dateToFormat && new Intl.DateTimeFormat('ar-MA', ops).format(dateToFormat);
 }
+
+export function excelDateToJSDate(serial) {
+    const start = new Date(1899, 11, 30);
+
+    const days = Math.floor(serial);
+    const fraction = serial - days;
+    
+    let date = new Date(start.getTime() + days * 24 * 60 * 60 * 1000);
+    
+    const millisecondsInADay = 24 * 60 * 60 * 1000;
+    date = new Date(date.getTime() + fraction * millisecondsInADay);
+    return date;
+}
