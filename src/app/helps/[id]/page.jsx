@@ -290,7 +290,7 @@ export default async function HelpPage({ params }) {
                   </Grid>
                 </div>
                 <Divider
-                  vertical
+                  vertical="true"
                   sx={{
                     display: {
                       md: "block",

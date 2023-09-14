@@ -16,10 +16,8 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { HelpCardConfirmButton } from "./ConfirmButton";
 
 export default function HelpCard({ help }) {
-
   const { date, needs, city, location, docId } = help;
   const { palette } = useTheme();
-
 
   return (
     <Card
@@ -69,8 +67,28 @@ export default function HelpCard({ help }) {
               height={20}
               priority
             />
-            <Typography variant="h6">{city}</Typography>
-            <Typography variant="body1">{location}</Typography>
+            <Typography
+              sx={{
+                display: "-webkit-box",
+                overflow: "hidden",
+                WebkitBoxOrient: "vertical",
+                WebkitLineClamp: 1,
+              }}
+              variant="h6"
+            >
+              {city}
+            </Typography>
+            <Typography
+              sx={{
+                display: "-webkit-box",
+                overflow: "hidden",
+                WebkitBoxOrient: "vertical",
+                WebkitLineClamp: 1,
+              }}
+              variant="body1"
+            >
+              {location}
+            </Typography>
           </Grid>
           <Grid
             item
@@ -83,7 +101,7 @@ export default function HelpCard({ help }) {
               flexDirection: "column",
             }}
           >
-            {needs?.map((need, needInd) => (
+            {needs?.slice(0, 3).map((need, needInd) => (
               <div
                 key={needInd}
                 style={{
@@ -99,7 +117,16 @@ export default function HelpCard({ help }) {
                 >
                   {selectedIcon(need)}
                 </span>
-                <Typography variant="h5" key={needInd}>
+                <Typography
+                  sx={{
+                    display: "-webkit-box",
+                    overflow: "hidden",
+                    WebkitBoxOrient: "vertical",
+                    WebkitLineClamp: 1,
+                  }}
+                  variant="h5"
+                  key={needInd}
+                >
                   {need}
                 </Typography>
               </div>
