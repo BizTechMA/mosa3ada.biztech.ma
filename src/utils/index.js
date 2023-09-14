@@ -35,28 +35,36 @@ export function formatDate(dateToFormat, formatDate) {
   }
 
   if (!dateToFormat) return;
-  dateToFormat =
-    dateToFormat instanceof Timestamp
-      ? dateToFormat.toDate()
-      : dateToFormat?.hasOwnProperty("seconds")
-      ? new Date(
-          dateToFormat.seconds * 1000 + dateToFormat.nanoseconds / 1000000
-        )
-      : excelDateToJSDate(dateToFormat);
+  const formatedData = parseDate(dateToFormat);
+
   return (
-    dateToFormat && new Intl.DateTimeFormat("ar-MA", ops)?.format(dateToFormat)
+    formatedData && new Intl.DateTimeFormat("ar-MA", ops)?.format(formatedData)
   );
 }
 
-function excelDateToJSDate(serial) {
-  const start = new Date(1899, 11, 30);
+function parseDate(dateString) {
+  const parts = dateString.split(" ");
+  const dateParts = parts[0].split("/");
+  const timeParts = parts[1].split(":");
 
-  const days = Math.floor(serial);
-  const fraction = serial - days;
-
-  let date = new Date(start.getTime() + days * 24 * 60 * 60 * 1000);
-
-  const millisecondsInADay = 24 * 60 * 60 * 1000;
-  date = new Date(date.getTime() + fraction * millisecondsInADay);
-  return date;
+  const year = parseInt(dateParts[2], 10);
+  const month = parseInt(dateParts[1], 10) - 1;
+  const day = parseInt(dateParts[0], 10);
+  const hour = parseInt(timeParts[0], 10);
+  const minute = parseInt(timeParts[1], 10);
+  const second = parseInt(timeParts[2], 10);
+  return new Date(year, month, day, hour, minute, second);
 }
+
+// function excelDateToJSDate(serial) {
+//   const start = new Date(1899, 11, 30);
+
+//   const days = Math.floor(serial);
+//   const fraction = serial - days;
+
+//   let date = new Date(start.getTime() + days * 24 * 60 * 60 * 1000);
+
+//   const millisecondsInADay = 24 * 60 * 60 * 1000;
+//   date = new Date(date.getTime() + fraction * millisecondsInADay);
+//   return date;
+// }
