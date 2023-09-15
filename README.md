@@ -20,8 +20,19 @@ The goal of this iteration is to have a listing with the needs,the location, and
 #### Iteration 2:
 The goal of this iteration we will ad the Google map services to make the app more accessible and also the users can add a new listing directly.
 
-[Mockups Coming Soon]
+Mockups:
 
+![more info (1)](https://github.com/BizTech-Morocco/mosa3ada.biztech.ma/assets/24813026/9ac85411-8476-4804-bf53-66c29b911bf7)
+
+![input1 (location)](https://github.com/BizTech-Morocco/mosa3ada.biztech.ma/assets/24813026/3468bebb-a12d-4705-a942-07d8c003869b)
+
+![input 2 (information)](https://github.com/BizTech-Morocco/mosa3ada.biztech.ma/assets/24813026/76662253-caf7-4f21-98d2-91dc3d0b5872)
+
+![input 3 (preview)](https://github.com/BizTech-Morocco/mosa3ada.biztech.ma/assets/24813026/96514973-2c9e-449b-9b3c-604d71de8cd3)
+
+![input 4 (confirmation)](https://github.com/BizTech-Morocco/mosa3ada.biztech.ma/assets/24813026/05dab3c7-f59f-4412-8244-42a62e70d9f5)
+
+![contact us](https://github.com/BizTech-Morocco/mosa3ada.biztech.ma/assets/24813026/ec1f5bed-0122-4d71-8863-b0fb5ed54447)
 
 
 ## Want to contribute in V1? 
