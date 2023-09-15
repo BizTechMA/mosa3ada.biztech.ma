@@ -12,7 +12,7 @@ export const useConfirmation = ({ id, confirmation_count }) => {
 
   const isConfirmed = useMemo(
     () => quantomPtl?.some((item) => item.id === id),
-    [id, quantomPtl]
+    [id, quantomPtl],
   );
 
   const handleConfirmHelp = async () => {
