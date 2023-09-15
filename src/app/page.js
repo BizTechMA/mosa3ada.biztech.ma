@@ -5,6 +5,8 @@ import HelpCard from "./helps/help";
 import Header from "@/components/Header";
 import getAllDocuments from "@/utils/firebase/firestore/getAllDocuments";
 
+export const dynamic = "force-dynamic";
+
 async function getHelps() {
   let data = [];
   if (
