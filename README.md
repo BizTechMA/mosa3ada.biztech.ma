@@ -27,6 +27,9 @@ The goal of this iteration we will ad the Google map services to make the app mo
 
 Mockups:
 
+![Index](https://github.com/BizTech-Morocco/mosa3ada.biztech.ma/assets/24813026/c47b8f2b-1b35-4058-b3af-4566e609c21c)
+
+
 ![more info (1)](https://github.com/BizTech-Morocco/mosa3ada.biztech.ma/assets/24813026/9ac85411-8476-4804-bf53-66c29b911bf7)
 
 ![input1 (location)](https://github.com/BizTech-Morocco/mosa3ada.biztech.ma/assets/24813026/3468bebb-a12d-4705-a942-07d8c003869b)
