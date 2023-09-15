@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <MuiProvider>
         <Toaster />
         <GoogleAnalytics GA_TRACKING_ID={process.env.MEASUREMENT_ID} />
-        <body suppressHydrationWarning>{children}</body>
+        <body suppressHydrationWarning={true}>{children}</body>
       </MuiProvider>
     </html>
   );
