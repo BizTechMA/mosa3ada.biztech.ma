@@ -66,8 +66,10 @@ const cacheRtl = createCache({
 // MaterialUI Theme Provider only runs on the client side, so we need to wrap it in a component that only runs on the client side
 export const MuiProvider = ({ children }) => {
   return (
-    <ThemeProvider theme={responsiveFontSizes(muiTheme)}>
-      <CacheProvider  value={cacheRtl}>{children}</CacheProvider>
-    </ThemeProvider>
+    <CacheProvider  value={cacheRtl}>
+      <ThemeProvider theme={responsiveFontSizes(muiTheme)}>
+        {children} 
+      </ThemeProvider>
+    </CacheProvider>
   );
 };

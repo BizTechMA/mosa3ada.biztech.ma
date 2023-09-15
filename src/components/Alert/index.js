@@ -12,6 +12,7 @@ export default function TransitionAlerts() {
     <Box sx={{ width: '100%' }} stylisPlugins={[rtlPlugin]}>
       <Collapse in={open}>
         <Alert
+          severity="warning"
           action={
             <IconButton
               aria-label="close"
@@ -20,7 +21,6 @@ export default function TransitionAlerts() {
               onClick={() => {
                 setOpen(false);
               }}
-
             >
               <CloseIcon fontSize="inherit" />
             </IconButton>

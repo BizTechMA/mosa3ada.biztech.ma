@@ -8,7 +8,7 @@ import  TransitionAlerts from "../Alert";
 const Header = ({ navComponent }) => {
   return (
     <>
-      <TransitionAlerts></TransitionAlerts>
+      <TransitionAlerts/>
       <header className={styles.container}>
         {/* Most likely the logo will be rendered here */}
         {navComponent && (
