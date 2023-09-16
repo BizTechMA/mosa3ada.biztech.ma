@@ -1,5 +1,6 @@
 import Link from "next/link";
-
+import { promises as fs } from "fs";
+import path from "path";
 import {
   Grid,
   Card,
@@ -32,7 +33,7 @@ async function getHelp(helpId) {
     return result.data();
   } else {
     const jsonDirectory = path.join(process.cwd(), "helpsData");
-    const fileContents = await fs.readFile(jsonDirectory + "/helpsV2", "utf8");
+    const fileContents = await fs.readFile(jsonDirectory + "/helpsV3", "utf8");
     const parsedData = JSON.parse(fileContents.toLocaleString());
     const help = parsedData.find((item) => item.id == helpId).data;
     return help;
