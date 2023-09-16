@@ -7,7 +7,7 @@ export async function GET(req, { params }) {
   return NextResponse.json(helpDataById);
 }
 
-export async function PATCH({ params }) {
+export async function PATCH(req, { params }) {
   const { id } = params;
   const result = await updateConfirmationCount(id);
 
