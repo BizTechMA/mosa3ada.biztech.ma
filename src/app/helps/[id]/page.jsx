@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { promises as fs } from "fs";
+import path from "path";
 
 import {
   Grid,
@@ -21,6 +23,7 @@ import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import styles from "./page.module.css";
 import getDocument from "@/utils/firebase/firestore/getDocument";
 import { ConfirmButton } from "./ConfirmButton";
+import { DisConfirmationButton } from "./DisConfirmationButton";
 
 async function getHelp(helpId) {
   if (
@@ -32,7 +35,7 @@ async function getHelp(helpId) {
     return result.data();
   } else {
     const jsonDirectory = path.join(process.cwd(), "helpsData");
-    const fileContents = await fs.readFile(jsonDirectory + "/helpsV2", "utf8");
+    const fileContents = await fs.readFile(jsonDirectory + "/helpsV3.json", "utf8");
     const parsedData = JSON.parse(fileContents.toLocaleString());
     const help = parsedData.find((item) => item.id == helpId).data;
     return help;
@@ -378,6 +381,7 @@ export default async function HelpPage({ params }) {
             </div>
           </CardContent>
         </Card>
+        {/* <DisConfirmationButton dis_confirmation_count={10} id={params.id} /> */}
         <ConfirmButton confirmation_count={confirmation_count} id={params.id} />
       </Container>
     </div>
