@@ -32,7 +32,7 @@ export const useConfirmation = ({ id, confirmation_count }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        type: "confirmation"
+        type: "CONFIRMATION"
       })
     }).catch((err) => {
       setIsLoading(false);

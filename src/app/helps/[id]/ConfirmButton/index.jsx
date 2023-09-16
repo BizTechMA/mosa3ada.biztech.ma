@@ -12,8 +12,9 @@ export const ConfirmButton = ({ id, confirmation_count, buttonProps = {} }) => {
   return (
     <Button
       onClick={handleConfirmHelp}
-      color="error"
+      color="success"
       variant="contained"
+      disabled={isConfirmed || isLoading}
       style={{
         gap: 5,
         marginBottom: 20,
@@ -36,7 +37,7 @@ export const ConfirmButton = ({ id, confirmation_count, buttonProps = {} }) => {
         />
       )}
       {!isLoading && (
-        <>{!isConfirmed ? <ThumbUpOffAlt /> : <ThumbUpAltSharp />}</>
+        <>{!isConfirmed && <ThumbUpAltSharp />}</>
       )}
       <Typography color="white" variant="body3">
         {isConfirmed ? "تم التأكيد" : "تأكيد"}

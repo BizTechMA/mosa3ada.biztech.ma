@@ -19,7 +19,7 @@ export const HelpCardDisConfirmButton = ({
     >
       {isLoading && <CircularProgress size={15} />}
       {!isLoading && (
-        <>{!isDisConfirmed ? <DangerousOutlined /> :  <DangerousSharp /> }</>
+        <>{!isDisConfirmed ? <DangerousOutlined style={{color: "red"}} /> :  <DangerousSharp style={{color: "red"}} /> }</>
       )}
       <Typography component={"span"}> {disConfirmationCount} غير صحيح</Typography>
     </Button>

@@ -23,7 +23,7 @@ import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import styles from "./page.module.css";
 import getDocument from "@/utils/firebase/firestore/getDocument";
 import { ConfirmButton } from "./ConfirmButton";
-import { DisConfirmationButton } from "./DisConfirmationButton";
+import { DisConfirmButton } from "./DisConfirmButton";
 
 async function getHelp(helpId) {
   if (
@@ -31,7 +31,6 @@ async function getHelp(helpId) {
     process.env.NEXT_PUBLIC_USE_FIREBASE === "true"
   ) {
     const { result } = await getDocument("helps", helpId);
-    console.log(result.data());
     return result.data();
   } else {
     const jsonDirectory = path.join(process.cwd(), "helpsData");
@@ -56,6 +55,7 @@ export default async function HelpPage({ params }) {
     contact,
     in_place,
     confirmation_count = 0,
+    dis_confirmation_count = 0
   } = help;
 
   return (
@@ -381,7 +381,7 @@ export default async function HelpPage({ params }) {
             </div>
           </CardContent>
         </Card>
-        {/* <DisConfirmationButton dis_confirmation_count={10} id={params.id} /> */}
+        <DisConfirmButton dis_confirmation_count={dis_confirmation_count} id={params.id} />
         <ConfirmButton confirmation_count={confirmation_count} id={params.id} />
       </Container>
     </div>
