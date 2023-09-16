@@ -2,7 +2,7 @@ import { ThumbUpAltSharp, ThumbUpOffAlt } from "@mui/icons-material";
 import { Button, CircularProgress, Typography } from "@mui/material";
 
 export const HelpCardConfirmButton = ({
-  helpCount = 0,
+  confirmationCount = 0,
   onConfirm = () => {},
   buttonProps = {},
   isLoading,
@@ -21,7 +21,7 @@ export const HelpCardConfirmButton = ({
       {!isLoading && (
         <>{!isConfirmed ? <ThumbUpOffAlt /> : <ThumbUpAltSharp />}</>
       )}
-      <Typography component={"span"}>{helpCount} تأكيد</Typography>
+      <Typography component={"span"}>{confirmationCount} تأكيد</Typography>
     </Button>
   );
 };

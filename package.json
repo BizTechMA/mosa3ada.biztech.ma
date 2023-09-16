@@ -22,6 +22,7 @@
     "react-dom": "18.2.0",
     "react-ga": "^3.3.1",
     "react-hot-toast": "^2.4.1",
+    "react-query": "^3.39.3",
     "use-local-storage": "^3.0.0",
     "xlsx": "^0.18.5"
   },
