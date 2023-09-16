@@ -43,3 +43,9 @@ If you have any questions, need clarification, or want to discuss certain aspect
 ## Closing Notes
 
 Your contribution is a testament to the strength and unity of the community. By helping us enhance Mosa3ada, you're directly assisting countless individuals affected by the earthquake. Thank you for your dedication and support.
+
+## Community Contributors
+
+<a href="https://github.com/BizTech-Morocco/mosa3ada.biztech.ma/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=BizTech-Morocco/mosa3ada.biztech.ma" />
+</a>
