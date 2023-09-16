@@ -10,7 +10,7 @@ export const useDisConfirmation = ({ id, dis_confirmation_count }) => {
     syncData: true,
   });
 
-  const isDisConfirmHelp = useMemo(
+  const isDisConfirmed = useMemo(
     () => quantomPtl?.some((item) => item.id === id),
     [id, quantomPtl],
   );
@@ -24,12 +24,14 @@ export const useDisConfirmation = ({ id, dis_confirmation_count }) => {
 
     setIsLoading(true);
 
-    await fetch(`/api/help/${id}/PATCHNewEndpoint`, {
+    await fetch(`/api/help/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ key: 'value' })
+      body: JSON.stringify({
+        type: "DIS_CONFIRMATION"
+      })
     }).catch((err) => {
       setIsLoading(false);
       toast.error("حدث خطأ ما");
@@ -51,5 +53,5 @@ export const useDisConfirmation = ({ id, dis_confirmation_count }) => {
     setIsLoading(false);
   };
 
-  return { disConfirmationCount, isDisConfirmHelp, isLoading, handleDisConfirmHelp };
+  return { disConfirmationCount, isDisConfirmed, isLoading, handleDisConfirmHelp };
 };
