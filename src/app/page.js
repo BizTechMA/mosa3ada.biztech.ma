@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { promises as fs } from "fs";
+import path from "path";
+
 import { Container, Grid, Typography } from "@mui/material";
 
 import HelpCard from "./helps/help";
@@ -19,7 +22,7 @@ async function getHelps() {
     }));
   } else {
     const jsonDirectory = path.join(process.cwd(), "helpsData");
-    const fileContents = await fs.readFile(jsonDirectory + "/helpsV2", "utf8");
+    const fileContents = await fs.readFile(jsonDirectory + "/helpsV3", "utf8");
     data = JSON.parse(fileContents.toLocaleString()).map((item) => ({
       docId: item.id,
       ...item.data,
