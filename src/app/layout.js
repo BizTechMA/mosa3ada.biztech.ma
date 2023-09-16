@@ -5,8 +5,8 @@ import { Toaster } from "react-hot-toast";
 import { Suspense } from "react";
 
 export const metadata = {
-  title: "مساعدة",
-  description: "قائمة بالمناطق المتضررة المحتاجة للمساعدة",
+  title: " مساعدة - من المغاربة للمغاربة",
+  description: "موقع مساعدة عبارة عن عمل تطوعي غير ربحي لشباب مغاربة لا يمثل أي جهة او مجموعة، هدفنا هو إيصال الإغاثة الإنسانية لضحايا زلزال المغرب",
 };
 
 export default function RootLayout({ children }) {
