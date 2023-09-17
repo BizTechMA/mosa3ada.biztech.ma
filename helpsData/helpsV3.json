@@ -1,0 +1,5084 @@
+[
+    {
+        "id": "c1VBbdhRuhiEXd0nkJAy",
+        "data": {
+            "details": null,
+            "location": "جماعة سيدي حساين ",
+            "city": "تارودانت ",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 18:51:12",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "Dw7RTumHAOUwyY7zZTPB",
+        "data": {
+            "details": null,
+            "location": "جماعة تبقال دوار تسلداي",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 18:48:26",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "AgBdFxrIQZFfbAMCRJMe",
+        "data": {
+            "details": null,
+            "location": "دوار تورتيت جماعة خزامة إقليم ورزازات ",
+            "city": "ورزازات",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مساعدة طبية"
+            ],
+            "date": "14/09/2023 18:47:11",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "YJ9KHMPXtaDRt52i9ocG",
+        "data": {
+            "details": null,
+            "location": "جمعية أمنيد الخير دوار تكاديرت جماعة وقيادة أوريكة ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0678451584"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 18:22:36",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "rpX2jWj4pUpHRPDR3I4j",
+        "data": {
+            "details": "البيوت هدمت والبعض تشقق كله بمعنى ان اغلبية البيوت لم تعد صالحة لسكن",
+            "location": "جماعة سيدي بدهاج دوار تاشبيبت",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 18:06:54",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "C64OqP2XkUV3sPsmneXZ",
+        "data": {
+            "details": "اثر الزلزال الدي عرفه المغرب المنزل الذي نسكنه تعرض لشقوق بليغة حاولنا التواصل مع القيادة دون جدوا",
+            "location": "قيادة تغزوت",
+            "city": "Tinghir ",
+            "id": null,
+            "exact_position": {
+                "latitude": 31.4584,
+                "longitude": -5.43117
+            },
+            "in_place": true,
+            "contact": {
+                "phone_number": "0684192264"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 18:03:14",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "c7tNuoOXMtwSiIB7Rqs1",
+        "data": {
+            "details": "طلب مساعده للمسكن",
+            "location": "قيادة  السويهلة سعادة مراكش ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 17:46:23",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "pQhgVy0Sz1g0PO7h5DOv",
+        "data": {
+            "details": null,
+            "location": "جماعة بوابوض، دوار تنينفت وتلاث دواوير بجواره",
+            "city": "ايمنتانوت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 17:44:11",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "0SGliFpd6p2X1myxLAPB",
+        "data": {
+            "details": "هناك عائلتي البعض منهم ماتو والبعض قيد الحياة المرجو المساعدة بالخيم والملابس ",
+            "location": "دوار مسونا ودوار تجكالت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 17:24:33",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "CG1LxFbvdvJlfp1Q3id0",
+        "data": {
+            "details": null,
+            "location": "جماعة تافراوتن دوار تمضغوست",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0610224852"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 17:19:57",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "XzL4CpKTyZwFjoiuqWEn",
+        "data": {
+            "details": "الناس ناعسين غير فالزنقة و البرد دراري صغار ناس كبار مكرفسين من نهار الجمعة حتى واحد متسول فيهوم راهم في أمس الحاجة للمساعدة الله اجازيكوم بالخير ",
+            "location": "جماعة تالوين قيادة اسكاون دواوير تيسخت نيت براهيم توريرت اغبار مزدورت انيي",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 17:16:48",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "8qmpPWwVgTBI0jpiXf6H",
+        "data": {
+            "details": "الدار عندي  فيها السقوف والحاءط ليا للسقوط",
+            "location": "دوار ايت اشو السويهلة سعادة مراكش ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 17:09:42",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "Ly5JjQfFFRC7vd7oQxzr",
+        "data": {
+            "details": null,
+            "location": "جماعة أيت تمليل دوار تغفيست",
+            "city": "دمنات ",
+            "id": null,
+            "exact_position": {
+                "latitude": 31.367291,
+                "longitude": -6.931025
+            },
+            "in_place": true,
+            "contact": {
+                "phone_number": "0651901272"
+            },
+            "position_static": null,
+            "source": "سكان القرية ",
+            "needs": [
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 16:55:22",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "0ihqlDLa01TUtJbh5Z0n",
+        "data": {
+            "details": null,
+            "location": "إقليم شيشاوة *الجماعة القروية آيت حدو يوسف دوار أسيف لحلو",
+            "city": "ايمينتانوت، شيساوة",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0691833904  عبد الله ، امام مسجد الدوار، ، رقم آخره عند الضرورة 0661476147."
+            },
+            "position_static": null,
+            "source": "إمام و أستاذ الدوار",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 16:46:24",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "1JWI4dYeTsprtUwxoS61",
+        "data": {
+            "details": null,
+            "location": "جماعة تالوين",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": "المتضررين أنفسهم ",
+            "needs": [
+                "إغاثة",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 16:37:35",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "UJhSam5YyVDry47Sx0aP",
+        "data": {
+            "details": null,
+            "location": "تحناوت\r\n",
+            "city": "تحناوت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 16:28:54",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "NY4mrOrJJRHCr7MOkN66",
+        "data": {
+            "details": null,
+            "location": "جماعة الزاويت إقليم الصويرة ",
+            "city": "الصويرة",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "641772490"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مساعدة طبية",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 16:25:05",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "szPaYB3g2JLIaHex8MAu",
+        "data": {
+            "details": null,
+            "location": "دواوير اندور تايرت ساوليلا اكرمشا جماعة اساكي قيادة اساكي دائرة تالوين",
+            "city": "اولوز ",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 16:17:20",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "kBFhqC7QgVQRpR0wlNl7",
+        "data": {
+            "details": "كل المنازل محطمة ولم نتوصل الى الان بالخيام  و بالمواد الأساسية للطعام ",
+            "location": "جماعة ازكور  دوار انامرو ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "+212 676-112700"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 16:15:09",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "HXXGtWx0BFs6TG4TvdIS",
+        "data": {
+            "details": null,
+            "location": "Chichawa",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0636695730"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 16:12:13",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "zZPdboxw0S6mth52lvMu",
+        "data": {
+            "details": null,
+            "location": "Communate sitti fadma",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212 6 61 44 77 89"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 16:05:24",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "36wQ71mdgMgMAG5o8ff5",
+        "data": {
+            "details": null,
+            "location": "Ouzioua",
+            "city": "أكادير",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 16:00:30",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "yitamBv5f1Njr3yjoXML",
+        "data": {
+            "details": "الطريق ميسرة لعندهم والحمدلله داو ليهم شي شباب شي مساعدة ولكن متفرقاتش على متضررين وعندهم شي خيام مبغاوش يديروها للناس ناعسين في العراء",
+            "location": "تحناوت دوار الصور اسم الاقليم : الحوز \r\nاسم الجماعة : اغواطيم تحناوت\r\nاسم الدوار : الصور تدرارة \r\n",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0608264571 لكبيرة 0668652949 فدوى زهيرة 0622-852143"
+            },
+            "position_static": null,
+            "source": "ناس من عين المكان",
+            "needs": [
+                "إغاثة",
+                "مساعدة طبية",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 15:40:01",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "UczUZb6mHTrrHRjKtxFQ",
+        "data": {
+            "details": null,
+            "location": "Commune asni elhaouz ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "678457914"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 15:35:21",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "7sxZN1a66UcZfDJr4TsX",
+        "data": {
+            "details": null,
+            "location": "دوار تاركة أوفلا جماعة أيت حدو يوسف قيادة سكساوة إقليم شيشاوة ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 15:21:04",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "BkGXWa8CjBZfD7LT6WEX",
+        "data": {
+            "details": null,
+            "location": "تافراوتن قيادة تملوكت ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0672203639"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 14:41:34",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "ATByXjbgVnI12Z3q2Ata",
+        "data": {
+            "details": "الاسر  تبيت  في  الخلاء   والعراء بعيدا  عن  البيوت في حقول بورية  لا تصلها  الإنارة.  ويزداد  الخوف  دائما مع  كل هزة ارتدادية..   وكل  لياة نجد  الغطاء  التي   نتغطى به  يحمل الكثير من  البلل  بسبب البرودة..   معانات",
+            "location": "المهارة",
+            "city": "اولادبرحيل",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0607775517"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مساعدة طبية",
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "14/09/2023 14:41:14",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "Yijm3kfhZTTGajEqqWsZ",
+        "data": {
+            "details": null,
+            "location": "جماعة ثلاث نيعقوب دوار أݣني قيادة  إقليم الحوز",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 14:33:26",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "aW6DbaclFyb260a3TInE",
+        "data": {
+            "details": "الوضع كارتي ",
+            "location": "تلات نيعقوب ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0630137451"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 13:59:46",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "EbvJjpmsACtK9BOvuzfY",
+        "data": {
+            "details": "Ils ont reçu de l’aide mais pas suffisante. Il manque encore tentes, matelas, couvertures, vêtements pour enfants et nourriture. ",
+            "location": " Douar Ait Amara, Lwad Sidi Bedhaz, Al Haouz (connu sous le nom de \"l9l3a3 par les riverains)",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 13:54:23",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "dpISDM9DdSoPP5ZIKPdd",
+        "data": {
+            "details": null,
+            "location": "Douar  Achbarou ",
+            "city": "Tameslohte",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0662257303  Abderrahim"
+            },
+            "position_static": null,
+            "source": "Sur place ",
+            "needs": [
+                "مساعدة طبية",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 13:53:19",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "KqdsX63TvAeMK527SDvG",
+        "data": {
+            "details": null,
+            "location": "جماعة تافروتن تمضغوست ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0662836780"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 13:48:44",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "9fqkJFB41YwgxcPX84bV",
+        "data": {
+            "details": "الديور كلهم مشقوقين غير صالحسن للسكن والناس كل هذه الأيام يبيتون في الخارج كن غير مأوى ",
+            "location": "جماعة املمايس اقليم ترودانت قيادة اركانة ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212 666-278646"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 13:48:14",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "1nM3LrCfy45YuZFRpXt1",
+        "data": {
+            "details": "البنايات مهترئة و الساكنة تنام في العراء",
+            "location": "Taliouine",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": {
+                "latitude": 30.58124842786374,
+                "longitude": -7.978565272699447
+            },
+            "in_place": true,
+            "contact": {
+                "phone_number": "0660082266"
+            },
+            "position_static": null,
+            "source": "انا اعيش في المكان ",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 13:47:42",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "X0aD3lZT89xcr2Kro3Xn",
+        "data": {
+            "details": "المنزل مهدم و الظروف صعبة",
+            "location": "ج. تافراوتن ... قيادة تمالوكت دوار تامضغوست",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0687625101"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 13:42:58",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "mplNsK9ekNAA20ZL0fLo",
+        "data": {
+            "details": "تشقق المنازل وانهيار بعضها",
+            "location": "جماعة لالة عزيزة إقليم شيشاوة  دوار تكنيت دوار تمتضيت",
+            "city": "إيمنتانوت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0671072566"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مساعدة طبية",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 12:32:51",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "pznyBenLCxpH9MY9qfh7",
+        "data": {
+            "details": null,
+            "location": "ايت ايمور قربةمدرسة ملوان",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0767601484"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 12:32:30",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "e2cGdqDacLM5cpGhzlof",
+        "data": {
+            "details": null,
+            "location": "جماعة لالة عزيزة  إقليم شيشاوة دوار تكنيت تمتضيت",
+            "city": "إيمنتانوت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مساعدة طبية",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 12:15:09",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "2a8MqvlR2y0OGDDCQ7Tv",
+        "data": {
+            "details": "Salam Alaikoum,\r\n\r\nNous sommes reconnaissants que notre village d'Asni (EL haouz) et notre Douar Tamassit aient reçu des aides alimentaires. Cependant, nous rencontrons actuellement un problème urgent concernullt les tentes, en particulier en raison du froid et de l'approche des pluies. Nous vous serions reconnaissants de nous apporter votre aide à cet égard.\r\n\r\nMerci.",
+            "location": "ASNI",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0666102847"
+            },
+            "position_static": null,
+            "source": "Habitant de village ",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 12:09:29",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "kNiBZbTZPozwQOL4PGuw",
+        "data": {
+            "details": null,
+            "location": "عين تازيتونت دوار اكرورتان ",
+            "city": "امينتانوت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 11:56:17",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "8XZr7tH4INXoHXwf06TK",
+        "data": {
+            "details": "+212670279367",
+            "location": "تيزي إدكل",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 11:53:06",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "Ubg08UXH44VkAxTbd1OF",
+        "data": {
+            "details": "مبيت في العراء، منازل مهددة بالسقوط ",
+            "location": "دوار امزاورو جماعة تويالت قيادة اسكاون عمالة ترودانت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "616360764"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 11:51:07",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "lHRLYGjkpsNUwzFRS0Q2",
+        "data": {
+            "details": "نعم",
+            "location": "جماعة امولاس قيادة تارودانت دوار أسكا دار إسكران ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0658310769"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 11:40:54",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "tB3OMkD9tthL1RSQp8pL",
+        "data": {
+            "details": "نحن نحتاج الى خيم او مكان نأتوي فيه لأن منزلنا فيه شقوق ومعرض للانهيار في أي لحضة",
+            "location": "Oukaimden",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": "دوار ايت اقجون جماعة اوكايمدن",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 11:33:19",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "7yAIVhPBW18jtmdRH9Qs",
+        "data": {
+            "details": "أدى الزلزال الماضي الى خسائر مادية (تشقق البيوت القديمة  (المبنية بالتراب) )،أصبحت آيلة للسقوط مما جعل الناس ينامون في الخارج خوفا من ان تهدم البيوت على رؤوسهم ",
+            "location": "دوار عين اوكايدة جماعة تنزرت قيادة ولاد برحيل  تارودانت ",
+            "city": "ولاد برحيل",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212 644-796024"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 11:25:44",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "VqVUIYJRofsirAZEbtpO",
+        "data": {
+            "details": "أنا من دوار أگرضى جماعة إجوكاك إقليم الحوز\r\nالمنازل تشققت وهي مهددة بالسقوط في أية لحظة ونقطن الآن في الخيام رغم قلتها والطريق لازالت مقطوعة والكهرباء كذالك انقطع.",
+            "location": "جماعة إجوكاك قيادة تلات نيغقوب ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0720931180"
+            },
+            "position_static": null,
+            "source": "أنا من سكان المنطقة",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 11:24:04",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "y3VA4XVjdscQ14OsStui",
+        "data": {
+            "details": "الناس تبيث خارج البيوت ",
+            "location": "تالوين",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0664467079"
+            },
+            "position_static": null,
+            "source": "الخسن زعمي، سيدي حساين، تالوين، تارودانت",
+            "needs": [
+                "إغاثة",
+                "مأوى"
+            ],
+            "date": "14/09/2023 10:57:58",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "CA7epvfcn3dVgFgnqVCT",
+        "data": {
+            "details": "25اسرة عدد الافراد 140",
+            "location": "دوار ايت حميد جماعة اداوكيلال إقليم تارودانت ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 10:44:24",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "EYPrSEpHwSolVDwigCjl",
+        "data": {
+            "details": null,
+            "location": "جماعة تافنكولت دوار تامومانت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0601702793"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 10:26:07",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "FObjkvYDykhONn7dbuOV",
+        "data": {
+            "details": null,
+            "location": "دوار ايت حميد جماعة اداوكيلال إقليم تارودانت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0652573987"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 10:09:19",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "X4JaArt0rteNG1vF4Za7",
+        "data": {
+            "details": "ناس تم خاصهم الخيام حيت اش ديورهم تشوقو ",
+            "location": "جماعة توغمرت عمالة تارودانت ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0610259887"
+            },
+            "position_static": null,
+            "source": "اعرف الناس من هنااك",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 10:02:33",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "0qZizhPsVi1t5K2SYLZx",
+        "data": {
+            "details": "سكان الدوار فقدوا جميع منازلهم يبيتون في العراء و يعانون من البرد القارس نظرا لعلو المنطقة كما انهم لديهم اصابات و اطفال صغار و نساء كببرات في السن و لم يتوصلوا بأي دعم . الطريق للدوار صعبة بعد الاقتراب من الدوار ب 5km لكن تم تسليكها . اما باقي الطريق فهي معبدة من تارودانت لمركز الجماعة او اكثر .",
+            "location": "دوار انروي . جماعة ايكيدي . قيادة اوزيوة . اقليم تارودانت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0658960095 / 0653567359"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مساعدة طبية",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 09:36:23",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "WisWyliSWhRjyOULKKwg",
+        "data": {
+            "details": null,
+            "location": "كماسة",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0661053975"
+            },
+            "position_static": null,
+            "source": "فاعل جمعوي",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 09:10:32",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "5zgn8I4n2uepKGIZUXbW",
+        "data": {
+            "details": "تتواجد المنطقة على الطريق الرابطة بين اكادير ومراكش، الدوار يبعد عن هذه الطريق حوالي 2 كلمتر غير معبدة، حوالي 75 كلمتر من مدينة اكادير و 66 كلمتر من مدينة امنتانوت. \r\nش\r\nلقد أحدث الزلزال تشققات في المنازل المبنية بالطين، لذى اضطرت الساكنة المبيت خارج المنازل لان المنازل مهددة بالسقوط. الساكنة تحتاج الى مأوى حتى تقوم بترميم المنازل",
+            "location": "دوار تمشيرت جماعة بيكودين قيادة اركانة",
+            "city": "أكادير",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0678775517"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 08:23:39",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "NwHtTf8RjTowKg43jzGm",
+        "data": {
+            "details": "الهدم وتشقق الديور ",
+            "location": "جماعة سيدي غانم دوار ترست/ترغونت",
+            "city": "الصويرة",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212 663-462919"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 08:01:37",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "WTupCuAk111oQWlbmZ3k",
+        "data": {
+            "details": "0699731373",
+            "location": "تلات نيعقوب",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 07:37:36",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "g7tdGiRMveaoFXZ49yHN",
+        "data": {
+            "details": null,
+            "location": "Imlil Asni",
+            "city": "Imlil",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 06:51:45",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "UewXhlU37W2qxhR4U3AA",
+        "data": {
+            "details": null,
+            "location": "Chichaoua Assif lmal Azrou mellelne ",
+            "city": "أكادير",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212 6 43 14 97 50"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة"
+            ],
+            "date": "14/09/2023 06:33:53",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "2lBmkBFpkbrthSqyLPGw",
+        "data": {
+            "details": "هناك منازل منهارة للأسف الشديد الناس دون مأوي فراشهم الارض وعطائهم السماء قائد القيادة يقوم بمنع المساعادات بدخول دوار تكنزة والدواوير المجاورة له بدعائه انهم في أحسن الأحوال وهوا بنفسه قام بزيارة رفقة رئيس الجماعة ووعدوهم( بالملابس والطعام وخزاين)ولم نري شيئا لحد سوي ابناء القبيلة يرسلون مساعادات حسب استطاعتهم المادية بكونهم في ديار المهجر وأخرون خارج البلدة في المناطق الجنوبية",
+            "location": "جماعة مزوضة قيادة الزاوية النحلية ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 06:00:06",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "YO9zQA5oM5cd2XUsZ1O9",
+        "data": {
+            "details": null,
+            "location": "أݣفاي وأيت إيمور",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0660029662"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 04:30:09",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "YaKtjBRhbJeJxFMm2Fpv",
+        "data": {
+            "details": "جميع منازل الدوار دمرت",
+            "location": "ثلاث نيعقوب ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "+212 695-308403"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 03:26:41",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "zeWHohb0X5GqVKx92EiJ",
+        "data": {
+            "details": "بالنسبة بدواوير وجبال سيدي واعزيز المواد الغدائية متوفرة بكثرة، البطانيات كذلك، الناس هنا بحاجة إلى أفرشة نظرا لموجات البرد القارس التي ستعرفها المنطقة في الأيام القادمة بحول الله، بالإضافة إلى خيم، فرن وقنينات غاز للطهي، وبعض من القطاني والأواني المنزلية",
+            "location": "دواوير جماعة سيدي واعزيز قيادة تافنگولت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0688818087"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "14/09/2023 03:11:43",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "71O4TsHz9pOQKwXes3ru",
+        "data": {
+            "details": "الوضع،هو،فقدنا،السكنة،المرجو،المساعدة،ولو،بلقليل",
+            "location": "جماعة،اهل،تفنوت،،قيادة،ازيوا،دوار،دوار،انمتر",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة"
+            ],
+            "date": "14/09/2023 03:10:11",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "UKaqxxts4rKY7rdB6jHX",
+        "data": {
+            "details": "خروج العائلات والمبيت في العراء خوفا على ارواحهم نحتاج الى المساعدة الخيام والافرشة والاغطية والطعام ومواد التنظيف ",
+            "location": "دوار توريرت جماعة وقيادة زرقطن",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0673404194"
+            },
+            "position_static": null,
+            "source": "من عين المكان انا من الساكنة المنكوبة ",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 03:04:24",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "IxRdDW2gDAN8pOF34IEd",
+        "data": {
+            "details": "الوضع مؤسف للغاية",
+            "location": "جماعة سروا انزال ورزازات",
+            "city": "ورزازات",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0673523965"
+            },
+            "position_static": null,
+            "source": "من عين المكان",
+            "needs": [
+                "مساعدة طبية",
+                "مأوى"
+            ],
+            "date": "14/09/2023 02:52:39",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "hHZQBPtv7IkjSOxWsrE0",
+        "data": {
+            "details": null,
+            "location": "AGHOUATIM ELHAOUE.Z",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0659694584"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 02:41:15",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "nDsQBgERjZZ3OBfETuj3",
+        "data": {
+            "details": "خروج العائلات والمبيت في العراء خوفا على ارواحهم ولم نلقى المساعدة نحتاج الى الخيام والافرشة والاغطية والطعام ومواد التنظيف ",
+            "location": "دوار توريرت جماعة وقيادة زرقطن",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0673404194"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 02:40:51",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "Qhpc2dRHphbwjWOj76E3",
+        "data": {
+            "details": "الوضع  ضعيف ",
+            "location": "دوار  تونغاست جماعة امين الدونيت قيادة سيدي بوعثمان  إقليم شيشاوة",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0691946174"
+            },
+            "position_static": null,
+            "source": "السكن",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 02:11:49",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "ZbVFa9K5SqX262lmAonP",
+        "data": {
+            "details": "تشقاقات منازلهم حالة رعب ينامون خارج منازلهم خوفا من انهيار منازل هزازات خفيفة كل ساعتين \r\nليس لدهم مونة يعشون برد القارسوالموسم شتاء قادم وتلوج\r\n",
+            "location": "دوار ايت ولالامسونت\r\nجماعة اكدي لكن عناك دواير ليست مستفيدة اممنسونت ايت ايت احدين ازكنان",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0623490729 brahim nidnaser"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 02:05:41",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "wfbXagNZck7S8KO6YUHk",
+        "data": {
+            "details": "منذ يوم الجمعة و الناس نساء و اطفال و رجال تنام في العراء و يعانون من شدة البرد، و هم لا يحتاجون اكلا و لا شربا فقط أغطية و خيم للمبيت و شكرا",
+            "location": "توغمرت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0611488103"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 02:04:49",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "t41aUUjo7tVfKRKlYePq",
+        "data": {
+            "details": null,
+            "location": "إيكودار لمنابهة",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0673672510"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 01:56:52",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "EwfB1XAyBrOiZbglYZsr",
+        "data": {
+            "details": null,
+            "location": "سدي واعزيز  . تافنكولت . تانتمازر",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0606829413"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 01:56:01",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "b40kg80UOgmxQ8WMNQ1v",
+        "data": {
+            "details": null,
+            "location": "دوار توريرت جماعة وقيادة زرقطن",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 01:55:12",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "SEO1AC3pit5wNCKykdam",
+        "data": {
+            "details": null,
+            "location": "إقليم أزيلال جماعة أيت تمليل",
+            "city": "دمنات",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 01:22:13",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "XyGU5cleksyqph1soKGt",
+        "data": {
+            "details": "الناس يبيتون في العراء   ",
+            "location": "آيت حدو يوسف امنتنوت دوار إكيس",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 01:19:22",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "ni7rsn9YubjqvZjNuvY6",
+        "data": {
+            "details": "هناك أناس دون منازل وينامون في العراء وايضا أناس تشققت منازلهم ",
+            "location": "جماعة تبقال قيادة اوزيوة عمالة تارودانت ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0673550663"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 01:06:05",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "jlYPCYqfN5Qcjrv9FvdM",
+        "data": {
+            "details": "نحن نسكن في جبل و جل البيوت مشققة مع تخريب 6 بيوت لأصحابها ونصف الدوار يبيت في الخارج، وهنا منطقة جبلية يغلبها طابع البرودة في الليل ونرجو من المحسنين ان امكن بعض الأفرشة و الأغدية ونحن مقبلون على فصل الشتاء والمنطقة تشهد تساقطات ثلجية كثيفة .",
+            "location": "دوار ابراغن جماعة أوكيمدن ",
+            "city": "جماعة اوكيمدن الحوز",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0681185621"
+            },
+            "position_static": null,
+            "source": "على أبراغ أستاذ بالمنطقة",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 01:02:07",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "gs0NPX9p5MwqFgtEu1Fp",
+        "data": {
+            "details": "الناس بحاجة إلى أغطية وخيام ( گياطن) les tentes",
+            "location": "أولوز",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 01:01:05",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "4Dj3mrQNi5T9Tu0yN2Ot",
+        "data": {
+            "details": "تضرر المنزل جراء الزلزال ",
+            "location": "جماعة سيدي بورجا",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0766105215"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 00:58:57",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "aDnUY3YDlC7vT1iOCHsd",
+        "data": {
+            "details": null,
+            "location": "تاولوكلت",
+            "city": "امنتانوت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0672577796"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 00:56:48",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "kQFzIHjEmscKj5agflX5",
+        "data": {
+            "details": "مأوى مضرر بسبب الزلزال ",
+            "location": "دوار تيزي نوبادو ايت بلال ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0602171681"
+            },
+            "position_static": null,
+            "source": "تيزي نوبادو",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 00:49:46",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "Hr3zoQKFRukUuSJyvbtI",
+        "data": {
+            "details": null,
+            "location": "دوار مݣونت جماعة تلمكانت قيادية أرݣانة إقليم تارودانت ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0615691077"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 00:45:07",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "jOzqmuK4RIuJ0cuF2Ao1",
+        "data": {
+            "details": "نقص في اماكن المبيت والغطاء ضد الامطار والبرد في حالة تقلب الأجواء ",
+            "location": "دوار زاوية بوحوثة جماعة أغواطيم إقليم الحوز",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0684218755"
+            },
+            "position_static": null,
+            "source": "شاهد عيان",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 00:40:51",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "VPX5KxqYNzi1DcyHF76Z",
+        "data": {
+            "details": "انهيار 27 منزل و5 دواوير  جميع منازلهم مشقوقة",
+            "location": "دوار اسغمو قيادة توندوت جماعة امينولاون",
+            "city": "ورزازات",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "14/09/2023 00:27:30",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "vny0eKKCKEg8iIL8ZjYw",
+        "data": {
+            "details": null,
+            "location": "جماعة الفيض ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0760447023"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مساعدة طبية",
+                "مأوى"
+            ],
+            "date": "14/09/2023 00:25:30",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "4x8p7Zu1IfMgKk8ZQqgw",
+        "data": {
+            "details": "انهيار المنازل ",
+            "location": "الله يرحم بها الوالدين لما وصلو هاد المبادرة للناس لي محتاجينها ! لي عندو شي گروب ف واتساب يحاول يبارطاجي فيه لينك ديال الإستمارة و رقم الواتساب! يكفي غير شخص واحد فدوار يوصلو هادشي و يعمر الإستمارة بإسم الدوار كامل، تقدر تكون نتا ولا نتي السبب ف أن المساعدة توصل بكري لهاداك الدوار و تقدر تكون ولا نتي السبب في بقاء حياة أو أكثر 🙏🏻\r\n\r\nالإستمارة :\r\nhttps://docs.google.com/forms/d/e/1FAIpQLSfNrFHUScot5jQyRUJmor7kWYgwkkME6WqRgQG_L4Eze4RdHA/viewform\r\n\r\nللتواصل في الواتساب :\r\n+212 652-573987\r\n\r\nمشاهدة النتائج على الموقع : https://huggingface.co/spaces/nt3awnou/Nt3awnou-rescue-map\r\n\r\nفيديو توضيحي:\r\nhttps://www.instagram.com/reel/CxB4xtQtpMX/?igshid=NjFhOGMzYTE3ZQ==",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0653500934"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 00:19:36",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "BUYvEntxX6I1Smtv36oc",
+        "data": {
+            "details": null,
+            "location": "دوار اوزليضا جماعة تافراوتن قيادة تمالوكت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0670107902"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 00:13:56",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "AZ2n9qZHX0Gm1OZEXE5L",
+        "data": {
+            "details": "الحمد لله ليس هناك موتى ولكن بعض المنازل بها شقوق لذلك الساكنة تنام في خارج المنزل خوفا من سقوط المنازل بسبب الهزات الارتدادية.",
+            "location": "جماعة أسكاون قيادة اسكاون دائرة تالوين اقليم تارودانت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0697428361"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 00:12:43",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "GmAGQSwIWIsluCShj5yT",
+        "data": {
+            "details": null,
+            "location": " دوار امزاورو جماعة تويالت قيادة اسكاون عمالة ترودانت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212 616-360764"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 00:09:41",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "rXgR1Rc5GRsuMAf95bQb",
+        "data": {
+            "details": null,
+            "location": " دوار امزاورو جماعة تويالت قيادة اسكاون عمالة ترودانت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212 616-360764"
+            },
+            "position_static": null,
+            "source": "عائلة امي جدي و خالي",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "14/09/2023 00:05:30",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "gEBcKx54O22l68TjkqDx",
+        "data": {
+            "details": null,
+            "location": "دوار تابية قيادة تنانت",
+            "city": "ازيلال",
+            "id": null,
+            "exact_position": {
+                "latitude": 31.975316,
+                "longitude": -6.850482
+            },
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212 616-733546"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 00:03:58",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "qI1n30WLj0CQD9fslIJA",
+        "data": {
+            "details": "منازل مهدمة و منازل اهلة للسقوط في حاجة للمساعدة , ليس هناك خسائر بشرية ",
+            "location": "جماعة ايت زينب/ قيادة امرزكان/ دوار تادولة ايتواية",
+            "city": "ورزازات",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0650104932/ 0670187852"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "14/09/2023 00:02:39",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "Q69oDfgSBvCDRdlxadeg",
+        "data": {
+            "details": "منازل مهددة بالهدم",
+            "location": "دوار تمضغوست جماعة تافراوتن قيادة تملوكت ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0661631169"
+            },
+            "position_static": null,
+            "source": "شخصي",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 23:55:03",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "b3G1ahtOq6HBpRgYlUEj",
+        "data": {
+            "details": "في حالة يرثى لها",
+            "location": "دوار أيت يونس جماعة تيديلي قيادةإغرم نوݣدال\r\n",
+            "city": "ورزازات",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0721094773"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 23:50:26",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "XkLDpGqU4ixyAIHZVWM0",
+        "data": {
+            "details": "نعم",
+            "location": "دوار ادغاغ جماعة سيروا اقليم ورزازات",
+            "city": "ورزازات",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0648507221"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 23:48:33",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "AkjInhvbs5a747N7FHFQ",
+        "data": {
+            "details": null,
+            "location": "جماعة مزوضة اقليم شيشاوة ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0700215196"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 23:47:58",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "f00Y5mAwa76NotnY7UP6",
+        "data": {
+            "details": "نحن في حالة يورت لها",
+            "location": "ايت يونس جماعة تيديلي اغرم نوگدال",
+            "city": "ورزازات ",
+            "id": null,
+            "exact_position": {
+                "latitude": 31.095974,
+                "longitude": -7.613158
+            },
+            "in_place": true,
+            "contact": {
+                "phone_number": "0680645218/0721094773"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 23:41:50",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "wMXgT6hJVLvjRr8IHasu",
+        "data": {
+            "details": "منازل مهتمة منازل ايلة للسقوط لا تصلح للسكن الدوار يبيت خارجا ",
+            "location": "جماعة مزوضة دوار تلاكنس",
+            "city": "شيشاوة",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0700215196"
+            },
+            "position_static": null,
+            "source": "معاينة المكان شخضيا",
+            "needs": [
+                "مساعدة طبية",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 23:34:32",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "gcERdRfYIk6hV0w5VFaB",
+        "data": {
+            "details": null,
+            "location": "جماعة واد البور دوار إميزن قيادة نفيفة",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0648027850"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 23:26:31",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "ivoTWAP0dVt6CKLOSmmR",
+        "data": {
+            "details": null,
+            "location": "دوار تمربوحت جماعة مزودة إقليم شيشاوة",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 23:23:12",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "KEbxTuNWjLgvoQUan3VZ",
+        "data": {
+            "details": null,
+            "location": ",  جماعة  توغمرت إقليم تارودانت قيادة الفيض دوار تركي أرغن",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0652291069"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مساعدة طبية",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 23:20:09",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "DM90opdAdD6SodaUVT39",
+        "data": {
+            "details": "أكدوا لي انهم لم يتوصلوا بأي اعانة و قد هدمت بيوت الكثيرين. ",
+            "location": "دوار تݣيانت- جماعة اسايس- قيادة سكتانة-دائرة تالوين- عمالة تارودانت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0667113918 عبد الله امحيل"
+            },
+            "position_static": null,
+            "source": "احد المنتمين إلى المنطقة ",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 23:13:57",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "EKnhxtdhTj3FDfj0y6ZA",
+        "data": {
+            "details": "منازل مهدمة وشبه مهدمة، ضحايا بشرية و خسائر مادية جد مهمة",
+            "location": "Douar taddart, douar ajmanni, et douar Addar et tamaqra zone imiki à proximité de Amzmiz ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0673812405"
+            },
+            "position_static": null,
+            "source": "انا من فرد  من أفراد هذه الأسر المتضررة بهذا الزلزال نسأل الله السلامة والعافية ",
+            "needs": [
+                "إغاثة",
+                "مساعدة طبية",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 23:08:43",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "fRH7T8LnA8ZiEVKeOOZN",
+        "data": {
+            "details": null,
+            "location": "جماعة الزاويت إقليم الصويرة دوار أكمكدار ",
+            "city": "الصويرة",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 23:05:20",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "HSB2HC45xArUDIjCuofg",
+        "data": {
+            "details": null,
+            "location": "دوار تكواوت جماعة الزاويت ",
+            "city": "الصويرة",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0653804371"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 23:02:44",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "2jwfXGXQNP7nyOfBMNyr",
+        "data": {
+            "details": "جميع الأشخاص القاطنين في الدوار يبيتون خارج منازلهم بسبب تضررها الكبير بالزلزال",
+            "location": "جماعة أسكاون",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212 682-421461"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 23:00:08",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "gjbWfWde6oi7Z3IDLjXK",
+        "data": {
+            "details": null,
+            "location": "قيادةانزال جماعةسيروا قبيلةايت سمگان دوارايت تگة",
+            "city": "ورزازات",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة",
+                "مساعدة طبية",
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 22:49:20",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "zNLRgwrXhLLesmJnlnxE",
+        "data": {
+            "details": null,
+            "location": "جماعة أيت حديوسف ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 22:30:15",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "knqfVwr6E2rNEiIA2sMY",
+        "data": {
+            "details": null,
+            "location": "جماعة اوناين دوار تگيدشت",
+            "city": "الدار البيضاء",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0648968137"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 22:25:24",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "OMYoNJ0Qd3lsKr28A5ln",
+        "data": {
+            "details": "منزلي انهار و  تحطم كليا لم يبقى لي شيء البيت في العراء مع زوجتي و ابناءي الاربعة",
+            "location": "جماعة اسيف المال داءرة مجاط",
+            "city": "شيشاوة",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0673273708"
+            },
+            "position_static": null,
+            "source": "شخصيا",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 22:15:46",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "OeaNbaYyFLUGrG5Ufv5p",
+        "data": {
+            "details": null,
+            "location": "إبركناتن أولوز تابيا تارودانت ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0652243830"
+            },
+            "position_static": null,
+            "source": "سيدة تعمل في التنظيف في شركة أصلها من نفس القرية و هي على تواصل مع الساكنة و العائلة هناك",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 22:15:11",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "JdWHlXn5YMTMUhivyyMH",
+        "data": {
+            "details": "في حاجة ماسة لإعادة تأهيل البنايات",
+            "location": "جماعة سكورة قيادة سكورة ",
+            "city": "ورزازات ",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 22:15:06",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "OLCJvrosSfNUj2MfcamK",
+        "data": {
+            "details": "السكن  و الطعام",
+            "location": "جماعة سكورة قيادة سكورة",
+            "city": "Ouarzazat ",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0661929215"
+            },
+            "position_static": null,
+            "source": "من عين المكان",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 22:10:42",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "vtdDDMsMPA2oss4IXKys",
+        "data": {
+            "details": "مخيم للمنكوبين يحتاج للخيم قرب دار الصناعة",
+            "location": "مركز اولوز قرب دار الصناعة",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 21:54:16",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "iOd63dttqzsWwpyAtpyc",
+        "data": {
+            "details": null,
+            "location": "جماعة أيت ايمور",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة",
+                "مأوى"
+            ],
+            "date": "13/09/2023 21:53:40",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "ENVYk7bdWRIPPW1lYM5o",
+        "data": {
+            "details": "تعتبر ضمن المناطق المنكوبة أي هناك أشخاص لا يتوفرون على مناطق السكن \r\nيقطنون في خيام ",
+            "location": "جماعة طاطا /قيادة طاطا/قصبة زوليط طاطا ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0611742561"
+            },
+            "position_static": null,
+            "source": "الفايسبوك",
+            "needs": [
+                "إغاثة",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 21:47:02",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "f3Kxurbvnr64k9KlKNMq",
+        "data": {
+            "details": null,
+            "location": "جماعة مولاي ابراهيم",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0677025150"
+            },
+            "position_static": null,
+            "source": "شخصي كريمة طائع",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 21:45:45",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "2hlO8VHLXBTzyq2Xs9zx",
+        "data": {
+            "details": "السكان ينامون في العراء ",
+            "location": "قيادة أولاد برحيل جماعة توغمرت أرغن",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0673807590"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مساعدة طبية",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 21:45:42",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "8Ww1k6UlyZuvEmdbKvm2",
+        "data": {
+            "details": "بالنسبة للدوار عندنا غير متضرر بزاف ولكن كاينين ديور مهددة الناس كاتبات برا إلا كانت ش مساعدة حبدا تكون مادية لدوك الناس يبنيو الديور بالنسبة للمواد الغذائيه راه كاين ش حاجة ",
+            "location": " جماعة امي نولاون قيادة امغران",
+            "city": "Ouarzazate ",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0643177551"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 21:34:14",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "sVziaDW0okgM9Nitofzp",
+        "data": {
+            "details": null,
+            "location": "جماعة اوزيوة دائرة تالوين عمالة تارودانت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212615751631"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 21:30:29",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "DK1D3OYSp07k4N6dBvnr",
+        "data": {
+            "details": "السكان بدون ماوى يبيتون بالاراضي الزراعية يعانون من البرد وقلة المواد الغداءية والملبس",
+            "location": "تالكجونت جماعة تافنكولت عمالة تارودانت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مساعدة طبية",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 21:30:18",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "fACGmHegjLaniE6fIGo7",
+        "data": {
+            "details": "بالنسبة أدوار أنميتر\r\nاكتر من 20 منزل هدم\r\nاكتر من 30 بشقوق بليغة ",
+            "location": "تلوات ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0644363339"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 21:08:03",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "wfMS0fS2rixTWuaLnYmZ",
+        "data": {
+            "details": null,
+            "location": "جماعة تافروتن قيادة تمالوكت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0666401009"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 21:07:56",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "xlA5vK4Ysnn95jKaypk7",
+        "data": {
+            "details": "اكثر من 60 شخص توصلو فقط ب 3 خيم يبتون في الخلاء اوضاع جد صعبة",
+            "location": "دوار تاركوت وتجكجي جماعة تيگوگة",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212 602-992515"
+            },
+            "position_static": null,
+            "source": "تواصلت مع سيدة تقطن في المتطقة هاتفها فوق ممكن ان يكون خارج التغطية لنقص شبكة الريزو",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 21:04:49",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "xmyXfOSjA6GXBcblar9Q",
+        "data": {
+            "details": "عدد السكان المحتاجين للمأوى فوق 60 شخص يبتون في الخلاء",
+            "location": "جماعة تيگوگة",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212 602-992515"
+            },
+            "position_static": null,
+            "source": "تواصلت مع واحدة من ساكنة المنطقة",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 20:56:34",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "pcH6y90VXwRp2Jw1zRVC",
+        "data": {
+            "details": null,
+            "location": "ثلاث نيعقوب ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0675465936"
+            },
+            "position_static": null,
+            "source": "ثلاث نيعقوب",
+            "needs": [
+                "مساعدة طبية",
+                "مأوى"
+            ],
+            "date": "13/09/2023 20:38:34",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "e7Xy5k0Ph2iV2sRIP6ug",
+        "data": {
+            "details": "دوار اگرنسوق امنتانوت لم يتوصل بأي مساعدة",
+            "location": "امنتانوت",
+            "city": "أكادير",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0635116816 naima "
+            },
+            "position_static": null,
+            "source": "عائلة السيدة نعيمة ",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 20:31:13",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "a5kEMiJQqzFzEXQ6YGTg",
+        "data": {
+            "details": "لدينا الخسائر البشرية والخسائر المادية",
+            "location": "جماعة  تلوات تمجوجت",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0709793368"
+            },
+            "position_static": null,
+            "source": "نعم",
+            "needs": [
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 20:18:26",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "0oGi1e9UD4qG7p3ofgO3",
+        "data": {
+            "details": "حالة بورت لها",
+            "location": "ايت يونس تيديلي ",
+            "city": "ورزازات ",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0680645218"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة",
+                "مساعدة طبية",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 20:17:56",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "l2QXIIvr2wz0YxCAUv1D",
+        "data": {
+            "details": null,
+            "location": "جماعة تسراس قيادة اوزيوة دوار اضار",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": {
+                "latitude": 30.679744,
+                "longitude": -8.022565
+            },
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 20:05:18",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "y6Cdvz35jLVdex7SseWt",
+        "data": {
+            "details": null,
+            "location": "مراكش ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 20:00:12",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "0ZMHNy4UMQZgwEFWVeRR",
+        "data": {
+            "details": null,
+            "location": "جماعة سيدي حساين دوار امغيض ",
+            "city": "تالوين ",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212 659-771549"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 19:57:45",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "6DtrJxhmpRd6TUBN60H2",
+        "data": {
+            "details": null,
+            "location": "تكاديرت نبوزين",
+            "city": "وارزازات",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0659566198"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مساعدة طبية",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 19:50:59",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "wvLoQWOEaa6rLgDyDPWc",
+        "data": {
+            "details": "اصبح مكان سكني ايلا لسقوط ",
+            "location": "جماعة تالكجونت قيادة اولاد برحيل اقليم تارودانت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0648657580"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 19:44:29",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "xVJPCJJckDlYErCP8fJS",
+        "data": {
+            "details": "تقطن بدوار افسفاس بحيث انا اشتغل هناك كاستاذة التعليم الابتدائي فالمكان الذي اسكن فيه اصبح غير صالح بحيث الان اعيش في الشارع ليل نهار ",
+            "location": "جماعة تالكجونت قيادة اولاد برحيل اقليم تارودانت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0636525661"
+            },
+            "position_static": null,
+            "source": "انا ",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 19:41:23",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "smrfcLXgXZx6Hx8dDOlY",
+        "data": {
+            "details": "فقدات المأوى ",
+            "location": "سكورة",
+            "city": "ورزازات",
+            "id": null,
+            "exact_position": {
+                "latitude": 31.0841071,
+                "longitude": -6.6157368
+            },
+            "in_place": true,
+            "contact": {
+                "phone_number": "0669135475"
+            },
+            "position_static": null,
+            "source": "أفراد العائلة وبعض السكان الجاورين",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 19:36:42",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "JtI002VCbAxBcnsBH5MU",
+        "data": {
+            "details": "Nass tma ta whd mamcha endhom mn nhar zelzal chi dyor rabo oli bqaw mchaqin risque anahom isknu fihom nass khayfa katbat ghir 3la berra ",
+            "location": "إقليم شيشاوة جماعة تمزكدوين فرقة ايت شعيب دمسيرة دوار إملالن",
+            "city": "Imintanoute ",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212 682-053209"
+            },
+            "position_static": null,
+            "source": "Whd mn la famille dyali kaytwajed tahowa f 3in lmakan",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 19:35:22",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "Dw3Wd149LeiHxiWfzLHG",
+        "data": {
+            "details": "الداور يعتبر ابعد نقطة عن مدينة ارلوز اسفل بحيرة إفني، وجميع السكان يبيتون في الخلاء في ظل قرب تهاطل الأمطار. ",
+            "location": "جماعة اهل تفنوت دوار انميتر",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 19:34:46",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "XWShjI5hPXZB1f8iSkO5",
+        "data": {
+            "details": null,
+            "location": "جماعة افلايسن قيادة تيمزكدوين دوار تفريت",
+            "city": "ايمنتانوت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0699185946"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 19:34:12",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "Ew6dEvxqva1PuTRfhZqF",
+        "data": {
+            "details": "Had nass tawahd mamcha 3ndhom mn nhar zelzall dyor kaynin li rabo ga3 olibqaw kolchi mcheqeq risque bash isknu fihom kolhom kaybatu 3laa bra",
+            "location": "إقليم شيشاوة جماعة تمزكدوين فرقة ايت شعيب دمسيرة دوار إملالن",
+            "city": "Imintanoute ",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212 682-053209"
+            },
+            "position_static": null,
+            "source": "Whd mn la famille dyali tahowa tma ",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 19:32:39",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "z5gx3KJGqjslBatrdMcZ",
+        "data": {
+            "details": "دمار المنازل أشخاص دون مأوى",
+            "location": "دوار تسكونت جماعة تسراس ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0658469421"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 19:32:14",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "8uzWHctp82EMXbLup1F6",
+        "data": {
+            "details": null,
+            "location": "دوار تنفيط جماعة تسراس قيادة اوزيوة إقليم تارودانت ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0653539052"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 19:31:44",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "aVCi1JnLp5WocaRMypiF",
+        "data": {
+            "details": null,
+            "location": "جماعة اهل تفنوت قيادة اوزيوا",
+            "city": "ورززات",
+            "id": null,
+            "exact_position": {
+                "latitude": 30.98335142098669,
+                "longitude": -7.873303259038698
+            },
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": {
+                "latitude": 30.98335142098669,
+                "longitude": -7.873303259038698
+            },
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 19:28:14",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "PQCIpDfR9XxroSeOjnN1",
+        "data": {
+            "details": null,
+            "location": "ايت تيمور السبت الجديد",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 19:27:40",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "mWx9hF5oFe56NjOhCfyU",
+        "data": {
+            "details": "جل المنازل خطرة، وهناك ثلاثة منازل اصبحت ركام",
+            "location": "جماعة اشمرارن، دوار بوودي",
+            "city": "شيشاوة",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0666687214"
+            },
+            "position_static": null,
+            "source": "صاحب الرقم أعلاه، فاعل جمعوي اسمه محمد زليم ",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 19:23:04",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "2LK0xM3ZxLHQAFUeSkSJ",
+        "data": {
+            "details": null,
+            "location": "جماعة إيغيل قيادة ثلات نيعقوب دوار ارك ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0649205953"
+            },
+            "position_static": null,
+            "source": "عين المكان مصدر عائلي ",
+            "needs": [
+                "إغاثة",
+                "مساعدة طبية",
+                "مأوى"
+            ],
+            "date": "13/09/2023 19:21:35",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "bpcVXbIJYshnbIkFBXoS",
+        "data": {
+            "details": null,
+            "location": "جماعة امندونيت دوار اكلوان و دوار تاونغاست",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": "سيدة بعين المكان",
+            "needs": [
+                "إغاثة",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 19:20:59",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "TBjHbsCKXbyIuBIKp6Do",
+        "data": {
+            "details": null,
+            "location": "دوار زاوية ايرس جماعة الفيض اقليم تارودانت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0650498724"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 19:20:48",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "Biar4PnnLBmrV3rMwKcG",
+        "data": {
+            "details": "الناس تنام قرب الواد جميع المنازل تخربت \r\nدون مأوى دون أكل لم تصل أي مساعدة بسبب بعد المسافة ",
+            "location": "إقليم الحوز جماعة ايغيل دوار أوضيض ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "715387032"
+            },
+            "position_static": null,
+            "source": "أنا أستاذة كنت هناك أثناء الفاجعة وجلست معهم لمدة ٣ أيام ",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 19:17:16",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "2m7HC4LrKedjvGHzMkxN",
+        "data": {
+            "details": "ناس راه مكرفصين هنا را كايباتو غي على برا كلشي تريب ديور مريبين  كاملين مكاينش لماء ولا الغطاء باش اتغطاو من البرد ",
+            "location": "دوار تيزي جماعة اسايس قيادة ادغاس ",
+            "city": "الصويرة",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 19:16:33",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "1SxdACM0BAbU79NF0h22",
+        "data": {
+            "details": null,
+            "location": "جماعة ايت بلال/ قيادة /إورضن",
+            "city": "دمنات",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [],
+            "date": "13/09/2023 19:06:27",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "rqwBKnKeiTfZYgHEcUWk",
+        "data": {
+            "details": "ننام بالشارع",
+            "location": "Marrakech ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0676572118"
+            },
+            "position_static": null,
+            "source": "أنا ",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 19:01:27",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "KPRsCFQU18maNPWZnSYP",
+        "data": {
+            "details": ".كارتي",
+            "location": "  جماعة وقيادة تلات نيعقوب",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0662094950"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 18:54:22",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "Nts6yLqAmXUVVonmmIdX",
+        "data": {
+            "details": "ينامون في شارع والمنزل كله تهدم",
+            "location": "جماعة سدي بورجة دوار ولاد عبو",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0766105215"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 18:38:40",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "lLpF2h1vjPyoTKefBY1M",
+        "data": {
+            "details": "المنازل متضررة الناس في الشارع ",
+            "location": "سكورة دوار تجنات",
+            "city": "ورزازات",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 18:33:14",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "azFzv1X0q3H3QNX0ewXp",
+        "data": {
+            "details": null,
+            "location": "دوار أورتان إداومحمود جماعة تالماكانت إقليم تارودانت",
+            "city": "أكادير",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0662-355034"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 18:31:39",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "vJLudIeglIZEXuyvbkGO",
+        "data": {
+            "details": "دوار هدم ، وصل المواطنون المتطوعون بالمؤونة ولكن ما زلت الساكنة في الخلاء بدون مؤوى والليالي اصبحت باردة ",
+            "location": "جماعة سيدي عبد الله وسعيد بتارودانت ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "ام ربيعة 0658870718"
+            },
+            "position_static": null,
+            "source": "مواطنة توجد بالدوار صاحبة رقم الهاتف وابنتها ربيعة باديس ",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 18:30:41",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "mtS0ht7f9ADmwLGZ5oc6",
+        "data": {
+            "details": null,
+            "location": "جماعة اهل تفنوت قيادة اوزيوة",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0662206703"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 18:21:45",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "214yZVR3CeO0Q5C8uToL",
+        "data": {
+            "details": "عندنا ناس خاصهم الدواء ديال القلب والسكري ",
+            "location": "بلدية أمزميز دوار تݣنزوين ",
+            "city": "أمزميز دوار تݣنزوين",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "+212662130938"
+            },
+            "position_static": null,
+            "source": "تݣنزوين",
+            "needs": [
+                "مساعدة طبية"
+            ],
+            "date": "13/09/2023 18:15:56",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "zgzmBR6R5RDBcI2izjxT",
+        "data": {
+            "details": "يبيتون في العراء بأمر من السلطات لأن منازلهم سقطت بالكامل أو مهددة بالسقوط",
+            "location": "جماعة أغواطيم دوار توفسيرين",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0688942015"
+            },
+            "position_static": null,
+            "source": "شخص من عين المكان من العائلة",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 18:14:23",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "QZYYbmMqX7iQzz2VqGH1",
+        "data": {
+            "details": null,
+            "location": "دوار تفريت جماعة أفلايسن قيادة دمسيرة ",
+            "city": "امنتانوت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0698512308"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 18:13:43",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "qJ5CN4EeHcopbI6BXIom",
+        "data": {
+            "details": null,
+            "location": "جماعة غواطيم دوار توفسيرين",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0688942015"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 18:06:06",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "JyExNnASpMB4mRWnXWbo",
+        "data": {
+            "details": "المأوى ",
+            "location": "جماعة تيغدوين",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0615717526"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة",
+                "مأوى"
+            ],
+            "date": "13/09/2023 18:06:05",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "FXlhyIFFGECYlwkZWmE9",
+        "data": {
+            "details": "إفتقار الناس إلى الخيام من أجل المبيت والخضر من أجل الرضع والكبار",
+            "location": "جماعة إجوكاك",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": "لم أفهم",
+            "needs": [
+                "مساعدة طبية",
+                "مأوى"
+            ],
+            "date": "13/09/2023 18:05:30",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "LlboLXrVEj31Qj5FSWH4",
+        "data": {
+            "details": "وضع كارثي منطقة جبلية وعرة لم يتوصلوا باي مساعدة ",
+            "location": "جماعة امزوضة قيادة امزوضة دائرة مجاط عمالة شيشاوة ",
+            "city": "شيشاوة ",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0677473277"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 17:59:49",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "StEJiP77qthHJyfcde4Z",
+        "data": {
+            "details": "مرحبا .0691566501 ",
+            "location": "جماعة امين الدونيت اقليم شيشاوة دوار تنزمين و تزكي وتكسيت .",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "‏‪+212 772-296650‬‏"
+            },
+            "position_static": null,
+            "source": "من عين المكان ",
+            "needs": [
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 17:52:29",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "WFE9DOwQxQuCBh2twp1F",
+        "data": {
+            "details": null,
+            "location": "جماعة امين الدونيت اقليم شيشاوة دوار تنزمين و تزكي ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "‏‪+212 772-296650‬‏"
+            },
+            "position_static": null,
+            "source": "ابن المنطقة ",
+            "needs": [
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 17:50:43",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "iHYnNiVPM7nVWAddnkfj",
+        "data": {
+            "details": null,
+            "location": "دواوير جماعة تلوات",
+            "city": "ورزازات",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0666709045"
+            },
+            "position_static": {
+                "latitude": 31.2859503,
+                "longitude": -7.1428254
+            },
+            "source": null,
+            "needs": [
+                "مساعدة طبية",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 17:49:30",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "ma5sLA1dbrkWi4wSwRoR",
+        "data": {
+            "details": "أهل القرية سواء في دوار تازكارت او الدواوير المجاورة فقدو منازلهم جراء الزلزال ولم تصلهم أي مساعدات من ناحية المأوى كالخيم والأفرشة والأغطية والملابس",
+            "location": "جماعة إكيدي قيادة اوزيوة  دوار تازكارت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0650651961"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 17:42:57",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "2z2RkMSMrIGmVWQW0fYz",
+        "data": {
+            "details": null,
+            "location": "جماعة اغيل قيادة ثلاث نيعقوب ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0617083576"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 17:42:36",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "ru0xNOmTWTU1iboVoNUT",
+        "data": {
+            "details": "الوضع مزري الناس هدمت بيوتهم وبيتون في العرى والطقس بارد ولا حولا ولا وقوة الابالله",
+            "location": "تبقال",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0616910002"
+            },
+            "position_static": null,
+            "source": "انا ابن الدوار ",
+            "needs": [
+                "مساعدة طبية"
+            ],
+            "date": "13/09/2023 17:38:57",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "utIKgZy0sYukkIjyqDM6",
+        "data": {
+            "details": null,
+            "location": "جماعة اجوكاك قيادة ثلاث نيعقوب واد امازوغني دوار اكيدي ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "702680059"
+            },
+            "position_static": null,
+            "source": "انا شاب من القرية ",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 17:38:24",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "XylwxqHZNJMcwpGjtTeu",
+        "data": {
+            "details": null,
+            "location": "جماعة ايروهالن شيشاوة دوار الكتاجرت قيادة تازيتونت ",
+            "city": "امنتانوت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0709625263"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مساعدة طبية",
+                "مأوى"
+            ],
+            "date": "13/09/2023 17:37:16",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "rdq5905kcnzqfA0gc5tB",
+        "data": {
+            "details": "فقدانا بيتنا بسبب زلزال  ولم يأتي احد من السلطات   لمعاينة البيت   ",
+            "location": "دوار الحرارشة جماعة مجاط اقليم شيشاوة",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0618988908"
+            },
+            "position_static": null,
+            "source": "انا",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 17:36:02",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "86ygGoPIimHHD1NzcUG8",
+        "data": {
+            "details": null,
+            "location": "دوار عباد جماعة سيدي بوزيد ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0702246278"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 17:33:07",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "gThn5Qmgk4AgtH9W4P0w",
+        "data": {
+            "details": null,
+            "location": " قيادة أركانة جماعة تلمكانت دوار تافيلالت ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "+212 678-291460"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 17:32:46",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "Q4CVDZepFytBLzUPMcu9",
+        "data": {
+            "details": null,
+            "location": "ايت تمجوت جماعة تمالوكت عملات تارودانت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0636563722"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 17:31:51",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "HgZg8pgUWxiFMmxLpnw2",
+        "data": {
+            "details": null,
+            "location": "جماعة فاس الملحقة الإدارية واد فاس",
+            "city": "مكناس / تازة / صفرو",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [],
+            "date": "13/09/2023 17:25:21",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "HTbWGkpBVnh0nt9KHpa2",
+        "data": {
+            "details": null,
+            "location": "دوار تمنيت تمتركة جماعة اوناين تارودانت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0678974452"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 17:22:41",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "3mWQc1XXJaI6ADmfOk79",
+        "data": {
+            "details": null,
+            "location": "جماعة سيدي عبد الله اوسعيد ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مساعدة طبية",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 17:19:51",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "P5VGAZKUFU3d5SyRgR0K",
+        "data": {
+            "details": "لا ضحايا في الارواح 70 عائلة تحتاج أغطية و أفرشة و 8 خيام كباقي",
+            "location": "امزميز",
+            "city": "امزميز",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0666183943"
+            },
+            "position_static": null,
+            "source": "ن 70 عائلة تحتاج أغطية و أفرشة و 8 خيام كباقي",
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 17:19:03",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "vJplzj5vXk0186NPuUBs",
+        "data": {
+            "details": "فقدنا منزلنا جراء الزلزال المدمر الذي عرفه إقليم الحوز، والطريق أصبحت مقطوعه نحن في أمس الحاجة إلى المساعدة. ",
+            "location": "DR INFGANE TALAT N'YAACOUB EL HAOUZ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0721428748"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 17:16:25",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "NrxcSKQUVNKFLDNXY9lo",
+        "data": {
+            "details": "لا ضحايا في الارواح و الكل بدون مأوى 70 خيمة ",
+            "location": "جماعة امزميز",
+            "city": "دوار تمازيرت أمزميز ",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0666183943"
+            },
+            "position_static": null,
+            "source": "تم جلب خيام والباقي 8",
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 17:15:14",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "fTqKbzoIZsJpiXxqkp1A",
+        "data": {
+            "details": null,
+            "location": "ايمنتانوت",
+            "city": "نواحي ايمنتانوت طريق دوار ايت كاسا",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "+212 676-336459"
+            },
+            "position_static": null,
+            "source": "شخص في عين المكان",
+            "needs": [
+                "مساعدة طبية",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 17:08:35",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "8RMaDA7yaj2NwS1EM2JR",
+        "data": {
+            "details": "هناك أشخاص متفرقون (جماعات) يختبئون تحت الأشجار يحتاجون إلى خيام وأغطية وأفرشة",
+            "location": "تالجكونت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0677972897"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 17:07:56",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "oghnLyykNjc4K3HNcFSI",
+        "data": {
+            "details": null,
+            "location": "تكوكة",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 17:06:16",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "rS697rUbAw0jlNtba0VO",
+        "data": {
+            "details": null,
+            "location": "جماعة تيزي انتاست قيادة تافينكولت عمالة تارودانت ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 17:04:13",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "66C3NsC6a9cUb4TMxmf1",
+        "data": {
+            "details": null,
+            "location": "مجاط",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 16:57:29",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "QI0aenNzICnhlhNW8N1U",
+        "data": {
+            "details": null,
+            "location": "جماعة اغرم نوكدال",
+            "city": "Ouarzazate",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "+212 691-285555"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 16:56:00",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "LyaH1J1RVl8AjTnZGWWV",
+        "data": {
+            "details": null,
+            "location": "قيادة اغرم نوكدال جماعة اغرم نوكدال دوار اكرد نوادوز  دوار اغرم نوكدال دوار اماسين تمسطينت دوار إكداي دوار تيمكيست وجماعة تيديلي دوار زاوية سيدي علي وحماد دوار اگني دوار ايت بويهدا دوار ملالت دوار تزكي وجماعة خزامة دوار ايت ماغليف دوار تشاكشت دوار تورتيت دوار تزولط دوار تيدزي ",
+            "city": "ورزازات",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مساعدة طبية",
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:54:57",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "S6yPwRkBkhTkxZhOtzEt",
+        "data": {
+            "details": null,
+            "location": "جماعة مزوضة دوار آيت العين (فوق الزاوية النحيلية)",
+            "city": "شيشاوة ",
+            "id": null,
+            "exact_position": {
+                "latitude": 31.216256,
+                "longitude": -8.602581
+            },
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": {
+                "latitude": 31.216256,
+                "longitude": -8.602581
+            },
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 16:48:00",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "9PRe3eTyD6e7twNQ38cb",
+        "data": {
+            "details": "Very Very critical situation",
+            "location": "Setti-Fatma",
+            "city": "Haouz",
+            "id": null,
+            "exact_position": {
+                "latitude": 31.225559234559128,
+                "longitude": -7.675463110589399
+            },
+            "in_place": false,
+            "contact": {
+                "phone_number": "\"(212)661351982 محمد ايت محمد \""
+            },
+            "position_static": {
+                "latitude": 31.225559234559128,
+                "longitude": -7.675463110589399
+            },
+            "source": null,
+            "needs": [
+                "طعام وماء",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:47:03",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "kv8hwQpAdLNb3M2YTA5U",
+        "data": {
+            "details": "Vêtements chauds, couvertures et tentes tout âge confondu",
+            "location": "Taourghe/Mzouda",
+            "city": "Haouz",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "Rachide (212)605320461"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:45:57",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "ctEZnbyfnX9MmdsaqZgk",
+        "data": {
+            "details": "tente petite et grande ,electricité , tri9E maktou3a, pas de réseau andhoum  27 douar  kaine l maa food ok / couverture clothes / medicament specialement diabéte et tension / couverture ",
+            "location": "Tiguerte",
+            "city": "Haouz",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "(212)627137031 hannulle "
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 16:45:10",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "eROKSj769RZDYvb7vwVB",
+        "data": {
+            "details": null,
+            "location": "Imi Oughlad",
+            "city": "Haouz",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "(212)603075255"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:42:05",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "f6nD12eY66gfSrhAO3Cm",
+        "data": {
+            "details": null,
+            "location": "دوار سكورة جماعة تماغيرت توامة ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0662647739"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 16:41:55",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "GfIUlp7NoxH1DLDWIpG5",
+        "data": {
+            "details": null,
+            "location": "Ctre Commune Ahl Tifnoute Assarag",
+            "city": "Haouz",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "(212)624939604 Brahim Bougra"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:41:28",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "bx0nDXsLXJzojb3u6Jnc",
+        "data": {
+            "details": null,
+            "location": "Lalla Aziza",
+            "city": "Haouz",
+            "id": null,
+            "exact_position": {
+                "latitude": 31.079640008962315,
+                "longitude": -8.701086158295539
+            },
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": {
+                "latitude": 31.079640008962315,
+                "longitude": -8.701086158295539
+            },
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:40:52",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "2e6CYeyhsgNgSnsD8Nm6",
+        "data": {
+            "details": null,
+            "location": "Tinomrotine",
+            "city": "Haouz",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "(212)666886238 Hamid"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:40:08",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "FQymJQOmfj1z705phU8H",
+        "data": {
+            "details": null,
+            "location": "Ibaloulene",
+            "city": "Haouz",
+            "id": null,
+            "exact_position": {
+                "latitude": 30.939666274596966,
+                "longitude": -8.910856347605616
+            },
+            "in_place": false,
+            "contact": {
+                "phone_number": "(212)666886238 Hamid"
+            },
+            "position_static": {
+                "latitude": 30.939666274596966,
+                "longitude": -8.910856347605616
+            },
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:39:34",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "oWOLb4XXWf4lz5I9ARpW",
+        "data": {
+            "details": null,
+            "location": "Imalalene timzagadiouine, chichaoua",
+            "city": "Haouz",
+            "id": null,
+            "exact_position": {
+                "latitude": 30.98968765167665,
+                "longitude": -8.922063210157884
+            },
+            "in_place": false,
+            "contact": {
+                "phone_number": "(212)666886238 Hamid"
+            },
+            "position_static": {
+                "latitude": 30.98968765167665,
+                "longitude": -8.922063210157884
+            },
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:38:58",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "QwikfFN1chegSmT0qs8j",
+        "data": {
+            "details": "أنا  طالب جامعي في كلية الآداب والعلوم الإنسانية القاضي عياض مراكش ، أنا من مدينة الداخلة لكنني مستقر في مدينة مراكش وبالضبط في المدينة القديمة ولما جاء الزلزال إنهار المنزل الذي أقطن فيه وأصبحت بدون مأوى هناك وأصبح مشواري الدراسي مهددا نظرا لعدم قدرتي على الإيجار",
+            "location": "مراكش",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": "أنا ",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 16:38:13",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "dXGGk6hbUVYO8zAoed48",
+        "data": {
+            "details": null,
+            "location": "Amzmiz et environs : Jbel Douzrou",
+            "city": "Haouz",
+            "id": null,
+            "exact_position": {
+                "latitude": 31.17632523373601,
+                "longitude": -8.374929656662651
+            },
+            "in_place": false,
+            "contact": {
+                "phone_number": "Brahim : (212)666367197"
+            },
+            "position_static": {
+                "latitude": 31.17632523373601,
+                "longitude": -8.374929656662651
+            },
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:38:10",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "rRmOvjf5KTXV08xHVHjo",
+        "data": {
+            "details": null,
+            "location": "COMMUNE IMINOULAOUNE",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": {
+                "latitude": 31.312031709403488,
+                "longitude": -6.510236301164503
+            },
+            "in_place": false,
+            "contact": {
+                "phone_number": " +212 672-627732 Abdesslam Outaleb"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:37:25",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "rMqCr0h5e6U8yrI4eTiK",
+        "data": {
+            "details": null,
+            "location": "Ighounulle",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 16:36:29",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "jdYZ4aHjdZzdIDOjJA5n",
+        "data": {
+            "details": null,
+            "location": " تيزكي نباردة ",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": {
+                "latitude": 31.162753700837563,
+                "longitude": -7.12387772942064
+            },
+            "in_place": false,
+            "contact": {
+                "phone_number": "جمعية تيزكي نباردة رقم أمين المال -0676440483"
+            },
+            "position_static": {
+                "latitude": 31.162753700837563,
+                "longitude": -7.12387772942064
+            },
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:35:41",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "atvGEmZZZ24x5ilP3QjC",
+        "data": {
+            "details": "tri9e nadia :  54 maison total / 10 maison bonne état /tente : dyoure raibine food / habsouuu alihoum lmousa3adate clothes ",
+            "location": "أديك إحنداكن",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": {
+                "latitude": 31.278972720887303,
+                "longitude": -7.261571801861506
+            },
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:34:45",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "Z2Mg8qllCpNYH2Ke5eVy",
+        "data": {
+            "details": null,
+            "location": "Timjoujte",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "رئيس جمعية تيمجوجت -0672523312-0672089041"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:33:49",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "H17Zi6n32IqexxZRAe3V",
+        "data": {
+            "details": null,
+            "location": "لولاد",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة",
+                "مأوى"
+            ],
+            "date": "13/09/2023 16:33:48",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "dzLPLecJLfr53oQEZ60V",
+        "data": {
+            "details": null,
+            "location": "El Bour ",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": {
+                "latitude": 31.21154543209448,
+                "longitude": -7.935376262532039
+            },
+            "in_place": false,
+            "contact": {
+                "phone_number": "ئيس جمعية البور -0610616939"
+            },
+            "position_static": {
+                "latitude": 31.21154543209448,
+                "longitude": -7.935376262532039
+            },
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:32:44",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "tE1tS61SSrV4n6A5xhCR",
+        "data": {
+            "details": null,
+            "location": "لاولد",
+            "city": "خريبكة",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0697029874"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مساعدة طبية",
+                "مأوى"
+            ],
+            "date": "13/09/2023 16:32:06",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "nLsnzP9tTQ2qeXAo6Hqp",
+        "data": {
+            "details": null,
+            "location": "Timsal",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "رئيس جمعية تمسال-0642836026"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:31:54",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "fL68iCNeCol1b7StS4CR",
+        "data": {
+            "details": " مصابون وطلب مآوى",
+            "location": " تيزينتاست  دوار أسايس",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": "شهادات بعين المكان شاهد الفديو  : https://youtu.be/udSCFZAj8zQ?si=D3dAXS-sr9Kc15cM ",
+            "needs": [
+                "إغاثة",
+                "مساعدة طبية",
+                "مأوى"
+            ],
+            "date": "13/09/2023 16:31:19",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "qLvUY6RYfTFAgVccJBTu",
+        "data": {
+            "details": null,
+            "location": "Ouzlim ",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "رئيس جمعية أوزليم -0662575555"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:31:08",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "hlSsbTzFlh1f74EO1a9X",
+        "data": {
+            "details": null,
+            "location": "Tighza",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "رئيس جمعية تغزا - 0682687367"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:30:22",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "fQKSdh1PGMTIqNa5Zc6V",
+        "data": {
+            "details": "دار ايلة للسقوط خطر الشقوق ",
+            "location": "جماعة تمكرت التوامة دوار اسكورة ",
+            "city": "مراكش",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "0699799730"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 16:30:07",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "cjNPXv5bcIXXxYOUBPg1",
+        "data": {
+            "details": null,
+            "location": "Anmiter",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "جمعية أنميتر_0666709045"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:29:34",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "rYPy2AZi9MgahODtMmSx",
+        "data": {
+            "details": null,
+            "location": "Tadoula zanifi Amerzagane ouarzazate",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": " Mahdi (212)619076624"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:28:36",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "Dh3qLDMMltWmoaVQzLSd",
+        "data": {
+            "details": null,
+            "location": "Iminoulane / Timicha ",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": {
+                "latitude": 30.42338318603502,
+                "longitude": -8.013346200896448
+            },
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": {
+                "latitude": 30.42338318603502,
+                "longitude": -8.013346200896448
+            },
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:28:00",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "1CEX0K5VSFrW03dt4YSB",
+        "data": {
+            "details": null,
+            "location": "#عمالة_تارودانت_قيادة_ولاد_برحيل_جماعة_تانكجونت_كداشة_دوار_تخزنيت",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": true,
+            "contact": {
+                "phone_number": "630592277"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "إغاثة",
+                "مساعدة طبية",
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 16:27:52",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "BRqU3vnJuriVBLo6ho8t",
+        "data": {
+            "details": null,
+            "location": "Tadoula Nait Twaya",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:26:25",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "2koXJO0YayDlcyfhdk3t",
+        "data": {
+            "details": "نعم الساكنة في حاجة الى خيم .جميع المناز متصدعة ومتشققة والناس يبيتون في العراء تحت السماء",
+            "location": "جماعة ايمولاس",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": "تارودانت",
+            "needs": [
+                "مأوى"
+            ],
+            "date": "13/09/2023 16:25:49",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "39WZ7kZNo8Agz0Y6VFHK",
+        "data": {
+            "details": null,
+            "location": "ANFG",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "(212)662695202"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:25:40",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "1osUp4OF5Irf6wZgncxJ",
+        "data": {
+            "details": "دواري تلزاط لم يستفدا من قبل حيث هناك اسر تبث في العراء الى الآن بسبب هدم بيوتهم او تشققها ولم تبق صالحة للسكن",
+            "location": "جماعة اداومومن قيادة احمر عمالة وإقليم تارودانت ",
+            "city": "تارودانت",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "0660605117"
+            },
+            "position_static": null,
+            "source": "جمعية تدارين للتنمية والتعاون دوار تلزاط جماعة اداومومن ",
+            "needs": [
+                "مأوى",
+                "طعام وماء"
+            ],
+            "date": "13/09/2023 16:25:17",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "KY8TbJZ78jx8cFsMZ4px",
+        "data": {
+            "details": null,
+            "location": "Izalaghen",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:25:00",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "TFZoedSpzPAA68CWqAjE",
+        "data": {
+            "details": null,
+            "location": "Ctre Commune Amghras ",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": {
+                "latitude": 31.209176814278297,
+                "longitude": -8.18286181578776
+            },
+            "in_place": false,
+            "contact": {
+                "phone_number": " Mahdi (212)619076624"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:23:11",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "gtGplxpvP3PIMhilpDlK",
+        "data": {
+            "details": null,
+            "location": "Telouate",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": {
+                "latitude": 31.291477994541616,
+                "longitude": -7.240805441814181
+            },
+            "in_place": false,
+            "contact": {
+                "phone_number": "Mohsine Bayoud :+212 666-359864/ Nouhaila Aggni : 0690366708  (جمعية الشباب الإيجابي ورزازات )"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:21:35",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "jQ2dmN8wkTk87lw1JQ7O",
+        "data": {
+            "details": "Contacter et coordonner avec l'association جمعية الشباب الإيجابي ورزازات",
+            "location": "Siroua",
+            "city": "Ouerzazate",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": "Mohsine Bayoud :+212 666-359864/ Nouhaila Aggni : 0690366708  (جمعية الشباب الإيجابي ورزازات )"
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "طعام وماء",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:20:37",
+            "confirmation_count": 0
+        }
+    },
+    {
+        "id": "fgotS6CWifoVRb4RKDSy",
+        "data": {
+            "details": null,
+            "location": "Amerzgane",
+            "city": "Ouarzazate",
+            "id": null,
+            "exact_position": null,
+            "in_place": false,
+            "contact": {
+                "phone_number": null
+            },
+            "position_static": null,
+            "source": null,
+            "needs": [
+                "مأوى",
+                "أغطية وملابس"
+            ],
+            "date": "13/09/2023 16:19:37",
+            "confirmation_count": 0
+        }
+    }
+]
