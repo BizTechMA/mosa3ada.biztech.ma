@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "@mui/material/styles";
 import { useConfirmation } from "../../hooks/useConfimration";
+import { useDisConfirmation } from "../../hooks/useDisConfirmation";
 
 import {
   Grid,
@@ -16,9 +17,10 @@ import {
 import { formatDate, formatDates, selectedIcon } from "../../utils";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { HelpCardConfirmButton } from "./CardConfirmButton";
+import { HelpCardDisConfirmButton } from "./CardDisConfirmButton";
 
 export default function HelpCard({ help }) {
-  const { date, needs, city, location, docId, confirmation_count = 0 } = help;
+  const { date, needs, city, location, docId, confirmation_count = 0, dis_confirmation_count = 0} = help;
 
   const { palette } = useTheme();
 
@@ -26,6 +28,12 @@ export default function HelpCard({ help }) {
     useConfirmation({
       id: docId,
       confirmation_count,
+    });
+
+    const { disConfirmationCount, handleDisConfirmHelp, isDisConfirmedLoading, isDisConfirmed } =
+    useDisConfirmation({
+      id: docId,
+      dis_confirmation_count,
     });
 
   return (
@@ -147,14 +155,20 @@ export default function HelpCard({ help }) {
         style={{
           backgroundColor: "#5B5B5B0D",
           marginTop: "auto",
-          padding: "15px 29px",
+          padding: "15px 25px",
         }}
       >
         <HelpCardConfirmButton
           isConfirmed={isConfirmed}
           isLoading={isLoading}
-          helpCount={confirmationCount}
+          confirmationCount={confirmationCount}
           onConfirm={handleConfirmHelp}
+        />
+        < HelpCardDisConfirmButton
+          isDisConfirmed={isDisConfirmed}
+          isLoading={isDisConfirmedLoading}
+          disConfirmationCount={disConfirmationCount}
+          onDisConfirm={handleDisConfirmHelp}
         />
         <Link
           href={`/helps/${docId}`}
@@ -163,7 +177,7 @@ export default function HelpCard({ help }) {
             color: palette.primary.red,
             display: "flex",
             alignItems: "center",
-            gap: 8,
+            gap: 6,
           }}
         >
           <span>إقرأ المزيد</span>
