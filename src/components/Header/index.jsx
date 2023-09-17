@@ -34,7 +34,7 @@ const Header = ({ navComponent }) => {
               >
                 Mosa3ada.ma موقع للتضامن والمساعدة المجتمعية
               </Typography>
-              <Link target="_blank" href={"https://twitter.com/BiztechMorocco"}>
+              <Link target="_blank" href={"https://t.co/wZ1Xh0CJLV"}>
                 <Button
                   style={{
                     fontSize: 18,
