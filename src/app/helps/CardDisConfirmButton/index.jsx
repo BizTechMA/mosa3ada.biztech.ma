@@ -7,10 +7,11 @@ export const HelpCardDisConfirmButton = ({
   buttonProps = {},
   isLoading,
   isDisConfirmed,
+  isConfirmed
 }) => {
   return (
     <Button
-      disabled={isLoading}
+      disabled={isLoading || isConfirmed}
       style={{
         gap: 6,
       }}
@@ -19,7 +20,7 @@ export const HelpCardDisConfirmButton = ({
     >
       {isLoading && <CircularProgress size={15} />}
       {!isLoading && (
-        <>{!isDisConfirmed ? <DangerousOutlined style={{color: "red"}} /> :  <DangerousSharp style={{color: "red"}} /> }</>
+        <>{!isDisConfirmed ? <DangerousOutlined style={{color: isConfirmed ? "gray" : "red"}} /> :  <DangerousSharp style={{color: "red"}} /> }</>
       )}
       <Typography component={"span"}> {disConfirmationCount} غير صحيح</Typography>
     </Button>

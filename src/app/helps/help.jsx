@@ -160,12 +160,14 @@ export default function HelpCard({ help }) {
       >
         <HelpCardConfirmButton
           isConfirmed={isConfirmed}
+          isDisConfirmed={isDisConfirmed}
           isLoading={isLoading}
           confirmationCount={confirmationCount}
           onConfirm={handleConfirmHelp}
         />
         < HelpCardDisConfirmButton
           isDisConfirmed={isDisConfirmed}
+          isConfirmed={isConfirmed}
           isLoading={isDisConfirmedLoading}
           disConfirmationCount={disConfirmationCount}
           onDisConfirm={handleDisConfirmHelp}
