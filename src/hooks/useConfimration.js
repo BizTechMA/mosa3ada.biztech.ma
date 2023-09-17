@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import useLocalStorage from "use-local-storage";
 import toast from "react-hot-toast";
-export const useConfirmation = ({ id, confirmation_count }) => {
+export const useConfirmation = ({ id, confirmation_count = 0 }) => {
   const [confirmationCount, setConfirmationCount] =
     useState(confirmation_count);
   const [isLoading, setIsLoading] = useState(false);
