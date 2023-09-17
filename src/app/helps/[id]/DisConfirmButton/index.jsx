@@ -1,23 +1,24 @@
 "use client";
-import { useConfirmation } from "@/hooks/useConfimration";
-import { ThumbUpAltSharp, ThumbUpOffAlt } from "@mui/icons-material";
+import { useDisConfirmation } from "@/hooks/useDisConfirmation";
+import { Block } from "@mui/icons-material";
 import { Button, CircularProgress, Typography } from "@mui/material";
 
 // Confirm button component used in the help details page to confirm the help
-export const ConfirmButton = ({ id, confirmation_count, buttonProps = {} }) => {
-  const { handleConfirmHelp, isLoading, isConfirmed } = useConfirmation({
+export const DisConfirmButton = ({ id, dis_confirmation_count, buttonProps = {} }) => {
+  const { handleDisConfirmHelp, isLoading, isDisConfirmed } = useDisConfirmation({
     id,
-    confirmation_count,
+    dis_confirmation_count,
   });
   return (
     <Button
-      onClick={handleConfirmHelp}
-      color="success"
+      onClick={handleDisConfirmHelp}
+      color="error"
       variant="contained"
-      disabled={isConfirmed || isLoading}
+      disabled={isDisConfirmed || isLoading}
       style={{
         gap: 5,
         marginBottom: 20,
+        marginLeft: 60
       }}
       sx={{
         width: {
@@ -37,10 +38,10 @@ export const ConfirmButton = ({ id, confirmation_count, buttonProps = {} }) => {
         />
       )}
       {!isLoading && (
-        <>{!isConfirmed && <ThumbUpAltSharp />}</>
+        <>{!isDisConfirmed && <Block />}</>
       )}
       <Typography color="white" variant="body3">
-        {isConfirmed ? "تم التأكيد" : "تأكيد"}
+        {isDisConfirmed ? "تم الإبلاغ" : "غير صحيح"}
       </Typography>
     </Button>
   );
