@@ -5,7 +5,7 @@ import { Button, CircularProgress, Typography } from "@mui/material";
 
 // Confirm button component used in the help details page to confirm the help
 export const DisConfirmButton = ({ id, dis_confirmation_count, buttonProps = {} }) => {
-  const { handleDisConfirmHelp, isLoading, isDisConfirmed } = useDisConfirmation({
+  const { handleDisConfirmHelp, isDisConfirmedLoading, isDisConfirmed } = useDisConfirmation({
     id,
     dis_confirmation_count,
   });
@@ -14,7 +14,7 @@ export const DisConfirmButton = ({ id, dis_confirmation_count, buttonProps = {} 
       onClick={handleDisConfirmHelp}
       color="error"
       variant="contained"
-      disabled={isDisConfirmed || isLoading}
+      disabled={isDisConfirmed || isDisConfirmedLoading}
       style={{
         gap: 5,
         marginBottom: 20,
@@ -29,7 +29,7 @@ export const DisConfirmButton = ({ id, dis_confirmation_count, buttonProps = {} 
       size="large"
       {...buttonProps}
     >
-      {isLoading && (
+      {isDisConfirmedLoading && (
         <CircularProgress
           style={{
             color: "white",
@@ -37,7 +37,7 @@ export const DisConfirmButton = ({ id, dis_confirmation_count, buttonProps = {} 
           size={15}
         />
       )}
-      {!isLoading && (
+      {!isDisConfirmedLoading && (
         <>{!isDisConfirmed && <Block />}</>
       )}
       <Typography color="white" variant="body3">
