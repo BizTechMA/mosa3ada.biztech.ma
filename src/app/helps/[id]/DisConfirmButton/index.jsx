@@ -1,28 +1,30 @@
 "use client";
-import { useConfirmation } from "@/hooks/useConfimration";
 import { useDisConfirmation } from "@/hooks/useDisConfirmation";
-import { ThumbUpAltSharp, ThumbUpOffAlt } from "@mui/icons-material";
+import { useConfirmation } from "@/hooks/useConfimration";
+import { Block } from "@mui/icons-material";
 import { Button, CircularProgress, Typography } from "@mui/material";
 
 // Confirm button component used in the help details page to confirm the help
-export const ConfirmButton = ({ id, confirmation_count, buttonProps = {} }) => {
-  const { handleConfirmHelp, isLoading, isConfirmed } = useConfirmation({
+export const DisConfirmButton = ({ id, dis_confirmation_count, buttonProps = {} }) => {
+  const { handleDisConfirmHelp, isDisConfirmedLoading, isDisConfirmed } = useDisConfirmation({
     id,
-    confirmation_count,
+    dis_confirmation_count,
   });
 
-  const { isDisConfirmed } = useDisConfirmation({
+  const { isConfirmed } = useConfirmation({
     id
   });
+
   return (
     <Button
-      onClick={handleConfirmHelp}
-      color="success"
+      onClick={handleDisConfirmHelp}
+      color="error"
       variant="contained"
-      disabled={isConfirmed || isLoading || isDisConfirmed}
+      disabled={isDisConfirmed || isDisConfirmedLoading || isConfirmed}
       style={{
         gap: 5,
         marginBottom: 20,
+        marginLeft: 60
       }}
       sx={{
         width: {
@@ -33,7 +35,7 @@ export const ConfirmButton = ({ id, confirmation_count, buttonProps = {} }) => {
       size="large"
       {...buttonProps}
     >
-      {isLoading && (
+      {isDisConfirmedLoading && (
         <CircularProgress
           style={{
             color: "white",
@@ -41,11 +43,11 @@ export const ConfirmButton = ({ id, confirmation_count, buttonProps = {} }) => {
           size={15}
         />
       )}
-      {!isLoading && (
-        <>{!isConfirmed && <ThumbUpAltSharp />}</>
+      {!isDisConfirmedLoading && (
+        <>{!isDisConfirmed && <Block />}</>
       )}
       <Typography color="white" variant="body3">
-        {isConfirmed ? "تم التأكيد" : "تأكيد"}
+        {isDisConfirmed ? "تم الإبلاغ" : "غير صحيح"}
       </Typography>
     </Button>
   );
