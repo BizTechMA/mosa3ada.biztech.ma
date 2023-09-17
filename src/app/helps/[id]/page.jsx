@@ -281,6 +281,7 @@ export default async function HelpPage({ params }) {
                       <Typography className={styles.helpInfoText}>
                         {details || " لا يوجد"}
                       </Typography>
+                      <br />
                       <Typography
                         className={styles.helpInfoLabel}
                         variant="body2"
@@ -289,6 +290,15 @@ export default async function HelpPage({ params }) {
                       </Typography>
                       <Typography className={styles.helpInfoText}>
                         {confirmation_count}
+                      </Typography>
+                      <Typography
+                        className={styles.helpInfoLabel}
+                        variant="body2"
+                      >
+                        عدد التبليغات بعدم صحيح
+                       </Typography>
+                      <Typography className={styles.helpInfoText}>
+                        {dis_confirmation_count}
                       </Typography>
                     </Grid>
                     <Divider
