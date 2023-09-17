@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 export const useDisConfirmation = ({ id, dis_confirmation_count }) => {
   const [disConfirmationCount, setConfirmationCount] =
     useState(dis_confirmation_count);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isDisConfirmedLoading, setIsDisConfirmedLoading] = useState(false);
 
   const [quantomPtl, setQuantomPtl] = useLocalStorage("quantom_ptl_2", [], {
     syncData: true,
@@ -22,7 +22,7 @@ export const useDisConfirmation = ({ id, dis_confirmation_count }) => {
       return;
     }
 
-    setIsLoading(true);
+    setIsDisConfirmedLoading(true);
 
     await fetch(`/api/help/${id}`, {
       method: "PATCH",
@@ -33,7 +33,7 @@ export const useDisConfirmation = ({ id, dis_confirmation_count }) => {
         type: "DIS_CONFIRMATION"
       })
     }).catch((err) => {
-      setIsLoading(false);
+      setIsDisConfirmedLoading(false);
       toast.error("حدث خطأ ما");
     });
 
@@ -50,8 +50,8 @@ export const useDisConfirmation = ({ id, dis_confirmation_count }) => {
 
     toast.success("تم بالإبلاغ بنجاح");
     setConfirmationCount((prev) => (prev ? prev + 1 : 1));
-    setIsLoading(false);
+    setIsDisConfirmedLoading(false);
   };
 
-  return { disConfirmationCount, isDisConfirmed, isLoading, handleDisConfirmHelp };
+  return { disConfirmationCount, isDisConfirmed, isDisConfirmedLoading, handleDisConfirmHelp };
 };
