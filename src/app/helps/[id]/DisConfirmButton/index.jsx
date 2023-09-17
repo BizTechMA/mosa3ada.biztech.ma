@@ -1,5 +1,6 @@
 "use client";
 import { useDisConfirmation } from "@/hooks/useDisConfirmation";
+import { useConfirmation } from "@/hooks/useConfimration";
 import { Block } from "@mui/icons-material";
 import { Button, CircularProgress, Typography } from "@mui/material";
 
@@ -9,12 +10,17 @@ export const DisConfirmButton = ({ id, dis_confirmation_count, buttonProps = {} 
     id,
     dis_confirmation_count,
   });
+
+  const { isConfirmed } = useConfirmation({
+    id
+  });
+
   return (
     <Button
       onClick={handleDisConfirmHelp}
       color="error"
       variant="contained"
-      disabled={isDisConfirmed || isDisConfirmedLoading}
+      disabled={isDisConfirmed || isDisConfirmedLoading || isConfirmed}
       style={{
         gap: 5,
         marginBottom: 20,
