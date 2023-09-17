@@ -7,10 +7,11 @@ export const HelpCardConfirmButton = ({
   buttonProps = {},
   isLoading,
   isConfirmed,
+  isDisConfirmed
 }) => {
   return (
     <Button
-      disabled={isLoading}
+      disabled={isLoading || isDisConfirmed}
       style={{
         gap: 9,
       }}
