@@ -3,12 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./header.module.css";
 import { Button, Container, Typography } from "@mui/material";
-import  TransitionAlerts from "../Alert";
 
 const Header = ({ navComponent }) => {
   return (
     <>
-      <TransitionAlerts/>
       <header className={styles.container}>
         {/* Most likely the logo will be rendered here */}
         {navComponent && (
