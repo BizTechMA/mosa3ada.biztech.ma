@@ -92,7 +92,7 @@ export default async function HelpsPage() {
             }}
           >
             {helps?.map((help, ind) => (
-              <Grid xs={12} md={4} key={ind}>
+              <Grid xs={12} md={4} sm={6} key={ind}>
                 <HelpCard help={help} />
               </Grid>
             ))}
