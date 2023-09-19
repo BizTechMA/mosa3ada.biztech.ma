@@ -20,7 +20,15 @@ import { HelpCardConfirmButton } from "./CardConfirmButton";
 import { HelpCardDisConfirmButton } from "./CardDisConfirmButton";
 
 export default function HelpCard({ help }) {
-  const { date, needs, city, location, docId, confirmation_count = 0, dis_confirmation_count = 0} = help;
+  const {
+    date,
+    needs,
+    city,
+    location,
+    docId,
+    confirmation_count = 0,
+    dis_confirmation_count = 0,
+  } = help;
 
   const { palette } = useTheme();
 
@@ -30,16 +38,20 @@ export default function HelpCard({ help }) {
       confirmation_count,
     });
 
-    const { disConfirmationCount, handleDisConfirmHelp, isDisConfirmedLoading, isDisConfirmed } =
-    useDisConfirmation({
-      id: docId,
-      dis_confirmation_count,
-    });
+  const {
+    disConfirmationCount,
+    handleDisConfirmHelp,
+    isDisConfirmedLoading,
+    isDisConfirmed,
+  } = useDisConfirmation({
+    id: docId,
+    dis_confirmation_count,
+  });
 
   return (
     <Card
       sx={{
-        minWidth: 350,
+        minWidth: 260,
         minHeight: 230,
         margin: 2,
         display: "flex",
@@ -165,7 +177,7 @@ export default function HelpCard({ help }) {
           confirmationCount={confirmationCount}
           onConfirm={handleConfirmHelp}
         />
-        < HelpCardDisConfirmButton
+        <HelpCardDisConfirmButton
           isDisConfirmed={isDisConfirmed}
           isConfirmed={isConfirmed}
           isLoading={isDisConfirmedLoading}
