@@ -7,7 +7,7 @@ import { Container, Grid, Typography } from "@mui/material";
 import HelpCard from "./helps/help";
 import Header from "@/components/Header";
 import getAllDocuments from "@/utils/firebase/firestore/getAllDocuments";
-import HelpCards from "./helps/helpCardsPage";
+import HelpCards from "./helps/helpCardsPagination";
 
 export const dynamic = "force-dynamic";
 
