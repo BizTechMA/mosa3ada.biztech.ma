@@ -62,7 +62,7 @@ export default function HelpCards({ data }) {
         }}
       >
         {data?.slice(currentSliceStart, currentSliceEnd).map((help, ind) => (
-          <Grid xs={9} md={4} key={ind}>
+          <Grid xs={12} md={6} lg={4} key={ind}>
             <HelpCard help={help} />
           </Grid>
         ))}

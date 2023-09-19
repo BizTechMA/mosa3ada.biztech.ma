@@ -68,26 +68,15 @@ export default async function HelpsPage() {
         </div>
         <Grid container>
           <Grid
-            container
             style={{
               display: "flex",
-              width: "100%",
-              justifyContent: "center",
-              marginTop: 50,
+              flexDirection: "row",
+              marginTop: 70,
+              alignItems: "center",
             }}
           ></Grid>
-          <Grid container>
-            <Grid
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                marginTop: 20,
-                alignItems: "center",
-              }}
-            ></Grid>
-          </Grid>
-          <HelpCards data={helps} />
         </Grid>
+        <HelpCards data={helps} />
       </Container>
     </>
   );
