@@ -7,6 +7,7 @@ import { Container, Grid, Typography } from "@mui/material";
 import HelpCard from "./helps/help";
 import Header from "@/components/Header";
 import getAllDocuments from "@/utils/firebase/firestore/getAllDocuments";
+import HelpCards from "./helps/helpCardsPagination";
 
 export const dynamic = "force-dynamic";
 
@@ -67,12 +68,11 @@ export default async function HelpsPage() {
         </div>
         <Grid container>
           <Grid
-            container
             style={{
               display: "flex",
-              width: "100%",
-              justifyContent: "center",
-              marginTop: 50,
+              flexDirection: "row",
+              marginTop: 70,
+              alignItems: "center",
             }}
           ></Grid>
           <Grid container>
@@ -98,6 +98,7 @@ export default async function HelpsPage() {
             ))}
           </Grid>
         </Grid>
+        <HelpCards data={helps} />
       </Container>
     </>
   );
