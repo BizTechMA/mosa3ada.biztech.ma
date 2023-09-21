@@ -1,22 +1,30 @@
 "use client";
+
+import { Grid } from "@mui/material";
+
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import {
-  Button,
-  ButtonGroup,
-  Grid,
-  Pagination,
-  PaginationItem,
-} from "@mui/material";
-import { useRef } from "react";
+import { Button, ButtonGroup, Pagination, PaginationItem } from "@mui/material";
+import { use } from "react";
 import HelpCard from "./help";
 
-export default function HelpCards({ data }) {
-  const fistElem = useRef(null);
+export async function getHelps() {
+  const results = await fetch("http://localhost:3000/api/helps");
+  return results.json();
+}
+let dataPromise = getHelps();
+
+export default function HelpCards() {
+  let data = [];
+  const myData = use(dataPromise);
+  let lastKey = myData.lastKey;
+  data = myData.results.map((item) => ({
+    docId: item.id,
+    ...item.data,
+  }));
 
   return (
     <>
-      <div ref={fistElem}></div>
       <Grid
         container
         style={{
@@ -45,7 +53,7 @@ export default function HelpCards({ data }) {
             flexDirection: "row-reverse",
           }}
         >
-          <Button>التالي</Button>
+          <Button onClick={() => getMoreHelps(lastKey)}>التالي</Button>
           <Button>رجوع</Button>
         </ButtonGroup>
       </Grid>
@@ -69,7 +77,7 @@ export default function HelpCards({ data }) {
               }}
               {...item}
             />
-          )} // Show one page on either side of the current page
+          )}
         />
       </Grid>
     </>
