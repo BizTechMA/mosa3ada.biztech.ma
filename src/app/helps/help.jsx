@@ -51,6 +51,7 @@ export default function HelpCard({ help }) {
   return (
     <Card
       sx={{
+        minHeight: 230,
         margin: 2,
         display: "flex",
         flexDirection: "column",
