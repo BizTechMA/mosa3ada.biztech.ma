@@ -1,8 +1,7 @@
-import "./globals.css";
-import GoogleAnalytics from "@/utils/analytics";
 import { MuiProvider } from "@/components";
+import GoogleAnalytics from "@/utils/analytics";
 import { Toaster } from "react-hot-toast";
-import { Suspense } from "react";
+import "./globals.css";
 
 export const metadata = {
   title: "مساعدة",
@@ -12,11 +11,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
-      <MuiProvider>
-        <Toaster />
-        <GoogleAnalytics GA_TRACKING_ID={process.env.MEASUREMENT_ID} />
-        <body suppressHydrationWarning>{children}</body>
-      </MuiProvider>
+      <body suppressHydrationWarning>
+        <MuiProvider>
+          <Toaster />
+          <GoogleAnalytics GA_TRACKING_ID={process.env.MEASUREMENT_ID} />
+          {children}
+        </MuiProvider>
+      </body>
     </html>
   );
 }

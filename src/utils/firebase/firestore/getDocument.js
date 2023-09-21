@@ -1,9 +1,7 @@
 import {
-  getFirestore,
   doc,
   getDoc,
-  collection,
-  getDocs,
+  getFirestore
 } from "firebase/firestore";
 import firebase_app from "../../../../config";
 
