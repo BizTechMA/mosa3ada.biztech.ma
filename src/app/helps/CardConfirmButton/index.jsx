@@ -7,7 +7,7 @@ export const HelpCardConfirmButton = ({
   buttonProps = {},
   isLoading,
   isConfirmed,
-  isDisConfirmed
+  isDisConfirmed,
 }) => {
   return (
     <Button

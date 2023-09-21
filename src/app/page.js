@@ -1,12 +1,11 @@
-import Image from "next/image";
 import { promises as fs } from "fs";
+import Image from "next/image";
 import path from "path";
 
 import { Container, Grid, Typography } from "@mui/material";
 
-import HelpCard from "./helps/help";
 import Header from "@/components/Header";
-import getAllDocuments from "@/utils/firebase/firestore/getAllDocuments";
+import fetchFirestoreBatch from "@/utils/firebase/firestore/fetchFirestoreBatch";
 import HelpCards from "./helps/helpCardsPagination";
 
 export const dynamic = "force-dynamic";
@@ -17,7 +16,7 @@ async function getHelps() {
     process.env.CURRENT_ENV === "PRODUCTION" ||
     process.env.NEXT_PUBLIC_USE_FIREBASE === "true"
   ) {
-    data = (await getAllDocuments("helps")).map((item) => ({
+    data = (await fetchFirestoreBatch("helps")).map((item) => ({
       docId: item.id,
       ...item.data,
     }));
@@ -30,7 +29,6 @@ async function getHelps() {
       ...item.data,
     }));
   }
-
   return data;
 }
 

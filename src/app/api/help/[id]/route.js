@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { getHelpById } from "./service";
-import { updateConfirmationCount, updateDisConfirmationCount } from "./service";
+import { getHelpById, updateConfirmationCount, updateDisConfirmationCount } from "./service";
 
 export async function GET(req, { params }) {
   const { id } = params;
@@ -15,9 +14,9 @@ export async function PATCH(req, { params }) {
 
   let result = false;
 
-  if(type === "CONFIRMATION")
+  if (type === "CONFIRMATION")
     result = await updateConfirmationCount(id);
-  else if(type === "DIS_CONFIRMATION")
+  else if (type === "DIS_CONFIRMATION")
     result = await updateDisConfirmationCount(id);
 
   return result
