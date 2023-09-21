@@ -51,7 +51,6 @@ export default function HelpCard({ help }) {
   return (
     <Card
       sx={{
-        minWidth: 260,
         minHeight: 230,
         margin: 2,
         display: "flex",
@@ -170,20 +169,22 @@ export default function HelpCard({ help }) {
           padding: "15px 25px",
         }}
       >
-        <HelpCardConfirmButton
-          isConfirmed={isConfirmed}
-          isDisConfirmed={isDisConfirmed}
-          isLoading={isLoading}
-          confirmationCount={confirmationCount}
-          onConfirm={handleConfirmHelp}
-        />
-        <HelpCardDisConfirmButton
-          isDisConfirmed={isDisConfirmed}
-          isConfirmed={isConfirmed}
-          isLoading={isDisConfirmedLoading}
-          disConfirmationCount={disConfirmationCount}
-          onDisConfirm={handleDisConfirmHelp}
-        />
+        <Grid item xs={12} style={{ flex: 1 }} >
+          <HelpCardConfirmButton
+            isConfirmed={isConfirmed}
+            isDisConfirmed={isDisConfirmed}
+            isLoading={isLoading}
+            confirmationCount={confirmationCount}
+            onConfirm={handleConfirmHelp}
+          />
+          <HelpCardDisConfirmButton
+            isDisConfirmed={isDisConfirmed}
+            isConfirmed={isConfirmed}
+            isLoading={isDisConfirmedLoading}
+            disConfirmationCount={disConfirmationCount}
+            onDisConfirm={handleDisConfirmHelp}
+          />
+        </Grid>
         <Link
           href={`/helps/${docId}`}
           style={{
