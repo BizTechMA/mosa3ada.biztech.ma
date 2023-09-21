@@ -1,4 +1,4 @@
-import { DangerousSharp, DangerousOutlined } from "@mui/icons-material";
+import { DangerousOutlined, DangerousSharp } from "@mui/icons-material";
 import { Button, CircularProgress, Typography } from "@mui/material";
 
 export const HelpCardDisConfirmButton = ({
@@ -7,7 +7,7 @@ export const HelpCardDisConfirmButton = ({
   buttonProps = {},
   isLoading,
   isDisConfirmed,
-  isConfirmed
+  isConfirmed,
 }) => {
   return (
     <Button
@@ -20,9 +20,20 @@ export const HelpCardDisConfirmButton = ({
     >
       {isLoading && <CircularProgress size={15} />}
       {!isLoading && (
-        <>{!isDisConfirmed ? <DangerousOutlined style={{color: isConfirmed ? "gray" : "red"}} /> :  <DangerousSharp style={{color: "red"}} /> }</>
+        <>
+          {!isDisConfirmed ? (
+            <DangerousOutlined
+              style={{ color: isConfirmed ? "gray" : "red" }}
+            />
+          ) : (
+            <DangerousSharp style={{ color: "red" }} />
+          )}
+        </>
       )}
-      <Typography component={"span"}> {disConfirmationCount} غير صحيح</Typography>
+      <Typography component={"span"}>
+        {" "}
+        {disConfirmationCount} غير صحيح
+      </Typography>
     </Button>
   );
 };

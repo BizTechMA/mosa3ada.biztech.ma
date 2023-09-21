@@ -1,18 +1,23 @@
 "use client";
-import { useDisConfirmation } from "@/hooks/useDisConfirmation";
 import { useConfirmation } from "@/hooks/useConfimration";
+import { useDisConfirmation } from "@/hooks/useDisConfirmation";
 import { Block } from "@mui/icons-material";
 import { Button, CircularProgress, Typography } from "@mui/material";
 
 // Confirm button component used in the help details page to confirm the help
-export const DisConfirmButton = ({ id, dis_confirmation_count, buttonProps = {} }) => {
-  const { handleDisConfirmHelp, isDisConfirmedLoading, isDisConfirmed } = useDisConfirmation({
-    id,
-    dis_confirmation_count,
-  });
+export const DisConfirmButton = ({
+  id,
+  dis_confirmation_count,
+  buttonProps = {},
+}) => {
+  const { handleDisConfirmHelp, isDisConfirmedLoading, isDisConfirmed } =
+    useDisConfirmation({
+      id,
+      dis_confirmation_count,
+    });
 
   const { isConfirmed } = useConfirmation({
-    id
+    id,
   });
 
   return (
@@ -24,7 +29,7 @@ export const DisConfirmButton = ({ id, dis_confirmation_count, buttonProps = {} 
       style={{
         gap: 5,
         marginBottom: 20,
-        marginLeft: 60
+        marginLeft: 60,
       }}
       sx={{
         width: {
@@ -43,9 +48,7 @@ export const DisConfirmButton = ({ id, dis_confirmation_count, buttonProps = {} 
           size={15}
         />
       )}
-      {!isDisConfirmedLoading && (
-        <>{!isDisConfirmed && <Block />}</>
-      )}
+      {!isDisConfirmedLoading && <>{!isDisConfirmed && <Block />}</>}
       <Typography color="white" variant="body3">
         {isDisConfirmed ? "تم الإبلاغ" : "غير صحيح"}
       </Typography>
