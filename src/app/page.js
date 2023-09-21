@@ -1,41 +1,14 @@
-import { promises as fs } from "fs";
 import Image from "next/image";
-import path from "path";
 
 import { Container, Grid, Typography } from "@mui/material";
 
 import Header from "@/components/Header";
-import fetchFirestoreBatch from "@/utils/firebase/firestore/fetchFirestoreBatch";
 import HelpCards from "./helps/helpCardsPagination";
 
 export const dynamic = "force-dynamic";
 
-async function getHelps() {
-  let data = [];
-  if (
-    process.env.CURRENT_ENV === "PRODUCTION" ||
-    process.env.NEXT_PUBLIC_USE_FIREBASE === "true"
-  ) {
-    data = (await fetchFirestoreBatch("helps")).map((item) => ({
-      docId: item.id,
-      ...item.data,
-    }));
-  } else {
-    const jsonDirectory = path.join(process.cwd(), "helpsData");
-    const fileContents = await fs.readFile(jsonDirectory + "/helpsV3", "utf8");
-
-    data = JSON.parse(fileContents.toLocaleString()).map((item) => ({
-      docId: item.id,
-      ...item.data,
-    }));
-  }
-  return data;
-}
 
 export default async function HelpsPage() {
-  const helps = await getHelps();
-  helps.sort((a, b) => b.confirmation_count - a.confirmation_count);
-
   return (
     <>
       <Header
@@ -74,7 +47,7 @@ export default async function HelpsPage() {
             }}
           ></Grid>
         </Grid>
-        <HelpCards data={helps} />
+        <HelpCards />
       </Container>
     </>
   );

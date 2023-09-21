@@ -4,19 +4,21 @@ import {
   getFirestore,
   limit,
   orderBy,
-  query
+  query,
+  startAfter
 } from "firebase/firestore";
 import firebase_app from "../../../../config";
 
 export const db = getFirestore(firebase_app);
 
-async function fetchFirestoreBatch(collectionName) {
+export default async function fetchFirestoreNextBatch(collectionName, key) {
   let results = [];
   let lastKey = "";
   try {
     let q = query(
       collection(db, collectionName),
       orderBy('date', 'desc'),
+      startAfter(key),
       limit(9)
     )
     const querySnapshots = await getDocs(q);
@@ -30,6 +32,3 @@ async function fetchFirestoreBatch(collectionName) {
 
   return { results, lastKey };
 }
-
-export { fetchFirestoreBatch };
-
