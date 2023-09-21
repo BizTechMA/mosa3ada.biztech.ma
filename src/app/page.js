@@ -75,6 +75,28 @@ export default async function HelpsPage() {
               alignItems: "center",
             }}
           ></Grid>
+          <Grid container>
+            <Grid
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                marginTop: 20,
+                alignItems: "center",
+              }}
+            ></Grid>
+          </Grid>
+          <Grid
+            container
+            style={{
+              justifyContent: "center",
+            }}
+          >
+            {helps?.map((help, ind) => (
+              <Grid xs={12} md={4} sm={6} key={ind}>
+                <HelpCard help={help} />
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
         <HelpCards data={helps} />
       </Container>
