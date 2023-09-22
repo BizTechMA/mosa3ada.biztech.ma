@@ -4,10 +4,7 @@ import { forwardRef, useEffect, useMemo } from "react";
 import { useFormContext } from "react-hook-form";
 import Map, { Marker } from "react-map-gl";
 
-export const RequestMap = forwardRef(function InternalMap(
-  { manualMapChange, setManualMapChange },
-  ref,
-) {
+export const RequestMap = forwardRef(function InternalMap(props, ref) {
   const { setValue, watch } = useFormContext();
 
   const mapValues = useMemo(
@@ -19,12 +16,6 @@ export const RequestMap = forwardRef(function InternalMap(
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [watch("longitude"), watch("latitude")],
   );
-
-  useEffect(() => {
-    if (manualMapChange) {
-      setManualMapChange(false);
-    }
-  }, [manualMapChange, setManualMapChange]);
 
   return (
     <Map
