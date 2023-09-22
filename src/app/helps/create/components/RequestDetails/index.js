@@ -151,7 +151,7 @@ export const RequestDetails = ({ step }) => {
                   component={"label"}
                   variant="body1"
                 >
-                  هل توجد بعين المكان ؟{" "}
+                  نوع الطلب
                 </Typography>
                 <ComponentFormState fieldName={"needs"} formState={formState}>
                   {NEEDS_LIST.map((need, ind) => (
