@@ -89,6 +89,10 @@ body {
   overflow-x: hidden;
   font-family: "Alexandria", sans-serif;
 }
+
+* {
+  font-family: inherit;
+}
 body {
   color: rgb(var(--foreground-rgb));
   background: #faf1f5;
