@@ -8,7 +8,8 @@ import HelpCard from "./helps/help";
 import Header from "@/components/Header";
 import getAllDocuments from "@/utils/firebase/firestore/getAllDocuments";
 import HelpCards from "./helps/helpCardsPagination";
-
+import { Button } from "@mui/material";
+import Link from "next/link";
 export const dynamic = "force-dynamic";
 
 async function getHelps() {
@@ -62,9 +63,13 @@ export default async function HelpsPage() {
           }}
         >
           <Typography variant="h3">قائمة الطلبات</Typography>
-          {/* <Button color="error" variant="contained" size="large">
-            <Typography variant="h6">إضافة طلب</Typography>
-          </Button> */}
+          <Link href={"/helps/create"}>
+            <Button color="primary" variant="contained" size="large">
+              <Typography variant="h6" color={"white"}>
+                إضافة طلب
+              </Typography>
+            </Button>
+          </Link>
         </div>
         <Grid container>
           <Grid
