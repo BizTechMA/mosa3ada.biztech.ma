@@ -14,7 +14,7 @@ export default function HelpCards() {
   const [currentData, setCurrentData] = useState([]);
 
   const fetchHelps = async (key) => {
-    const results = await fetch("http://localhost:3000/api/afterhelps", {
+    const results = await fetch("http://localhost:3000/api/nexthelps", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -39,8 +39,8 @@ export default function HelpCards() {
   };
 
   useEffect(() => {
-    if (previous) {
-      fetchNextOrPreviousData(pageStack[pageStack.length - 2]);
+    if (previous && pageStack.length > 2) {
+      fetchNextOrPreviousData(pageStack[pageStack.length - 3]);
       setPrevious(false);
     }
     if (next) {
@@ -69,7 +69,10 @@ export default function HelpCards() {
     {
       onSuccess: (data) => {
         setCurrentData(data?.results);
+        console.log("first key", data?.firstKey);
         if (data?.lastKey != "") {
+          setPageStack([]);
+          setPageStack((pageStack) => [...pageStack, data?.firstKey]);
           setPageStack((pageStack) => [...pageStack, data?.lastKey]);
         }
       },
@@ -121,7 +124,7 @@ export default function HelpCards() {
             ) : (
               <Button disabled>التالي</Button>
             )}
-            {pageStack.length > 1 ? (
+            {pageStack.length > 2 ? (
               <Button onClick={() => setPrevious(true)}>رجوع</Button>
             ) : (
               <Button disabled>رجوع</Button>
