@@ -169,6 +169,7 @@ export default function HelpCards() {
             <Pagination
               count={helpsCount ? helpsCount : 50}
               page={pageStack.length - 1}
+              size="small"
               color="primary"
               onChange={(event, page) => {
                 if (page > pageStack.length - 1) {
