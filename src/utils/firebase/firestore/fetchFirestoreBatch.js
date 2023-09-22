@@ -11,14 +11,14 @@ import firebase_app from "../../../../config";
 
 export const db = getFirestore(firebase_app);
 
-async function fetchFirestoreBatch(collectionName) {
+async function fetchFirestoreBatch(collectionName, sizeLimit = 9) {
   let results = [];
   let lastKey = "";
   try {
     let q = query(
       collection(db, collectionName),
       orderBy('date', 'desc'),
-      limit(9)
+      limit(sizeLimit)
     )
     const querySnapshots = await getDocs(q);
     querySnapshots.forEach((doc) => {
