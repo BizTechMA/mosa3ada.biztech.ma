@@ -100,6 +100,7 @@ const RequestHelpPage = () => {
       style={{
         display: "flex",
         flexDirection: "column",
+        position: "relative",
       }}
     >
       {success && <RequestSuccess />}
@@ -109,6 +110,10 @@ const RequestHelpPage = () => {
             style={{
               backgroundColor: "white",
               padding: "15px 20px",
+              position: "sticky",
+              boxShadow: "0px 8px 30px 0px rgba(0, 0, 0, 0.06)",
+              zIndex: 10,
+              top: 0,
             }}
           >
             <Container maxWidth="xl">
