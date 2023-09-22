@@ -6,12 +6,14 @@ import { Button, ButtonGroup } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import HelpCard from "./help";
+import LoadingHelps from "./helpLoading";
 
 export default function HelpCards() {
   const [pageStack, setPageStack] = useState([]);
   const [next, setNext] = useState(false);
   const [previous, setPrevious] = useState(false);
   const [currentData, setCurrentData] = useState([]);
+  const [switchData, setSwitchData] = useState(false);
 
   const fetchHelps = async (key) => {
     const results = await fetch("http://localhost:3000/api/nexthelps", {
@@ -35,6 +37,7 @@ export default function HelpCards() {
         prevStack.filter((item) => item !== pageStack[pageStack.length - 1]),
       );
     }
+    setSwitchData(false);
     return data;
   };
 
@@ -53,6 +56,7 @@ export default function HelpCards() {
     ["helps"],
     async ({ queryKey }) => {
       const [_, key] = queryKey;
+      setSwitchData(true);
       return fetchNextOrPreviousData(key);
     },
     {
@@ -63,18 +67,19 @@ export default function HelpCards() {
   const { data, isLoading } = useQuery(
     ["helps"],
     async () => {
+      setSwitchData(true);
       const results = await fetch("http://localhost:3000/api/helps");
       return results.json();
     },
     {
       onSuccess: (data) => {
         setCurrentData(data?.results);
-        console.log("first key", data?.firstKey);
         if (data?.lastKey != "") {
           setPageStack([]);
           setPageStack((pageStack) => [...pageStack, data?.firstKey]);
           setPageStack((pageStack) => [...pageStack, data?.lastKey]);
         }
+        setSwitchData(false);
       },
     },
   );
@@ -84,10 +89,12 @@ export default function HelpCards() {
     ...item.data,
   }));
 
-  console.log("pageStack :", pageStack);
-
-  if (isLoading || isFetching) {
-    return <div>loading ...</div>;
+  if (isLoading || isFetching || switchData) {
+    return (
+      <>
+        <LoadingHelps />
+      </>
+    );
   } else
     return (
       <>
