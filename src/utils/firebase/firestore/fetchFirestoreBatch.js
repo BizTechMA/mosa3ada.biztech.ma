@@ -29,7 +29,6 @@ async function fetchFirestoreInitialBatch(collectionName) {
     if (results.length > 0) {
       firstKey = results[0].data.date;
     }
-    console.log(firstKey);
   } catch (e) {
     console.error("Error retrieving documents:", e);
   }
