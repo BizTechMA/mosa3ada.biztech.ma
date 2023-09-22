@@ -4,15 +4,61 @@ import { Grid } from "@mui/material";
 
 import { Button, ButtonGroup } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HelpCard from "./help";
 
 export default function HelpCards() {
+  const [pageStack, setPageStack] = useState([]);
   const [next, setNext] = useState(false);
   const [previous, setPrevious] = useState(false);
-  const [firstData, setData] = useState([]);
-  const [nextKey, setNextKey] = useState("");
-  const [previousKey, setPreviousKey] = useState("");
+  const [currentData, setCurrentData] = useState([]);
+
+  const fetchHelps = async (key) => {
+    const results = await fetch("http://localhost:3000/api/afterhelps", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ key }),
+    });
+    return results.json();
+  };
+
+  const fetchNextOrPreviousData = async (key) => {
+    const data = await fetchHelps(key);
+    setCurrentData(data?.results);
+    if (data?.lastKey != "" && next) {
+      setPageStack((pageStack) => [...pageStack, data?.lastKey]);
+    }
+    if (data?.lastKey != "" && previous) {
+      setPageStack((prevStack) =>
+        prevStack.filter((item) => item !== pageStack[pageStack.length - 1]),
+      );
+    }
+    return data;
+  };
+
+  useEffect(() => {
+    if (previous) {
+      fetchNextOrPreviousData(pageStack[pageStack.length - 2]);
+      setPrevious(false);
+    }
+    if (next) {
+      fetchNextOrPreviousData(pageStack[pageStack.length - 1]);
+      setNext(false);
+    }
+  }, [previous, next]);
+
+  const { data: queriedData, isFetching } = useQuery(
+    ["helps"],
+    async ({ queryKey }) => {
+      const [_, key] = queryKey;
+      return fetchNextOrPreviousData(key);
+    },
+    {
+      enabled: next || previous,
+    },
+  );
 
   const { data, isLoading } = useQuery(
     ["helps"],
@@ -22,68 +68,21 @@ export default function HelpCards() {
     },
     {
       onSuccess: (data) => {
-        setData(data?.results);
-        setNextKey(data?.lastKey);
-        setPreviousKey(nextKey);
+        setCurrentData(data?.results);
+        if (data?.lastKey != "") {
+          setPageStack((pageStack) => [...pageStack, data?.lastKey]);
+        }
       },
     },
   );
 
-  const { newData, isFetching } = useQuery(
-    ["helps", nextKey],
-    async ({ queryKey }) => {
-      const [_, setNextKey] = queryKey;
-      const results = await fetch("http://localhost:3000/api/afterhelps", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ key: nextKey }),
-      });
-      return results.json();
-    },
-    {
-      enabled: next,
-      onSuccess: (newData) => {
-        setData(newData?.results);
-        setNextKey(newData?.lastKey);
-        setPreviousKey(nextKey);
-        setNext(false);
-      },
-    },
-  );
-
-  const { previousData } = useQuery(
-    ["helps", previousKey],
-    async ({ queryKey }) => {
-      const [_, setPreviousKey] = queryKey;
-      const results = await fetch("http://localhost:3000/api/afterhelps", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ key: previousKey }),
-      });
-      return results.json();
-    },
-    {
-      enabled: previous,
-      onSuccess: (previousData) => {
-        setData(previousData?.results);
-        setNextKey(previousData?.lastKey);
-        setPreviousKey(nextKey);
-        setPrevious(false);
-      },
-    },
-  );
-
-  let helps = firstData.map((item) => ({
+  let helps = currentData.map((item) => ({
     docId: item.id,
     ...item.data,
   }));
 
-  console.log("NextKey :", nextKey);
-  console.log("previousKey :", previousKey);
+  console.log("pageStack :", pageStack);
+
   if (isLoading || isFetching) {
     return <div>loading ...</div>;
   } else
@@ -117,12 +116,12 @@ export default function HelpCards() {
               flexDirection: "row-reverse",
             }}
           >
-            {nextKey != "" ? (
+            {helps.length === 9 ? (
               <Button onClick={() => setNext(true)}>التالي</Button>
             ) : (
               <Button disabled>التالي</Button>
             )}
-            {previousKey != "" ? (
+            {pageStack.length > 1 ? (
               <Button onClick={() => setPrevious(true)}>رجوع</Button>
             ) : (
               <Button disabled>رجوع</Button>
