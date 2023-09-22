@@ -13,9 +13,8 @@ export default function HelpCards() {
   const [next, setNext] = useState(false);
   const [previous, setPrevious] = useState(false);
   const [currentData, setCurrentData] = useState([]);
-  const [switchData, setSwitchData] = useState(false);
 
-  const fetchHelps = async (key) => {
+  const fetchNextOrPreviousData = async (key) => {
     const results = await fetch("http://localhost:3000/api/nexthelps", {
       method: "POST",
       headers: {
@@ -23,11 +22,7 @@ export default function HelpCards() {
       },
       body: JSON.stringify({ key }),
     });
-    return results.json();
-  };
-
-  const fetchNextOrPreviousData = async (key) => {
-    const data = await fetchHelps(key);
+    const data = await results.json();
     setCurrentData(data?.results);
     if (data?.lastKey != "" && next) {
       setPageStack((pageStack) => [...pageStack, data?.lastKey]);
@@ -37,7 +32,6 @@ export default function HelpCards() {
         prevStack.filter((item) => item !== pageStack[pageStack.length - 1]),
       );
     }
-    setSwitchData(false);
     return data;
   };
 
@@ -56,7 +50,6 @@ export default function HelpCards() {
     ["helps"],
     async ({ queryKey }) => {
       const [_, key] = queryKey;
-      setSwitchData(true);
       return fetchNextOrPreviousData(key);
     },
     {
@@ -67,7 +60,6 @@ export default function HelpCards() {
   const { data, isLoading } = useQuery(
     ["helps"],
     async () => {
-      setSwitchData(true);
       const results = await fetch("http://localhost:3000/api/helps");
       return results.json();
     },
@@ -79,7 +71,6 @@ export default function HelpCards() {
           setPageStack((pageStack) => [...pageStack, data?.firstKey]);
           setPageStack((pageStack) => [...pageStack, data?.lastKey]);
         }
-        setSwitchData(false);
       },
     },
   );
@@ -89,7 +80,7 @@ export default function HelpCards() {
     ...item.data,
   }));
 
-  if (isLoading || isFetching || switchData) {
+  if (isLoading || isFetching) {
     return (
       <>
         <LoadingHelps />
