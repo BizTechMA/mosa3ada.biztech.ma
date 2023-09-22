@@ -13,6 +13,8 @@ export default function HelpCards() {
   const [next, setNext] = useState(false);
   const [previous, setPrevious] = useState(false);
   const [currentData, setCurrentData] = useState([]);
+  const [helps, setHelps] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const fetchNextOrPreviousData = async (key) => {
     const results = await fetch("http://localhost:3000/api/nexthelps", {
@@ -75,12 +77,19 @@ export default function HelpCards() {
     },
   );
 
-  let helps = currentData.map((item) => ({
-    docId: item.id,
-    ...item.data,
-  }));
+  useEffect(() => {
+    setLoading(true);
+    if (currentData.length != 0) {
+      let getHelps = currentData.map((item) => ({
+        docId: item.id,
+        ...item.data,
+      }));
+      setHelps(getHelps);
+      setLoading(false);
+    }
+  }, [currentData]);
 
-  if (isLoading || isFetching) {
+  if (loading) {
     return (
       <>
         <LoadingHelps />
