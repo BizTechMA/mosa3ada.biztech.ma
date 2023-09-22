@@ -11,25 +11,30 @@ import firebase_app from "../../../../config";
 
 export const db = getFirestore(firebase_app);
 
-async function fetchFirestoreBatch(collectionName, sizeLimit = 9) {
+async function fetchFirestoreInitialBatch(collectionName) {
   let results = [];
   let lastKey = "";
+  let firstKey = "";
   try {
     let q = query(
       collection(db, collectionName),
       orderBy('date', 'desc'),
-      limit(sizeLimit)
+      limit(9)
     )
     const querySnapshots = await getDocs(q);
     querySnapshots.forEach((doc) => {
       results.push({ id: doc.id, data: doc.data() });
       lastKey = doc.data().date;
     });
+    if (results.length > 0) {
+      firstKey = results[0].data.date;
+    }
+    console.log(firstKey);
   } catch (e) {
     console.error("Error retrieving documents:", e);
   }
 
-  return { results, lastKey };
+  return { results, lastKey, firstKey };
 }
 
 async function fetchFirestoreNextBatch(collectionName, key) {
@@ -55,5 +60,5 @@ async function fetchFirestoreNextBatch(collectionName, key) {
 }
 
 
-export { fetchFirestoreBatch, fetchFirestoreNextBatch };
+export { fetchFirestoreInitialBatch, fetchFirestoreNextBatch };
 
