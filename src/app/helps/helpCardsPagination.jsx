@@ -4,11 +4,12 @@ import { Grid } from "@mui/material";
 
 import { Button, ButtonGroup } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import HelpCard from "./help";
 import LoadingHelps from "./helpLoading";
 
 export default function HelpCards() {
+  const fistElem = useRef(null);
   const [pageStack, setPageStack] = useState([]);
   const [next, setNext] = useState(false);
   const [previous, setPrevious] = useState(false);
@@ -48,7 +49,7 @@ export default function HelpCards() {
     }
   }, [previous, next]);
 
-  const { data: queriedData, isFetching } = useQuery(
+  const { data: queriedData } = useQuery(
     ["helps"],
     async ({ queryKey }) => {
       const [_, key] = queryKey;
@@ -89,55 +90,57 @@ export default function HelpCards() {
     }
   }, [currentData]);
 
-  if (loading) {
-    return (
-      <>
-        <LoadingHelps />
-      </>
-    );
-  } else
-    return (
-      <>
-        <Grid
-          container
-          style={{
-            justifyContent: "center",
-          }}
-        >
-          {helps?.map((help, ind) => (
+  useEffect(() => {
+    fistElem.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [helps]);
+
+  return (
+    <>
+      <div ref={fistElem}></div>
+      <Grid
+        container
+        style={{
+          justifyContent: "center",
+        }}
+      >
+        {loading || isLoading ? (
+          <LoadingHelps />
+        ) : (
+          helps?.map((help, ind) => (
             <Grid xs={12} md={6} lg={4} item key={ind}>
               <HelpCard help={help} />
             </Grid>
-          ))}
-        </Grid>
-        <Grid
-          container
+          ))
+        )}
+      </Grid>
+      <Grid
+        container
+        style={{
+          justifyContent: "center",
+          paddingTop: "2rem",
+          paddingBottom: "2rem",
+        }}
+      >
+        <ButtonGroup
+          disableElevation
+          variant="contained"
+          aria-label="Next and Previous buttons"
           style={{
-            justifyContent: "center",
-            paddingTop: "2rem",
-            paddingBottom: "2rem",
+            flexDirection: "row-reverse",
           }}
         >
-          <ButtonGroup
-            disableElevation
-            variant="contained"
-            aria-label="Next and Previous buttons"
-            style={{
-              flexDirection: "row-reverse",
-            }}
-          >
-            {helps.length === 9 ? (
-              <Button onClick={() => setNext(true)}>التالي</Button>
-            ) : (
-              <Button disabled>التالي</Button>
-            )}
-            {pageStack.length > 2 ? (
-              <Button onClick={() => setPrevious(true)}>رجوع</Button>
-            ) : (
-              <Button disabled>رجوع</Button>
-            )}
-          </ButtonGroup>
-        </Grid>
-      </>
-    );
+          {helps.length === 9 ? (
+            <Button onClick={() => setNext(true)}>التالي</Button>
+          ) : (
+            <Button disabled>التالي</Button>
+          )}
+          {pageStack.length > 2 ? (
+            <Button onClick={() => setPrevious(true)}>رجوع</Button>
+          ) : (
+            <Button disabled>رجوع</Button>
+          )}
+        </ButtonGroup>
+      </Grid>
+    </>
+  );
 }
