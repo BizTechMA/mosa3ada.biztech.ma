@@ -27,7 +27,6 @@ export const RequestLocation = ({ step }) => {
     }
   };
 
-  console.log(mapRef);
   return (
     <Box>
       <div>
