@@ -31,7 +31,7 @@ Mockups:
 - ![Input 4 (Confirmation)](https://github.com/BizTech-Morocco/mosa3ada.biztech.ma/assets/24813026/05dab3c7-f59f-4412-8244-42a62e70d9f5)
 - ![Contact Us](https://github.com/BizTech-Morocco/mosa3ada.biztech.ma/assets/24813026/ec1f5bed-0122-4d71-8863-b0fb5ed54447)
 
-## Ready to Contribute to V1?
+## Ready to Contribute?
 
 1. Create a new branch from the main branch.
 2. Pick an issue that resonates with you.
