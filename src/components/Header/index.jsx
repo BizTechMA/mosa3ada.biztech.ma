@@ -22,16 +22,10 @@ const Header = ({ navComponent }) => {
           </div>
         )}
 
-        <Container maxWidth="xl">
+        <Container>
           <div className={styles.headerBanner}>
             <div className={styles.contentContainer}>
-              <Typography
-                variant="h4"
-                fontSize={35}
-                fontWeight={600}
-                lineHeight={1.6}
-                color={"white"}
-              >
+              <Typography className={styles.typo}>
                 Mosa3ada.ma موقع للتضامن والمساعدة المجتمعية
               </Typography>
               <Link target="_blank" href={"https://t.co/wZ1Xh0CJLV"}>

@@ -1,9 +1,9 @@
 import { MuiProvider } from "@/components";
 import ReactQueryProviders from "@/components/reactQueryProvider/providers";
 import GoogleAnalytics from "@/utils/analytics";
+import "mapbox-gl/dist/mapbox-gl.css";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
-
 export const metadata = {
   title: "مساعدة",
   description: "قائمة بالمناطق المتضررة المحتاجة للمساعدة",
