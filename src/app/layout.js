@@ -2,8 +2,7 @@ import "./globals.css";
 import GoogleAnalytics from "@/utils/analytics";
 import { MuiProvider } from "@/components";
 import { Toaster } from "react-hot-toast";
-import { Suspense } from "react";
-
+import "mapbox-gl/dist/mapbox-gl.css";
 export const metadata = {
   title: "مساعدة",
   description: "قائمة بالمناطق المتضررة المحتاجة للمساعدة",
