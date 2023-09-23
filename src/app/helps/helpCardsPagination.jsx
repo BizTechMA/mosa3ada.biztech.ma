@@ -21,7 +21,7 @@ export default function HelpCards() {
   const [helpsCount, setHelpsCount] = useState(null);
 
   const fetchNextOrPreviousData = async (key) => {
-    const results = await fetch("http://localhost:3000/api/nexthelps", {
+    const results = await fetch("/api/nexthelps", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -42,7 +42,7 @@ export default function HelpCards() {
   };
 
   const fetchCount = async () => {
-    const fetchedCount = await fetch("http://localhost:3000/api/helpscount");
+    const fetchedCount = await fetch("/api/helpscount");
     const countPromise = await fetchedCount.json();
     return countPromise;
   };
@@ -61,7 +61,7 @@ export default function HelpCards() {
   const { data, isLoading } = useQuery(
     ["helps"],
     async () => {
-      const results = await fetch("http://localhost:3000/api/helps");
+      const results = await fetch("/api/helps");
       return results.json();
     },
     {
