@@ -1,3 +1,4 @@
+"use client";
 import { ThumbUpAltSharp, ThumbUpOffAlt } from "@mui/icons-material";
 import { Button, CircularProgress, Typography } from "@mui/material";
 

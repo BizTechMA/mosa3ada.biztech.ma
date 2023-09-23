@@ -1,3 +1,4 @@
+"use client";
 import { DangerousOutlined, DangerousSharp } from "@mui/icons-material";
 import { Button, CircularProgress, Typography } from "@mui/material";
 
