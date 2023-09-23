@@ -1,0 +1,43 @@
+.fieldLabel {
+  opacity: 0.7;
+  margin-bottom: 20px;
+  display: block;
+}
+.textField {
+  background-color: #faf1f5;
+  padding: 12px 16px 12px 12px;
+  outline: none;
+  border: unset;
+  width: 100%;
+  border-radius: 4px;
+  border: solid 3px #faf1f5;
+  transition: all ease 300ms;
+  color: #777;
+  font-size: 18px;
+}
+
+.helpInfoText {
+  font-size: 18px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.textField:focus {
+  border: solid 3px #0e6146;
+}
+
+.textArea {
+  background-color: #faf1f5;
+  padding: 12px 16px 12px 12px;
+  outline: none;
+  border: unset;
+  width: 100%;
+  border-radius: 4px;
+  border: solid 3px #faf1f5;
+  transition: all ease 300ms;
+  color: #777;
+  font-size: 18px;
+  resize: vertical;
+  min-height: 100px;
+}

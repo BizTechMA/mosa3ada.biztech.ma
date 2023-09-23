@@ -3,8 +3,10 @@ import Image from "next/image";
 import { Container, Grid, Typography } from "@mui/material";
 
 import Header from "@/components/Header";
+import { Button } from "@mui/material";
+import Link from "next/link";
+import { HelpCardDisConfirmButton } from "./helps/CardDisConfirmButton";
 import HelpCards from "./helps/helpCardsPagination";
-
 export const dynamic = "force-dynamic";
 
 
@@ -33,9 +35,13 @@ export default async function HelpsPage() {
           }}
         >
           <Typography variant="h3">قائمة الطلبات</Typography>
-          {/* <Button color="error" variant="contained" size="large">
-            <Typography variant="h6">إضافة طلب</Typography>
-          </Button> */}
+          <Link href={"/helps/create"}>
+            <Button color="primary" variant="contained" size="large">
+              <Typography variant="h6" color={"white"}>
+                إضافة طلب
+              </Typography>
+            </Button>
+          </Link>
         </div>
         <Grid container>
           <Grid
@@ -46,6 +52,24 @@ export default async function HelpsPage() {
               alignItems: "center",
             }}
           ></Grid>
+          <Grid container>
+            <Grid
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                marginTop: 20,
+                alignItems: "center",
+              }}
+            ></Grid>
+          </Grid>
+          <Grid
+            container
+            style={{
+              justifyContent: "center",
+            }}
+          >
+            <HelpCardDisConfirmButton />
+          </Grid>
         </Grid>
         <HelpCards />
       </Container>
