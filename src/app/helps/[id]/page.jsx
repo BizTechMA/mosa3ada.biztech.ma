@@ -115,7 +115,7 @@ export default async function HelpPage({ params }) {
         </Typography>
         <Card
           sx={{
-            minWidth: 350,
+            minWidth: 300,
             minHeight: 230,
             margin: "30px 0",
             display: "flex",
