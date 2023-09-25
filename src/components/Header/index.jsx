@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./header.module.css";
 import { Button, Container, Typography } from "@mui/material";
 
-export const Header = ({ navComponent }) => {
+const Header = ({ navComponent }) => {
   return (
     <>
       <header className={styles.container}>
@@ -34,7 +34,7 @@ export const Header = ({ navComponent }) => {
               >
                 Mosa3ada.ma موقع للتضامن والمساعدة المجتمعية
               </Typography>
-              <Link target="_blank" href={"https://twitter.com/BiztechMorocco"}>
+              <Link target="_blank" href={"https://t.co/wZ1Xh0CJLV"}>
                 <Button
                   style={{
                     fontSize: 18,
@@ -64,3 +64,5 @@ export const Header = ({ navComponent }) => {
     </>
   );
 };
+
+export default Header;
