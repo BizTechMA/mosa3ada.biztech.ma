@@ -81,19 +81,17 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
-  overflow-y: visible;
+  font-family: inherit;
 }
 
 html,
 body {
   max-width: 100vw;
   font-family: "Alexandria", sans-serif;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
-* {
-  font-family: inherit;
-}
 body {
   color: rgb(var(--foreground-rgb));
   background: #faf1f5;
