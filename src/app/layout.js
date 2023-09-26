@@ -14,12 +14,12 @@ export default function RootLayout({ children }) {
     <html lang="ar" dir="rtl">
       <body suppressHydrationWarning>
         <MuiProvider>
-          <Toaster />
           <GoogleAnalytics GA_TRACKING_ID={process.env.MEASUREMENT_ID} />
           <ReactQueryProviders>
             {children}
           </ReactQueryProviders>
         </MuiProvider>
+        <Toaster />
       </body>
     </html>
   );
