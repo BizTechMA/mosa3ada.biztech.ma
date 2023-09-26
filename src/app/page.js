@@ -5,7 +5,6 @@ import { Container, Grid, Typography } from "@mui/material";
 import Header from "@/components/Header";
 import { Button } from "@mui/material";
 import Link from "next/link";
-import { HelpCardDisConfirmButton } from "./helps/CardDisConfirmButton";
 import HelpCards from "./helps/helpCardsPagination";
 export const dynamic = "force-dynamic";
 
@@ -68,7 +67,6 @@ export default async function HelpsPage() {
               justifyContent: "center",
             }}
           >
-            <HelpCardDisConfirmButton />
           </Grid>
         </Grid>
         <HelpCards />
