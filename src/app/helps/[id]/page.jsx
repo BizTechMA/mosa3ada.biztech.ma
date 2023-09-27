@@ -23,6 +23,7 @@ import styles from "./page.module.css";
 import getDocument from "@/utils/firebase/firestore/getDocument";
 import { ConfirmButton } from "./ConfirmButton";
 import { DisConfirmButton } from "./DisConfirmButton";
+import { ShareButton } from "@/app/helps/[id]/ShareToSocialMediaButton/index";
 
 async function getHelp(helpId) {
   if (
@@ -40,6 +41,16 @@ async function getHelp(helpId) {
     return help;
   }
 }
+
+
+
+const urlToShare = 'https://example.com'; // Replace with your URL
+
+
+
+
+
+
 
 export default async function HelpPage({ params }) {
   const help = await getHelp(params.id);
@@ -393,7 +404,7 @@ export default async function HelpPage({ params }) {
         </Card>
         <DisConfirmButton dis_confirmation_count={dis_confirmation_count} id={params.id} />
         <ConfirmButton confirmation_count={confirmation_count} id={params.id} />
-      </Container>
+        <ShareButton urlToShare={urlToShare}  />      </Container>
     </div>
   );
 }
