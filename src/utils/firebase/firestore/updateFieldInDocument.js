@@ -1,4 +1,4 @@
-import { getFirestore, updateDoc, doc, setDoc} from "firebase/firestore";
+import { doc, getFirestore, setDoc } from "firebase/firestore";
 import firebase_app from "../../../../config";
 
 export const db = getFirestore(firebase_app);
@@ -11,7 +11,7 @@ export const updateFieldInDocument =
       await setDoc(docRef, {
         ...newObj,
       });
-    
+
       console.log("Document updated successfully");
     } catch (error) {
       console.log("Error updating document: ", error);

@@ -1,28 +1,28 @@
-import Link from "next/link";
-import { promises as fs } from "fs";
-import path from "path";
 import {
-  Grid,
-  Card,
-  CardContent,
-  Typography,
-  Container,
-  Divider,
   Box,
   Button,
+  Card,
+  CardContent,
+  Container,
+  Divider,
+  Grid,
+  Typography,
 } from "@mui/material";
+import { promises as fs } from "fs";
+import Link from "next/link";
+import path from "path";
 
 import { formatDate, formatDates, selectedIcon } from "../../../utils";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
+import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 
-import styles from "./page.module.css";
 import getDocument from "@/utils/firebase/firestore/getDocument";
 import { ConfirmButton } from "./ConfirmButton";
 import { DisConfirmButton } from "./DisConfirmButton";
+import styles from "./page.module.css";
 
 async function getHelp(helpId) {
   if (
@@ -55,7 +55,7 @@ export default async function HelpPage({ params }) {
     contact,
     in_place,
     confirmation_count = 0,
-    dis_confirmation_count = 0
+    dis_confirmation_count = 0,
   } = help;
 
   return (
@@ -115,7 +115,7 @@ export default async function HelpPage({ params }) {
         </Typography>
         <Card
           sx={{
-            minWidth: 350,
+            minWidth: 300,
             minHeight: 230,
             margin: "30px 0",
             display: "flex",
@@ -295,7 +295,7 @@ export default async function HelpPage({ params }) {
                         variant="body2"
                       >
                         عدد التبليغات بعدم صحيح
-                       </Typography>
+                      </Typography>
                       <Typography className={styles.helpInfoText}>
                         {dis_confirmation_count}
                       </Typography>
@@ -391,7 +391,10 @@ export default async function HelpPage({ params }) {
             </div>
           </CardContent>
         </Card>
-        <DisConfirmButton dis_confirmation_count={dis_confirmation_count} id={params.id} />
+        <DisConfirmButton
+          dis_confirmation_count={dis_confirmation_count}
+          id={params.id}
+        />
         <ConfirmButton confirmation_count={confirmation_count} id={params.id} />
       </Container>
     </div>

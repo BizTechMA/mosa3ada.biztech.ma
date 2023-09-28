@@ -1,9 +1,9 @@
-import "./globals.css";
-import GoogleAnalytics from "@/utils/analytics";
 import { MuiProvider } from "@/components";
+import ReactQueryProviders from "@/components/reactQueryProvider/providers";
+import GoogleAnalytics from "@/utils/analytics";
+import "mapbox-gl/dist/mapbox-gl.css";
 import { Toaster } from "react-hot-toast";
-import { Suspense } from "react";
-
+import "./globals.css";
 export const metadata = {
   title: "مساعدة",
   description: "قائمة بالمناطق المتضررة المحتاجة للمساعدة",
@@ -12,11 +12,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
-      <MuiProvider>
+      <body suppressHydrationWarning>
+        <MuiProvider>
+          <GoogleAnalytics GA_TRACKING_ID={process.env.MEASUREMENT_ID} />
+          <ReactQueryProviders>
+            {children}
+          </ReactQueryProviders>
+        </MuiProvider>
         <Toaster />
-        <GoogleAnalytics GA_TRACKING_ID={process.env.MEASUREMENT_ID} />
-        <body suppressHydrationWarning>{children}</body>
-      </MuiProvider>
+      </body>
     </html>
   );
 }
