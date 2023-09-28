@@ -2,7 +2,7 @@ import { fetchFirestoreNextBatch } from "@/utils/firebase/firestore/fetchFiresto
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
-    const { key } = await req.json()
-    const helpData = await fetchFirestoreNextBatch("helps", key);
+    const { count, date } = await req.json()
+    const helpData = await fetchFirestoreNextBatch("helps", count, date);
     return NextResponse.json(helpData);
 } 
