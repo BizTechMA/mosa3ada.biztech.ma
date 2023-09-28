@@ -1,26 +1,33 @@
 "use client";
-import Link from "next/link";
-import Image from "next/image";
 import { useTheme } from "@mui/material/styles";
+import Image from "next/image";
+import Link from "next/link";
 import { useConfirmation } from "../../hooks/useConfimration";
 import { useDisConfirmation } from "../../hooks/useDisConfirmation";
 
 import {
-  Grid,
   Card,
   CardActions,
   CardContent,
+  Grid,
   Typography,
-  Icon,
 } from "@mui/material";
 
-import { formatDate, formatDates, selectedIcon } from "../../utils";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { formatDate, formatDates, selectedIcon } from "../../utils";
 import { HelpCardConfirmButton } from "./CardConfirmButton";
 import { HelpCardDisConfirmButton } from "./CardDisConfirmButton";
 
 export default function HelpCard({ help }) {
-  const { date, needs, city, location, docId, confirmation_count = 0, dis_confirmation_count = 0} = help;
+  const {
+    date,
+    needs,
+    city,
+    location,
+    docId,
+    confirmation_count = 0,
+    dis_confirmation_count = 0,
+  } = help;
 
   const { palette } = useTheme();
 
@@ -30,16 +37,19 @@ export default function HelpCard({ help }) {
       confirmation_count,
     });
 
-    const { disConfirmationCount, handleDisConfirmHelp, isDisConfirmedLoading, isDisConfirmed } =
-    useDisConfirmation({
-      id: docId,
-      dis_confirmation_count,
-    });
+  const {
+    disConfirmationCount,
+    handleDisConfirmHelp,
+    isDisConfirmedLoading,
+    isDisConfirmed,
+  } = useDisConfirmation({
+    id: docId,
+    dis_confirmation_count,
+  });
 
   return (
     <Card
       sx={{
-        minWidth: 350,
         minHeight: 230,
         margin: 2,
         display: "flex",
@@ -158,20 +168,22 @@ export default function HelpCard({ help }) {
           padding: "15px 25px",
         }}
       >
-        <HelpCardConfirmButton
-          isConfirmed={isConfirmed}
-          isDisConfirmed={isDisConfirmed}
-          isLoading={isLoading}
-          confirmationCount={confirmationCount}
-          onConfirm={handleConfirmHelp}
-        />
-        < HelpCardDisConfirmButton
-          isDisConfirmed={isDisConfirmed}
-          isConfirmed={isConfirmed}
-          isLoading={isDisConfirmedLoading}
-          disConfirmationCount={disConfirmationCount}
-          onDisConfirm={handleDisConfirmHelp}
-        />
+        <Grid item xs={12} style={{ flex: 1 }} >
+          <HelpCardConfirmButton
+            isConfirmed={isConfirmed}
+            isDisConfirmed={isDisConfirmed}
+            isLoading={isLoading}
+            confirmationCount={confirmationCount}
+            onConfirm={handleConfirmHelp}
+          />
+          <HelpCardDisConfirmButton
+            isDisConfirmed={isDisConfirmed}
+            isConfirmed={isConfirmed}
+            isLoading={isDisConfirmedLoading}
+            disConfirmationCount={disConfirmationCount}
+            onDisConfirm={handleDisConfirmHelp}
+          />
+        </Grid>
         <Link
           href={`/helps/${docId}`}
           style={{
