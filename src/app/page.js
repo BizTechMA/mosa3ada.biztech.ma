@@ -6,8 +6,8 @@ import Header from "@/components/Header";
 import { Button } from "@mui/material";
 import Link from "next/link";
 import HelpCards from "./helps/helpCardsPagination";
+import AddIcon from "@mui/icons-material/Add";
 export const dynamic = "force-dynamic";
-
 
 export default async function HelpsPage() {
   return (
@@ -27,16 +27,20 @@ export default async function HelpsPage() {
         <div
           style={{
             display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
+            flexDirection: "column-reverse",
             marginTop: 50,
+            gap: "1rem",
           }}
         >
           <Typography variant="h3">قائمة الطلبات</Typography>
           <Link href={"/helps/create"}>
-            <Button color="primary" variant="contained" size="large">
-              <Typography variant="h6" color={"white"}>
+            <Button color="error" variant="contained" size="large">
+              <Typography
+                variant="subtitle1"
+                color={"white"}
+                style={{ display: "flex", alignItems: "center", gap: "2px" }}
+              >
+                <AddIcon />
                 إضافة طلب
               </Typography>
             </Button>
@@ -66,8 +70,7 @@ export default async function HelpsPage() {
             style={{
               justifyContent: "center",
             }}
-          >
-          </Grid>
+          ></Grid>
         </Grid>
         <HelpCards />
       </Container>
