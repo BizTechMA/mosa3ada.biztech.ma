@@ -12,32 +12,56 @@ import LoadingHelps from "./helpLoading";
 
 export default function HelpCards() {
   const fistElem = useRef(null);
+  const [helps, setHelps] = useState([]);
   const [next, setNext] = useState(false);
   const [loading, setLoading] = useState(false);
   const [previous, setPrevious] = useState(false);
-  const [helps, setHelps] = useState([]);
   const [pageStack, setPageStack] = useState([]);
-  const [currentData, setCurrentData] = useState([]);
+  const [lastCount, setLastCount] = useState([]);
   const [helpsCount, setHelpsCount] = useState(null);
 
-  const fetchNextOrPreviousData = async (key) => {
+  const fetchNextOrPreviousData = async (count, date) => {
+    setLoading(true);
     const results = await fetch("/api/nexthelps", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ key }),
+      body: JSON.stringify({ count, date }),
     });
     const data = await results.json();
-    setCurrentData(data?.results);
+
     if (data?.lastKey != "" && next) {
       setPageStack((pageStack) => [...pageStack, data?.lastKey]);
+      setLastCount((lastCount) => [...lastCount, data?.lastCount]);
     }
     if (data?.lastKey != "" && previous) {
-      setPageStack((prevStack) =>
-        prevStack.filter((item) => item !== pageStack[pageStack.length - 1]),
-      );
+      setPageStack((prevStack) => prevStack.slice(0, -1));
+      setLastCount((prevCount) => prevCount.slice(0, -1));
     }
+
+    let getHelps = data.results.map((item) => ({
+      docId: item.id,
+      ...item.data,
+    }));
+    setHelps(getHelps);
+    setLoading(false);
+    return data;
+  };
+
+  const setInitialDataFunction = async () => {
+    setLoading(true);
+    const results = await fetch("/api/helps");
+    const data = await results.json();
+
+    let getHelps = data.results.map((item) => ({
+      docId: item.id,
+      ...item.data,
+    }));
+    setHelps(getHelps);
+    setPageStack((prevStack) => prevStack.slice(0, -1));
+    setLastCount((prevCount) => prevCount.slice(0, -1));
+    setLoading(false);
     return data;
   };
 
@@ -47,31 +71,29 @@ export default function HelpCards() {
     return countPromise;
   };
 
-  const { data: queriedData } = useQuery(
-    ["helps"],
-    async ({ queryKey }) => {
-      const [_, key] = queryKey;
-      return fetchNextOrPreviousData(key);
-    },
-    {
-      enabled: next || previous,
-    },
-  );
-
-  const { data, isLoading } = useQuery(
-    ["helps"],
+  const { data, isLoading, isFetching } = useQuery(
+    [],
     async () => {
       const results = await fetch("/api/helps");
       return results.json();
     },
     {
       onSuccess: (data) => {
-        setCurrentData(data?.results);
+        setLoading(true);
         if (data?.lastKey != "") {
           setPageStack([]);
+          setLastCount([]);
           setPageStack((pageStack) => [...pageStack, data?.firstKey]);
           setPageStack((pageStack) => [...pageStack, data?.lastKey]);
+          setLastCount((lastCount) => [...lastCount, data?.firstCount]);
+          setLastCount((lastCount) => [...lastCount, data?.lastCount]);
         }
+        let getHelps = data.results.map((item) => ({
+          docId: item.id,
+          ...item.data,
+        }));
+        setHelps(getHelps);
+        setLoading(false);
       },
     },
   );
@@ -86,27 +108,27 @@ export default function HelpCards() {
   }, [helpsCount]);
 
   useEffect(() => {
-    if (previous && pageStack.length > 2) {
-      fetchNextOrPreviousData(pageStack[pageStack.length - 3]);
-      setPrevious(false);
-    }
     if (next) {
-      fetchNextOrPreviousData(pageStack[pageStack.length - 1]);
+      fetchNextOrPreviousData(
+        lastCount[lastCount.length - 1],
+        pageStack[pageStack.length - 1],
+      );
       setNext(false);
     }
-  }, [previous, next]);
-
-  useEffect(() => {
-    setLoading(true);
-    if (currentData.length != 0) {
-      let getHelps = currentData.map((item) => ({
-        docId: item.id,
-        ...item.data,
-      }));
-      setHelps(getHelps);
-      setLoading(false);
+    if (previous) {
+      if (pageStack.length > 3) {
+        fetchNextOrPreviousData(
+          lastCount[lastCount.length - 3],
+          pageStack[pageStack.length - 3],
+        );
+        setPrevious(false);
+      }
+      if (pageStack.length === 3) {
+        setInitialDataFunction();
+        setPrevious(false);
+      }
     }
-  }, [currentData]);
+  }, [previous, next]);
 
   useEffect(() => {
     fistElem.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -115,7 +137,7 @@ export default function HelpCards() {
   return (
     <>
       <div ref={fistElem}></div>
-      {loading || isLoading ? (
+      {loading || isLoading || isFetching ? (
         <LoadingHelps />
       ) : (
         <>
