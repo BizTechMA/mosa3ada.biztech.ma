@@ -19,7 +19,6 @@ import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 
-import BackButton from "@/components/backButton";
 import getDocument from "@/utils/firebase/firestore/getDocument";
 import { ConfirmButton } from "./ConfirmButton";
 import { DisConfirmButton } from "./DisConfirmButton";
@@ -73,7 +72,6 @@ export default async function HelpPage({ params }) {
         }}
       >
         <Container maxWidth="xl">
-          <BackButton />
           <Link
             style={{
               display: "flex",
