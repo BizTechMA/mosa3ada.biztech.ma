@@ -5,7 +5,6 @@ import { Grid, Pagination, PaginationItem } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Button, ButtonGroup } from "@mui/material";
-import { useQuery } from "@tanstack/react-query";
 import { useEffect, useRef, useState } from "react";
 import HelpCard from "./help";
 import LoadingHelps from "./helpLoading";
@@ -14,7 +13,7 @@ export default function HelpCards() {
   const fistElem = useRef(null);
   const [helps, setHelps] = useState([]);
   const [next, setNext] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [previous, setPrevious] = useState(false);
   const [pageStack, setPageStack] = useState([]);
   const [lastCount, setLastCount] = useState([]);
@@ -49,18 +48,23 @@ export default function HelpCards() {
     return data;
   };
 
-  const setInitialDataFunction = async () => {
+  const initialData = async () => {
     setLoading(true);
     const results = await fetch("/api/helps");
     const data = await results.json();
-
+    if (data?.lastKey != "") {
+      setPageStack([]);
+      setLastCount([]);
+      setPageStack((pageStack) => [...pageStack, data?.firstKey]);
+      setPageStack((pageStack) => [...pageStack, data?.lastKey]);
+      setLastCount((lastCount) => [...lastCount, data?.firstCount]);
+      setLastCount((lastCount) => [...lastCount, data?.lastCount]);
+    }
     let getHelps = data.results.map((item) => ({
       docId: item.id,
       ...item.data,
     }));
     setHelps(getHelps);
-    setPageStack((prevStack) => prevStack.slice(0, -1));
-    setLastCount((prevCount) => prevCount.slice(0, -1));
     setLoading(false);
     return data;
   };
@@ -71,32 +75,9 @@ export default function HelpCards() {
     return countPromise;
   };
 
-  const { data, isLoading, isFetching } = useQuery(
-    [],
-    async () => {
-      const results = await fetch("/api/helps");
-      return results.json();
-    },
-    {
-      onSuccess: (data) => {
-        setLoading(true);
-        if (data?.lastKey != "") {
-          setPageStack([]);
-          setLastCount([]);
-          setPageStack((pageStack) => [...pageStack, data?.firstKey]);
-          setPageStack((pageStack) => [...pageStack, data?.lastKey]);
-          setLastCount((lastCount) => [...lastCount, data?.firstCount]);
-          setLastCount((lastCount) => [...lastCount, data?.lastCount]);
-        }
-        let getHelps = data.results.map((item) => ({
-          docId: item.id,
-          ...item.data,
-        }));
-        setHelps(getHelps);
-        setLoading(false);
-      },
-    },
-  );
+  useEffect(() => {
+    initialData();
+  }, []);
 
   useEffect(() => {
     const myHelpsCount = async () => {
@@ -124,7 +105,7 @@ export default function HelpCards() {
         setPrevious(false);
       }
       if (pageStack.length === 3) {
-        setInitialDataFunction();
+        initialData();
         setPrevious(false);
       }
     }
@@ -137,7 +118,7 @@ export default function HelpCards() {
   return (
     <>
       <div ref={fistElem}></div>
-      {loading || isLoading || isFetching ? (
+      {loading ? (
         <LoadingHelps />
       ) : (
         <>
