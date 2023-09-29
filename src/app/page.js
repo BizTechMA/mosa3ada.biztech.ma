@@ -34,7 +34,12 @@ export default async function HelpsPage() {
         >
           <Typography variant="h3">قائمة الطلبات</Typography>
           <Link href={"/helps/create"}>
-            <Button color="error" variant="contained" size="large">
+            <Button
+              className="phoneButton"
+              color="error"
+              variant="contained"
+              size="large"
+            >
               <Typography
                 variant="subtitle1"
                 color={"white"}
