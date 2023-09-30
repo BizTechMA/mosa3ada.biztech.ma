@@ -45,7 +45,6 @@ async function getHelp(helpId) {
 export default async function HelpPage({ params }) {
   const help = await getHelp(params.id);
   const urlToShare = `http://localhost:3000/helps/${params.id}`;
-  console.log('this is params',params, urlToShare)
   const {
     date,
     needs,
