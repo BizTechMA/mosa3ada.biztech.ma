@@ -42,19 +42,10 @@ async function getHelp(helpId) {
   }
 }
 
-
-
-const urlToShare = 'https://example.com'; // Replace with your URL
-
-
-
-
-
-
-
 export default async function HelpPage({ params }) {
   const help = await getHelp(params.id);
-
+  const urlToShare = `http://localhost:3000/helps/${params.id}`;
+  console.log('this is params',params, urlToShare)
   const {
     date,
     needs,
@@ -404,7 +395,7 @@ export default async function HelpPage({ params }) {
         </Card>
         <DisConfirmButton dis_confirmation_count={dis_confirmation_count} id={params.id} />
         <ConfirmButton confirmation_count={confirmation_count} id={params.id} />
-        <ShareButton urlToShare={urlToShare}  />      </Container>
+        <ShareButton shareUrl={urlToShare}  />      </Container>
     </div>
   );
 }
