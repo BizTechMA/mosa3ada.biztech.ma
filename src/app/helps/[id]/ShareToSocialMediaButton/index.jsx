@@ -2,7 +2,6 @@
 import React from 'react';
 import { Button } from '@mui/material';
 export const ShareButton = ({ shareUrl }) => {
-  console.log('this is shareUrl',shareUrl);
   const shareOnFacebook = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank');
   };
