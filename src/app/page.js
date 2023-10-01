@@ -1,42 +1,15 @@
 import Image from "next/image";
-import { promises as fs } from "fs";
-import path from "path";
 
 import { Container, Grid, Typography } from "@mui/material";
 
-import HelpCard from "./helps/help";
 import Header from "@/components/Header";
-import getAllDocuments from "@/utils/firebase/firestore/getAllDocuments";
-
+import { Button } from "@mui/material";
+import Link from "next/link";
+import HelpCards from "./helps/helpCardsPagination";
 export const dynamic = "force-dynamic";
 
-async function getHelps() {
-  let data = [];
-  if (
-    process.env.CURRENT_ENV === "PRODUCTION" ||
-    process.env.NEXT_PUBLIC_USE_FIREBASE === "true"
-  ) {
-    data = (await getAllDocuments("helps")).map((item) => ({
-      docId: item.id,
-      ...item.data,
-    }));
-  } else {
-    const jsonDirectory = path.join(process.cwd(), "helpsData");
-    const fileContents = await fs.readFile(jsonDirectory + "/helpsV3", "utf8");
-
-    data = JSON.parse(fileContents.toLocaleString()).map((item) => ({
-      docId: item.id,
-      ...item.data,
-    }));
-  }
-
-  return data;
-}
 
 export default async function HelpsPage() {
-  const helps = await getHelps();
-  helps.sort((a, b) => b.confirmation_count - a.confirmation_count);
-
   return (
     <>
       <Header
@@ -61,18 +34,21 @@ export default async function HelpsPage() {
           }}
         >
           <Typography variant="h3">قائمة الطلبات</Typography>
-          {/* <Button color="error" variant="contained" size="large">
-            <Typography variant="h6">إضافة طلب</Typography>
-          </Button> */}
+          <Link href={"/helps/create"}>
+            <Button color="primary" variant="contained" size="large">
+              <Typography variant="h6" color={"white"}>
+                إضافة طلب
+              </Typography>
+            </Button>
+          </Link>
         </div>
         <Grid container>
           <Grid
-            container
             style={{
               display: "flex",
-              width: "100%",
-              justifyContent: "center",
-              marginTop: 50,
+              flexDirection: "row",
+              marginTop: 70,
+              alignItems: "center",
             }}
           ></Grid>
           <Grid container>
@@ -91,13 +67,9 @@ export default async function HelpsPage() {
               justifyContent: "center",
             }}
           >
-            {helps?.map((help, ind) => (
-              <Grid xs={12} md={4} key={ind}>
-                <HelpCard help={help} />
-              </Grid>
-            ))}
           </Grid>
         </Grid>
+        <HelpCards />
       </Container>
     </>
   );

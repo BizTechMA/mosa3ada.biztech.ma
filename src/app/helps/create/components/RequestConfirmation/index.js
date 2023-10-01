@@ -1,155 +1,35 @@
+"use client";
 import {
   Box,
   Button,
-  Card,
-  CardContent,
-  Container,
   Divider,
   Grid,
+  Input,
+  Stack,
+  TextField,
   Typography,
+  useFormControl,
 } from "@mui/material";
-import { promises as fs } from "fs";
-import Link from "next/link";
-import path from "path";
+import { RequestHeader } from "../RequestHeader";
+import styles from "../styles/global.module.css";
+import { ComponentFormState } from "..";
+import { useFormContext } from "react-hook-form";
+import { computedFieldProps } from "../../utils/computeFieldProps";
+import {
+  PlaceOutlined,
+  StarOutlined,
+  StartOutlined,
+} from "@mui/icons-material";
+export const RequestConfirmation = ({ step }) => {
+  const { getValues } = useFormContext();
 
-import { formatDate, formatDates, selectedIcon } from "../../../utils";
-
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
-import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
-
-import getDocument from "@/utils/firebase/firestore/getDocument";
-import { ConfirmButton } from "./ConfirmButton";
-import { DisConfirmButton } from "./DisConfirmButton";
-
-import { ShareButton } from "@/app/helps/[id]/ShareToSocialMediaButton/index";
-
-import styles from "./page.module.css";
-
-
-async function getHelp(helpId) {
-  if (
-    process.env.CURRENT_ENV === "PRODUCTION" ||
-    process.env.NEXT_PUBLIC_USE_FIREBASE === "true"
-  ) {
-    const { result } = await getDocument("helps", helpId);
-    return result.data();
-  } else {
-    const jsonDirectory = path.join(process.cwd(), "helpsData");
-    const fileContents = await fs.readFile(jsonDirectory + "/helpsV3", "utf8");
-
-    const parsedData = JSON.parse(fileContents.toLocaleString());
-    const help = parsedData.find((item) => item.id == helpId).data;
-    return help;
-  }
-}
-
-export default async function HelpPage({ params }) {
-  const help = await getHelp(params.id);
-  const urlToShare = `http://localhost:3000/helps/${params.id}`;
-  const {
-    date,
-    needs,
-    city,
-    location,
-    exact_position,
-    details,
-    person_name,
-    contact,
-    in_place,
-    confirmation_count = 0,
-    dis_confirmation_count = 0,
-  } = help;
-
+  const data = getValues();
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
-      <div
-        style={{
-          backgroundColor: "white",
-          padding: "15px 20px",
-        }}
-      >
-        <Container maxWidth="xl">
-          <Link
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-end",
-              gap: 10,
-            }}
-            href={"/"}
-          >
-            {" "}
-            رجوع
-            <ArrowBackIcon />
-          </Link>
-        </Container>
-      </div>
-      <Container
-        maxWidth="xl"
-        style={{
-          paddingTop: 30,
-        }}
-      >
-        <Typography
-          variant="h5"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 10,
-          }}
-        >
-          <InfoOutlinedIcon color="primary" />
-          <span>معلومات كاملة</span>
-          <span
-            style={{
-              fontSize: 19,
-              opacity: 0.5,
-            }}
-          >
-            {" "}
-            ( {confirmation_count || 0} تأكيد)
-          </span>
-        </Typography>
-        <Card
-          sx={{
-            minWidth: 300,
-            minHeight: 230,
-            margin: "30px 0",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <CardContent>
-            <Grid
-              style={{
-                display: "flex",
-                flexDirection: "row",
-              }}
-            >
-              <Typography
-                sx={{ fontSize: 14 }}
-                color="text.secondary"
-                gutterBottom
-              >
-                {formatDate(date, formatDates.Date)}
-              </Typography>
-              <Typography
-                sx={{ mb: 1.5 }}
-                color="text.secondary"
-                style={{
-                  marginRight: "auto",
-                }}
-              >
-                الساعة {formatDate(date, formatDates.Hours)}
-              </Typography>
-            </Grid>
+    <Box>
+      <div>
+        <RequestHeader step={step} />
+        <Grid container columns={12}>
+          <Grid item xs={12}>
             <div>
               <Box
                 sx={{
@@ -173,7 +53,7 @@ export default async function HelpPage({ params }) {
                       gap: 10,
                     }}
                   >
-                    <StarOutlinedIcon color="primary" />
+                    <StarOutlined color="primary" />
                     <span> عن طلب المساعدة</span>
                   </Typography>
                   <Grid
@@ -191,10 +71,10 @@ export default async function HelpPage({ params }) {
                         المدينة أو الجهة
                       </Typography>
                       <Typography className={styles.helpInfoText}>
-                        <span>{city}</span>
-                        {exact_position && (
+                        <span>{data.city}</span>
+                        {data.longitude && (
                           <a
-                            href={`https://www.google.com/maps/search/?api=1&query=${exact_position.latitude},${exact_position.longitude}`}
+                            href={`https://www.google.com/maps/search/?api=1&query=${data.latitude},${data.longitude}`}
                             target="_blank"
                           >
                             <Button
@@ -210,7 +90,7 @@ export default async function HelpPage({ params }) {
                                 gap: 5,
                               }}
                             >
-                              <PlaceOutlinedIcon />
+                              <PlaceOutlined />
                               <span>افتح خريطة الموقع</span>
                             </Button>
                           </a>
@@ -225,7 +105,7 @@ export default async function HelpPage({ params }) {
                         إسم الدوار/الجماعة/القيادة
                       </Typography>
                       <Typography className={styles.helpInfoText}>
-                        {location}
+                        {data.state}
                       </Typography>
                     </Grid>
                     <Grid item xs={12} mt={3}>
@@ -240,11 +120,12 @@ export default async function HelpPage({ params }) {
                         style={{
                           display: "flex",
                           gap: 8,
+                          marginTop: 10,
                         }}
                         className={styles.helpInfoText}
                       >
-                        {needs
-                          ? needs?.map((need, needInd) => (
+                        {data.needs.length
+                          ? data.needs.map((need, needInd) => (
                               <div
                                 key={needInd}
                                 style={{
@@ -263,9 +144,7 @@ export default async function HelpPage({ params }) {
                                     marginRight: 3,
                                     marginLeft: 3,
                                   }}
-                                >
-                                  {selectedIcon(need)}
-                                </span>
+                                ></span>
                                 <Typography variant="body1" key={needInd}>
                                   {need}
                                 </Typography>
@@ -274,36 +153,7 @@ export default async function HelpPage({ params }) {
                           : "--"}
                       </Typography>
                     </Grid>
-                    <Grid item xs={12} mt={3}>
-                      <Typography
-                        className={styles.helpInfoLabel}
-                        variant="body2"
-                      >
-                        معلومات أخرى
-                      </Typography>
-                      <Typography className={styles.helpInfoText}>
-                        {details || " لا يوجد"}
-                      </Typography>
-                      <br />
-                      <Typography
-                        className={styles.helpInfoLabel}
-                        variant="body2"
-                      >
-                        عدد التأكيدات
-                      </Typography>
-                      <Typography className={styles.helpInfoText}>
-                        {confirmation_count}
-                      </Typography>
-                      <Typography
-                        className={styles.helpInfoLabel}
-                        variant="body2"
-                      >
-                        عدد التبليغات بعدم صحيح
-                      </Typography>
-                      <Typography className={styles.helpInfoText}>
-                        {dis_confirmation_count}
-                      </Typography>
-                    </Grid>
+
                     <Divider
                       sx={{
                         display: {
@@ -346,7 +196,7 @@ export default async function HelpPage({ params }) {
                       gap: 10,
                     }}
                   >
-                    <StarOutlinedIcon color="primary" />
+                    <StarOutlined color="primary" />
                     <span>عن واضع/واضعة الطلب</span>
                   </Typography>
                   <Grid
@@ -364,7 +214,7 @@ export default async function HelpPage({ params }) {
                         الإسم الكامل
                       </Typography>
                       <Typography className={styles.helpInfoText}>
-                        {person_name || "لا يوجد"}
+                        {data.fullName}
                       </Typography>
                     </Grid>
                     <Grid item xs={12} md={3} mt={3}>
@@ -375,7 +225,7 @@ export default async function HelpPage({ params }) {
                         هل توجد بعين المكان؟{" "}
                       </Typography>
                       <Typography className={styles.helpInfoText}>
-                        {in_place ? "نعم" : "لا"}
+                        {data.in_place ? "نعم" : "لا"}
                       </Typography>
                     </Grid>
                     <Grid item xs={12} md={3} mt={3}>
@@ -386,21 +236,16 @@ export default async function HelpPage({ params }) {
                         رقم الهاتف{" "}
                       </Typography>
                       <Typography className={styles.helpInfoText}>
-                        {contact?.phone_number || "لا يوجد"}
+                        {data.phone || "لا يوجد"}
                       </Typography>
                     </Grid>
                   </Grid>
                 </div>
               </Box>
             </div>
-          </CardContent>
-        </Card>
-        <DisConfirmButton
-          dis_confirmation_count={dis_confirmation_count}
-          id={params.id}
-        />
-        <ConfirmButton confirmation_count={confirmation_count} id={params.id} />
-        <ShareButton shareUrl={urlToShare}  />      </Container>
-    </div>
+          </Grid>
+        </Grid>
+      </div>
+    </Box>
   );
-}
+};
