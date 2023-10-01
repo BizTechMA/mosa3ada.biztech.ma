@@ -24,18 +24,11 @@ export default async function HelpsPage() {
         }
       />
       <Container maxWidth="xl">
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column-reverse",
-            marginTop: 50,
-            gap: "1rem",
-          }}
-        >
+        <div className="parentButtonAdd">
           <Typography variant="h3">قائمة الطلبات</Typography>
           <Link href={"/helps/create"}>
             <Button
-              className="phoneButton"
+              className="phoneButtonAdd"
               color="error"
               variant="contained"
               size="large"

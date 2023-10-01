@@ -102,8 +102,19 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 450px) {
-  .phoneButton {
+.parentButtonAdd {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50;
+  gap: 1rem;
+}
+
+@media (max-width: 770px) {
+  .parentButtonAdd {
+    flex-direction: column-reverse;
+  }
+  .parentButtonAdd .phoneButtonAdd {
     width: 100%;
   }
 }
