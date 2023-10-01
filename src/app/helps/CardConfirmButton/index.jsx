@@ -1,3 +1,4 @@
+"use client";
 import { ThumbUpAltSharp, ThumbUpOffAlt } from "@mui/icons-material";
 import { Button, CircularProgress, Typography } from "@mui/material";
 
@@ -7,7 +8,7 @@ export const HelpCardConfirmButton = ({
   buttonProps = {},
   isLoading,
   isConfirmed,
-  isDisConfirmed
+  isDisConfirmed,
 }) => {
   return (
     <Button
