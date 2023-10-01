@@ -1,5 +1,4 @@
 import { MuiProvider } from "@/components";
-import ReactQueryProviders from "@/components/reactQueryProvider/providers";
 import GoogleAnalytics from "@/utils/analytics";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { Toaster } from "react-hot-toast";
@@ -15,9 +14,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning>
         <MuiProvider>
           <GoogleAnalytics GA_TRACKING_ID={process.env.MEASUREMENT_ID} />
-          <ReactQueryProviders>
-            {children}
-          </ReactQueryProviders>
+          {children}
         </MuiProvider>
         <Toaster />
       </body>
