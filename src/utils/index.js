@@ -1,4 +1,3 @@
-import { Timestamp } from "firebase/firestore";
 import Image from "next/image";
 
 export function selectedIcon(key) {

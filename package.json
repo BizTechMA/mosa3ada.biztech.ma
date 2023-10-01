@@ -12,18 +12,29 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^5.0.8",
+    "@hookform/resolvers": "^3.3.1",
     "@mui/icons-material": "^5.14.8",
     "@mui/material": "^5.14.11",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
     "firebase": "^10.3.1",
+
     "next": "^13.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+
+    "mapbox-gl": "^2.15.0",
+    "next": "13.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+
     "react-ga": "^3.3.1",
+    "react-hook-form": "^7.46.2",
     "react-hot-toast": "^2.4.1",
+    "react-map-gl": "^7.1.6",
     "use-local-storage": "^3.0.0",
-    "xlsx": "^0.18.5"
+    "xlsx": "^0.18.5",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "prettier": "^3.0.3"
