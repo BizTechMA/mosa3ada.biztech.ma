@@ -168,7 +168,7 @@ export default function HelpCard({ help }) {
           padding: "15px 25px",
         }}
       >
-        <Grid item xs={12} style={{ flex: 1 }} >
+        <Grid item xs={12} style={{ flex: 1 }}>
           <HelpCardConfirmButton
             isConfirmed={isConfirmed}
             isDisConfirmed={isDisConfirmed}
