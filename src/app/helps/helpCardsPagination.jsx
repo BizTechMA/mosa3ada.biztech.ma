@@ -9,7 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import HelpCard from "./help";
 import LoadingHelps from "./helpLoading";
 
-export default function HelpCards() {
+export default function HelpCards(helpsFilters) {
   const fistElem = useRef(null);
   const [helps, setHelps] = useState([]);
   const [next, setNext] = useState(false);
@@ -18,6 +18,9 @@ export default function HelpCards() {
   const [pageStack, setPageStack] = useState([]);
   const [lastCount, setLastCount] = useState([]);
   const [helpsCount, setHelpsCount] = useState(null);
+
+  //!! I suggest opening a new issue to refactor this part, it does the job perfectly
+  //!! but it's overly complicated, it takes so much time to make little changes.
 
   const fetchNextOrPreviousData = async (count, date) => {
     setLoading(true);
@@ -50,7 +53,7 @@ export default function HelpCards() {
 
   const initialData = async () => {
     setLoading(true);
-    const results = await fetch("/api/helps");
+    const results = await fetch(`/api/helps?city=${helpsFilters.city}}`);
     const data = await results.json();
     if (data?.lastKey != "") {
       setPageStack([]);
@@ -77,7 +80,8 @@ export default function HelpCards() {
 
   useEffect(() => {
     initialData();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [helpsFilters]);
 
   useEffect(() => {
     const myHelpsCount = async () => {
