@@ -53,7 +53,7 @@ export default function HelpCards(helpsFilters) {
 
   const initialData = async () => {
     setLoading(true);
-    const results = await fetch(`/api/helps?city=${helpsFilters.city}}`);
+    const results = await fetch(`/api/helps?city=${helpsFilters.filters.city}`);
     const data = await results.json();
     if (data?.lastKey != "") {
       setPageStack([]);
