@@ -151,18 +151,18 @@ export default function HelpCards(helpsFilters) {
               variant="contained"
               aria-label="Next and Previous buttons"
               style={{
-                flexDirection: "row-reverse",
+                flexDirection: "row",
               }}
             >
-              {helps.length === 9 ? (
-                <Button onClick={() => setNext(true)}>التالي</Button>
-              ) : (
-                <Button disabled>التالي</Button>
-              )}
               {pageStack.length > 2 ? (
                 <Button onClick={() => setPrevious(true)}>رجوع</Button>
               ) : (
                 <Button disabled>رجوع</Button>
+              )}
+              {helps.length === 9 ? (
+                <Button onClick={() => setNext(true)}>التالي</Button>
+              ) : (
+                <Button disabled>التالي</Button>
               )}
             </ButtonGroup>
           </Grid>
@@ -173,28 +173,54 @@ export default function HelpCards(helpsFilters) {
               paddingBottom: "2rem",
             }}
           >
-            <Pagination
-              count={helpsCount ? helpsCount : 50}
-              page={pageStack.length - 1}
-              size="small"
-              color="primary"
-              onChange={(event, page) => {
-                if (page > pageStack.length - 1) {
-                  setNext(true);
-                } else if (page < pageStack.length - 1) {
-                  setPrevious(true);
-                }
-              }}
-              renderItem={(item) => (
-                <PaginationItem
-                  components={{
-                    previous: ArrowForwardIosIcon,
-                    next: ArrowBackIosNewIcon,
-                  }}
-                  {...item}
-                />
-              )}
-            />
+            {helps.length === 9 ? (
+              <Pagination
+                count={helpsCount ? helpsCount : 50}
+                page={pageStack.length - 1}
+                size="small"
+                color="primary"
+                onChange={(event, page) => {
+                  if (page > pageStack.length - 1) {
+                    setNext(true);
+                  } else if (page < pageStack.length - 1) {
+                    setPrevious(true);
+                  }
+                }}
+                renderItem={(item) => (
+                  <PaginationItem
+                    components={{
+                      previous: ArrowBackIosNewIcon,
+                      next: ArrowForwardIosIcon,
+                    }}
+                    {...item}
+                  />
+                )}
+              />
+            ) : (
+              <Pagination
+                disabled
+                count={helpsCount ? helpsCount : 50}
+                page={pageStack.length - 1}
+                size="small"
+                color="primary"
+                onChange={(event, page) => {
+                  if (page > pageStack.length - 1) {
+                    setNext(true);
+                  } else if (page < pageStack.length - 1) {
+                    setPrevious(true);
+                  }
+                }}
+                renderItem={(item) => (
+                  <PaginationItem
+                    components={{
+                      previous: ArrowBackIosNewIcon,
+                      next: ArrowForwardIosIcon,
+                    }}
+                    {...item}
+                  />
+                )}
+              />
+            )}
           </Grid>
         </>
       )}
