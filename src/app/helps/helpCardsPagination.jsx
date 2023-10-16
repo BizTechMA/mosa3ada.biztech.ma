@@ -9,7 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import HelpCard from "./help";
 import LoadingHelps from "./helpLoading";
 
-export default function HelpCards() {
+export default function HelpCards(helpsFilters) {
   const fistElem = useRef(null);
   const [helps, setHelps] = useState([]);
   const [next, setNext] = useState(false);
@@ -18,6 +18,9 @@ export default function HelpCards() {
   const [pageStack, setPageStack] = useState([]);
   const [lastCount, setLastCount] = useState([]);
   const [helpsCount, setHelpsCount] = useState(null);
+
+  //!! I suggest opening a new issue to refactor this part, it does the job perfectly
+  //!! but it's overly complicated, it takes so much time to make little changes.
 
   const fetchNextOrPreviousData = async (count, date) => {
     setLoading(true);
@@ -50,7 +53,7 @@ export default function HelpCards() {
 
   const initialData = async () => {
     setLoading(true);
-    const results = await fetch("/api/helps");
+    const results = await fetch(`/api/helps?city=${helpsFilters.filters.city}`);
     const data = await results.json();
     if (data?.lastKey != "") {
       setPageStack([]);
@@ -77,7 +80,8 @@ export default function HelpCards() {
 
   useEffect(() => {
     initialData();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [helpsFilters]);
 
   useEffect(() => {
     const myHelpsCount = async () => {
@@ -147,18 +151,18 @@ export default function HelpCards() {
               variant="contained"
               aria-label="Next and Previous buttons"
               style={{
-                flexDirection: "row-reverse",
+                flexDirection: "row",
               }}
             >
-              {helps.length === 9 ? (
-                <Button onClick={() => setNext(true)}>التالي</Button>
-              ) : (
-                <Button disabled>التالي</Button>
-              )}
               {pageStack.length > 2 ? (
                 <Button onClick={() => setPrevious(true)}>رجوع</Button>
               ) : (
                 <Button disabled>رجوع</Button>
+              )}
+              {helps.length === 9 ? (
+                <Button onClick={() => setNext(true)}>التالي</Button>
+              ) : (
+                <Button disabled>التالي</Button>
               )}
             </ButtonGroup>
           </Grid>
@@ -169,28 +173,54 @@ export default function HelpCards() {
               paddingBottom: "2rem",
             }}
           >
-            <Pagination
-              count={helpsCount ? helpsCount : 50}
-              page={pageStack.length - 1}
-              size="small"
-              color="primary"
-              onChange={(event, page) => {
-                if (page > pageStack.length - 1) {
-                  setNext(true);
-                } else if (page < pageStack.length - 1) {
-                  setPrevious(true);
-                }
-              }}
-              renderItem={(item) => (
-                <PaginationItem
-                  components={{
-                    previous: ArrowForwardIosIcon,
-                    next: ArrowBackIosNewIcon,
-                  }}
-                  {...item}
-                />
-              )}
-            />
+            {helps.length === 9 ? (
+              <Pagination
+                count={helpsCount ? helpsCount : 50}
+                page={pageStack.length - 1}
+                size="small"
+                color="primary"
+                onChange={(event, page) => {
+                  if (page > pageStack.length - 1) {
+                    setNext(true);
+                  } else if (page < pageStack.length - 1) {
+                    setPrevious(true);
+                  }
+                }}
+                renderItem={(item) => (
+                  <PaginationItem
+                    components={{
+                      previous: ArrowBackIosNewIcon,
+                      next: ArrowForwardIosIcon,
+                    }}
+                    {...item}
+                  />
+                )}
+              />
+            ) : (
+              <Pagination
+                disabled
+                count={helpsCount ? helpsCount : 50}
+                page={pageStack.length - 1}
+                size="small"
+                color="primary"
+                onChange={(event, page) => {
+                  if (page > pageStack.length - 1) {
+                    setNext(true);
+                  } else if (page < pageStack.length - 1) {
+                    setPrevious(true);
+                  }
+                }}
+                renderItem={(item) => (
+                  <PaginationItem
+                    components={{
+                      previous: ArrowBackIosNewIcon,
+                      next: ArrowForwardIosIcon,
+                    }}
+                    {...item}
+                  />
+                )}
+              />
+            )}
           </Grid>
         </>
       )}
