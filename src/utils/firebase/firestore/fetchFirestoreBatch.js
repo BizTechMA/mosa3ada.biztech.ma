@@ -17,11 +17,15 @@ async function fetchFirestoreInitialBatch(collectionName, filters) {
   let lastKey = "";
   let lastCount = 0;
   let firstCount = 0;
+
   let firstKey = "";
+
   try {
     let q = query(
       collection(db, collectionName),
-      filters.city ? where("city", "==", filters.city) : null,
+      filters.city !== "null" && filters.city !== "undefined" && filters.city
+        ? where("city", "==", filters.city)
+        : null,
       orderBy("confirmation_count", "desc"),
       orderBy("date", "desc"),
       limit(9),
