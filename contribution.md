@@ -38,7 +38,7 @@ Mosa3ada is built with React and Next.js 13. Ensure you have a basic understandi
 
 ## Communication
 
-If you have any questions, need clarification, or want to discuss certain aspects of the project, please join our [Discord server](https://discord.gg/n2FvJwHN). We're a collaborative community, and open discussion is encouraged.
+If you have any questions, need clarification, or want to discuss certain aspects of the project, please join our [Discord server](https://discord.gg/F2sAjBvX). We're a collaborative community, and open discussion is encouraged.
 
 ## Closing Notes
 
