@@ -75,6 +75,7 @@ export default function HelpCards() {
     return countPromise;
   };
 
+  
   useEffect(() => {
     initialData();
   }, []);
