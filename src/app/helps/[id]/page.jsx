@@ -23,7 +23,7 @@ import getDocument from "@/utils/firebase/firestore/getDocument";
 import { ConfirmButton } from "./ConfirmButton";
 import { DisConfirmButton } from "./DisConfirmButton";
 import styles from "./page.module.css";
-
+import { ShareButton } from "@/app/helps/[id]/ShareToSocialMediaButtons/index";
 async function getHelp(helpId) {
   if (
     process.env.CURRENT_ENV === "PRODUCTION" ||
