@@ -8,6 +8,7 @@ import { Button, ButtonGroup } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import HelpCard from "./help";
 import LoadingHelps from "./helpLoading";
+import FakeData from "../../../helpsData/fake-data";
 
 export default function HelpCards(helpsFilters) {
   const fistElem = useRef(null);
@@ -52,30 +53,57 @@ export default function HelpCards(helpsFilters) {
   };
 
   const initialData = async () => {
-    setLoading(true);
-    const results = await fetch(`/api/helps?city=${helpsFilters.filters.city}`);
-    const data = await results.json();
-    if (data?.lastKey != "") {
-      setPageStack([]);
-      setLastCount([]);
-      setPageStack((pageStack) => [...pageStack, data?.firstKey]);
-      setPageStack((pageStack) => [...pageStack, data?.lastKey]);
-      setLastCount((lastCount) => [...lastCount, data?.firstCount]);
-      setLastCount((lastCount) => [...lastCount, data?.lastCount]);
+    if (process.env.NEXT_PUBLIC_CURRENT_ENV === "LOCAL") {
+      setLoading(true);
+      const data = FakeData();
+      if (data?.lastKey != "") {
+        setPageStack([]);
+        setLastCount([]);
+        setPageStack((pageStack) => [...pageStack, data?.firstKey]);
+        setPageStack((pageStack) => [...pageStack, data?.lastKey]);
+        setLastCount((lastCount) => [...lastCount, data?.firstCount]);
+        setLastCount((lastCount) => [...lastCount, data?.lastCount]);
+      }
+      let getHelps = data.results.map((item) => ({
+        docId: item.id,
+        ...item.data,
+      }));
+      setHelps(getHelps);
+      setLoading(false);
+      return data;
+    } else {
+      setLoading(true);
+      const results = await fetch(
+        `/api/helps?city=${helpsFilters.filters.city}`,
+      );
+      const data = await results.json();
+      if (data?.lastKey != "") {
+        setPageStack([]);
+        setLastCount([]);
+        setPageStack((pageStack) => [...pageStack, data?.firstKey]);
+        setPageStack((pageStack) => [...pageStack, data?.lastKey]);
+        setLastCount((lastCount) => [...lastCount, data?.firstCount]);
+        setLastCount((lastCount) => [...lastCount, data?.lastCount]);
+      }
+      let getHelps = data.results.map((item) => ({
+        docId: item.id,
+        ...item.data,
+      }));
+      setHelps(getHelps);
+      setLoading(false);
+      return data;
     }
-    let getHelps = data.results.map((item) => ({
-      docId: item.id,
-      ...item.data,
-    }));
-    setHelps(getHelps);
-    setLoading(false);
-    return data;
   };
 
   const fetchCount = async () => {
-    const fetchedCount = await fetch("/api/helpscount");
-    const countPromise = await fetchedCount.json();
-    return countPromise;
+    if (process.env.NEXT_PUBLIC_CURRENT_ENV === "LOCAL") {
+      const countPromise = 1;
+      return countPromise;
+    } else {
+      const fetchedCount = await fetch("/api/helpscount");
+      const countPromise = await fetchedCount.json();
+      return countPromise;
+    }
   };
 
   useEffect(() => {
@@ -118,7 +146,6 @@ export default function HelpCards(helpsFilters) {
   useEffect(() => {
     fistElem.current.scrollIntoView({ behavior: "smooth", block: "start" });
   }, [helps]);
-
   return (
     <>
       <div ref={fistElem}></div>
@@ -159,7 +186,8 @@ export default function HelpCards(helpsFilters) {
               ) : (
                 <Button disabled>رجوع</Button>
               )}
-              {helps.length === 9 ? (
+              {helps.length === 9 &&
+              process.env.NEXT_PUBLIC_CURRENT_ENV !== "LOCAL" ? (
                 <Button onClick={() => setNext(true)}>التالي</Button>
               ) : (
                 <Button disabled>التالي</Button>
