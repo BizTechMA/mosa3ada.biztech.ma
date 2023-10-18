@@ -8,6 +8,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
+// this about 
 import { promises as fs } from "fs";
 import Link from "next/link";
 import path from "path";
@@ -22,8 +23,13 @@ import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import getDocument from "@/utils/firebase/firestore/getDocument";
 import { ConfirmButton } from "./ConfirmButton";
 import { DisConfirmButton } from "./DisConfirmButton";
-import styles from "./page.module.css";
+
 import { ShareButton } from "@/app/helps/[id]/ShareToSocialMediaButtons/index";
+
+import styles from "./page.module.css";
+import { MuiProvider } from "@/components";
+
+
 async function getHelp(helpId) {
   if (
     process.env.CURRENT_ENV === "PRODUCTION" ||
@@ -43,7 +49,7 @@ async function getHelp(helpId) {
 
 export default async function HelpPage({ params }) {
   const help = await getHelp(params.id);
-
+  const urlToShare = `http://localhost:3000/helps/${params.id}`;
   const {
     date,
     needs,
@@ -396,7 +402,9 @@ export default async function HelpPage({ params }) {
           id={params.id}
         />
         <ConfirmButton confirmation_count={confirmation_count} id={params.id} />
-      </Container>
+        <ShareButton shareUrl={urlToShare}  />    
+
+        </Container>
     </div>
   );
 }
