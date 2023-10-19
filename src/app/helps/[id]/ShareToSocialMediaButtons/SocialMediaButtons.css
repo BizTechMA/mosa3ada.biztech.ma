@@ -44,3 +44,19 @@
     background-color: #128C7E; /* WhatsApp color on hover */
   }
   
+
+  .share-link {
+    display: block;
+    background-color: white;
+    font-weight: bold;
+    color: initial; /* Set your specific color for normal state */
+    text-decoration: none; /* Remove underlines */
+    padding: 10px; /* Adjust the padding as needed */
+    transition: color 0.3s; /* Add a smooth color transition on hover */
+
+  }
+
+  
+  
+  
+  
