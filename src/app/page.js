@@ -9,13 +9,17 @@ import Link from "next/link";
 import HelpCards from "./helps/helpCardsPagination";
 import { HelpsFilter } from "./helpsFilter";
 import { useState } from "react";
+import { HelpsSortByDate } from "./helpsSortByDate";
+import { FiltersContainer } from "./filtersContainer";
 export const dynamic = "force-dynamic";
 
 export default function HelpsPage() {
   const [helpsFilter, setHelpsFilter] = useState({
     city: null,
-    date: null,
   });
+
+  // desc, asc
+  const [sortByDate, setSortByDate] = useState();
 
   return (
     <>
@@ -50,7 +54,10 @@ export default function HelpsPage() {
               </Button>
             </Link>
           </div>
-          <HelpsFilter setFilters={setHelpsFilter} />
+          <FiltersContainer>
+            <HelpsSortByDate value={sortByDate} setSorting={setSortByDate} />
+            <HelpsFilter setFilters={setHelpsFilter} />
+          </FiltersContainer>
         </Stack>
         <Grid container>
           <Grid
@@ -78,7 +85,7 @@ export default function HelpsPage() {
             }}
           ></Grid>
         </Grid>
-        <HelpCards filters={helpsFilter} />
+        <HelpCards sort={sortByDate} filters={helpsFilter} />
       </Container>
     </>
   );
