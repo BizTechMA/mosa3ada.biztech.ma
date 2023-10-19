@@ -10,7 +10,7 @@ import HelpCard from "./help";
 import LoadingHelps from "./helpLoading";
 import FakeData from "../../../helpsData/fake-data";
 
-export default function HelpCards(helpsFilters) {
+export default function HelpCards({ filters, sort }) {
   const fistElem = useRef(null);
   const [helps, setHelps] = useState([]);
   const [next, setNext] = useState(false);
@@ -74,7 +74,7 @@ export default function HelpCards(helpsFilters) {
     } else {
       setLoading(true);
       const results = await fetch(
-        `/api/helps?city=${helpsFilters.filters.city}`,
+        `/api/helps?city=${filters.city}&sortBy=${sort}`,
       );
       const data = await results.json();
       if (data?.lastKey != "") {
@@ -109,7 +109,7 @@ export default function HelpCards(helpsFilters) {
   useEffect(() => {
     initialData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [helpsFilters]);
+  }, [filters, sort]);
 
   useEffect(() => {
     const myHelpsCount = async () => {
