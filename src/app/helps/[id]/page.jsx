@@ -27,7 +27,7 @@ import { DisConfirmButton } from "./DisConfirmButton";
 import { ShareButton } from "@/app/helps/[id]/ShareToSocialMediaButtons/index";
 
 import styles from "./page.module.css";
-import { MuiProvider } from "@/components";
+import {ShareSocialMediaButtonsMenu} from "@/app/helps/[id]/ShareToSocialMediaButtons/tes";
 
 
 async function getHelp(helpId) {
