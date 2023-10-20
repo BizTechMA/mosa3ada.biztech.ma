@@ -25,13 +25,16 @@ export default function HelpCards({ filters, sort }) {
 
   const fetchNextOrPreviousData = async (count, date) => {
     setLoading(true);
-    const results = await fetch("/api/nexthelps", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+    const results = await fetch(
+      `/api/nexthelps?${filters.city}&sortBy=${sort}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ count, date }),
       },
-      body: JSON.stringify({ count, date }),
-    });
+    );
     const data = await results.json();
 
     if (data?.lastKey != "" && next) {

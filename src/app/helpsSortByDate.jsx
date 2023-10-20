@@ -38,8 +38,8 @@ export const HelpsSortByDate = ({ value, setSorting }) => {
             label="تاريخ الطلب"
             value={value}
           >
-            <MenuItem value={"desc"}>الأقدم</MenuItem>
-            <MenuItem value={"asc"}>الأحدث</MenuItem>
+            <MenuItem value={"asc"}>الأقدم</MenuItem>
+            <MenuItem value={"desc"}>الأحدث</MenuItem>
           </Select>
         </FormControl>
       </Box>
