@@ -20,15 +20,14 @@ async function fetchFirestoreInitialBatch(collectionName, filters) {
 
   let firstKey = "";
 
-  console.log(filters.sortBy);
   try {
     let q = query(
       collection(db, collectionName),
       filters.city !== "null" && filters.city !== "undefined" && filters.city
         ? where("city", "==", filters.city)
         : null,
-      orderBy("confirmation_count", "desc"),
       orderBy("date", filters.sortBy),
+      // orderBy("confirmation_count", "desc"),
       limit(9),
     );
     const querySnapshots = await getDocs(q);
@@ -52,6 +51,7 @@ async function fetchFirestoreNextBatch(
   collectionName,
   confirmation_count,
   date,
+  filters,
 ) {
   let results = [];
   let lastCount = 0;
@@ -60,7 +60,7 @@ async function fetchFirestoreNextBatch(
     let q = query(
       collection(db, collectionName),
       orderBy("confirmation_count", "desc"),
-      orderBy("date", "desc"),
+      orderBy("date", filters.sortBy),
       startAfter(confirmation_count, date),
       limit(9),
     );

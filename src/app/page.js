@@ -19,7 +19,7 @@ export default function HelpsPage() {
   });
 
   // desc, asc
-  const [sortByDate, setSortByDate] = useState();
+  const [sortByDate, setSortByDate] = useState("asc");
 
   return (
     <>
