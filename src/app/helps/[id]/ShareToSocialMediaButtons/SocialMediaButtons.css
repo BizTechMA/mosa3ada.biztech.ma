@@ -57,6 +57,27 @@
   }
 
   
+  .share-link {
+    cursor: pointer; /* Change cursor to hand on hover */
+    text-decoration: none; /* Remove underline from links */
+  }
   
+  .share-link:hover {
+    text-decoration: underline; /* Add underline back on hover */
+  }
   
+  .parent {
+    width: 100%; /* Set the width of the parent element */
+    /* You can use a specific width or a percentage based on your needs */
+    position: relative; /* For positioning children relative to this element */
+  }
   
+  .share-link {
+    width: 50%; /* Set the share link's width as a percentage of its parent's width */
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+  }
