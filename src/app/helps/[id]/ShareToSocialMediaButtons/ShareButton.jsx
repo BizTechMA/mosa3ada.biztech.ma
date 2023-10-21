@@ -26,7 +26,9 @@ const buttonStyles = {
     height: '21px',
     padding: '3.5px 3.5px 2.5px 3.5px',
   };
-
+  const textStyles = {
+    marginRight: '8px', 
+  };
 export const ButtonShare = ({ shareUrl }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const handleMenuOpen = (event) => {
@@ -58,29 +60,30 @@ export const ButtonShare = ({ shareUrl }) => {
 <>
       <Button style={buttonStyles} onClick={handleMenuOpen}>
         <Typography style={{ color: '#777777' }}>مشاركة</Typography>
+        <IosShareIcon style={iconStyles} />
       </Button>
       <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
         <MenuItem onClick={() => handleShareClick('Facebook', shareUrl)}>
-          <FacebookIcon color="primary" fontSize="small" /> 
-          <Typography>
+          <FacebookIcon color="primary" fontSize="small" />
+          <Typography style={textStyles}>
             شارك على فايسبوك
           </Typography>
         </MenuItem>
         <MenuItem onClick={() => handleShareClick('Twitter', shareUrl)}>
           <TwitterIcon color="primary" fontSize="small" /> 
-          <Typography>
+          <Typography style={textStyles}>
             شارك على تويتر
           </Typography>
         </MenuItem>
         <MenuItem onClick={() => handleShareClick('WhatsApp', shareUrl)}>
           <WhatsAppIcon color="primary" fontSize="small" />   
-          <Typography>
+          <Typography style={textStyles}>
             شارك على واتساب
           </Typography>
         </MenuItem>
         <MenuItem onClick={() => handleShareClick('LinkedIn', shareUrl)}>
           <LinkedInIcon color="primary" fontSize="small" />          
-           <Typography>
+           <Typography style={textStyles}>
             شارك على لينكدين
           </Typography>
         </MenuItem>
