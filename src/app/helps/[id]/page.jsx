@@ -8,7 +8,6 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-// this about 
 import { promises as fs } from "fs";
 import Link from "next/link";
 import path from "path";
@@ -23,10 +22,9 @@ import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import getDocument from "@/utils/firebase/firestore/getDocument";
 import { ConfirmButton } from "./ConfirmButton";
 import { DisConfirmButton } from "./DisConfirmButton";
-
-import { ShareButton } from "@/app/helps/[id]/ShareToSocialMediaButton/index";
-
 import styles from "./page.module.css";
+import {ButtonShare} from "@/app/helps/[id]/ShareToSocialMediaButtons/ShareButton";
+
 
 
 async function getHelp(helpId) {
@@ -48,8 +46,7 @@ async function getHelp(helpId) {
 
 export default async function HelpPage({ params }) {
   const help = await getHelp(params.id);
-  console.log(help)
-  const urlToShare = `http://localhost:3000/helps/${params.id}`;
+  const urlToShare = `https://www.mosa3ada.ma//helps/${params.id}`;
   const {
     date,
     needs,
@@ -177,14 +174,20 @@ export default async function HelpPage({ params }) {
                   >
                     <StarOutlinedIcon color="primary" />
                     <span> عن طلب المساعدة</span>
+                    {/* <Grid item xs={12} md={3} mt={3}> */}
+                  <ButtonShare shareUrl={urlToShare} />
+                  {/* </Grid> */}
                   </Typography>
+
                   <Grid
                     columns={{
                       md: 6,
                       xs: 12,
                     }}
                     container
-                  >
+                  >        
+
+
                     <Grid item xs={12} md={3} mt={3}>
                       <Typography
                         className={styles.helpInfoLabel}
@@ -401,8 +404,8 @@ export default async function HelpPage({ params }) {
           dis_confirmation_count={dis_confirmation_count}
           id={params.id}
         />
-        <ConfirmButton confirmation_count={confirmation_count} id={params.id} />
-        <ShareButton shareUrl={urlToShare}  />      </Container>
+        <ConfirmButton confirmation_count={confirmation_count} id={params.id} /> 
+        </Container>
     </div>
   );
 }
