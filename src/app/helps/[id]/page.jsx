@@ -24,8 +24,6 @@ import getDocument from "@/utils/firebase/firestore/getDocument";
 import { ConfirmButton } from "./ConfirmButton";
 import { DisConfirmButton } from "./DisConfirmButton";
 
-import { ShareButton } from "@/app/helps/[id]/ShareToSocialMediaButtons/index";
-
 import styles from "./page.module.css";
 import {ButtonShare} from "@/app/helps/[id]/ShareToSocialMediaButtons/ShareButton";
 
@@ -50,8 +48,6 @@ async function getHelp(helpId) {
 export default async function HelpPage({ params }) {
   const help = await getHelp(params.id);
   const urlToShare = `https://www.mosa3ada.ma//helps/${params.id}`;
-
-  
   const {
     date,
     needs,
