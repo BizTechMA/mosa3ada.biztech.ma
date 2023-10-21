@@ -163,20 +163,26 @@ export default async function HelpPage({ params }) {
                     width: "100%",
                   }}
                 >
-                  <Typography
+<Typography
                     variant="h6"
                     fontWeight={400}
                     style={{
                       display: "flex",
                       alignItems: "center",
+                      justifyContent:"space-between",
                       gap: 10,
                     }}
                   >
-                    <StarOutlinedIcon color="primary" />
-                    <span> عن طلب المساعدة</span>
+                    <span  style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 10,
+                    }}>
+                      <StarOutlinedIcon color="primary" />
+                      <span> عن طلب المساعدة</span>
+                    </span>
                     {/* <Grid item xs={12} md={3} mt={3}> */}
                   <ButtonShare shareUrl={urlToShare} />
-                  {/* </Grid> */}
                   </Typography>
 
                   <Grid
