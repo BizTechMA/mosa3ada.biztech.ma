@@ -1,6 +1,8 @@
 "use client";
 import { DangerousOutlined, DangerousSharp } from "@mui/icons-material";
 import { Button, CircularProgress, Typography } from "@mui/material";
+import { Context } from "@/app/helps/help";
+import {useContext} from "react";
 
 export const HelpCardDisConfirmButton = ({
   disConfirmationCount = 0,
@@ -10,9 +12,11 @@ export const HelpCardDisConfirmButton = ({
   isDisConfirmed,
   isConfirmed,
 }) => {
+  const [avoid,setAvoid]=useContext(Context);
+
   return (
     <Button
-      disabled={isLoading || isConfirmed}
+      disabled={isLoading || isConfirmed || avoid}
       style={{
         gap: 6,
       }}

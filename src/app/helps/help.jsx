@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useConfirmation } from "../../hooks/useConfimration";
 import { useDisConfirmation } from "../../hooks/useDisConfirmation";
+import {createContext,useState} from "react";
 
 import {
   Card,
@@ -17,8 +18,9 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { formatDate, formatDates, selectedIcon } from "../../utils";
 import { HelpCardConfirmButton } from "./CardConfirmButton";
 import { HelpCardDisConfirmButton } from "./CardDisConfirmButton";
-
+export const Context =createContext();
 export default function HelpCard({ help }) {
+  const [avoid,setAvoid]=useState(false);
   const {
     date,
     needs,
@@ -169,6 +171,8 @@ export default function HelpCard({ help }) {
         }}
       >
         <Grid item xs={12} style={{ flex: 1 }}>
+          <Context.Provider value={[avoid,setAvoid]}>
+
           <HelpCardConfirmButton
             isConfirmed={isConfirmed}
             isDisConfirmed={isDisConfirmed}
@@ -183,6 +187,7 @@ export default function HelpCard({ help }) {
             disConfirmationCount={disConfirmationCount}
             onDisConfirm={handleDisConfirmHelp}
           />
+          </Context.Provider>
         </Grid>
         <Link
           href={`/helps/${docId}`}

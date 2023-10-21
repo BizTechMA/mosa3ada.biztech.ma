@@ -1,4 +1,7 @@
+import { Context } from "@/app/helps/help";
 import { useMemo, useState } from "react";
+
+import {useContext} from "react";
 import toast from "react-hot-toast";
 import useLocalStorage from "use-local-storage";
 export const useDisConfirmation = ({ id, dis_confirmation_count }) => {
@@ -16,6 +19,10 @@ export const useDisConfirmation = ({ id, dis_confirmation_count }) => {
   );
 
   const handleDisConfirmHelp = async () => {
+    const [avoid,setAvoid]=useContext(Context);
+
+    setAvoid(true);
+    
     const currentQuantomPtl = quantomPtl?.find((item) => item.id === id);
     if (currentQuantomPtl?.ttl > Date.now()) {
       toast.error("لقد قمت بالإبلاغ على هذا الطلب من قبل");
@@ -51,6 +58,8 @@ export const useDisConfirmation = ({ id, dis_confirmation_count }) => {
     toast.success("تم بالإبلاغ بنجاح");
     setConfirmationCount((prev) => (prev ? prev + 1 : 1));
     setIsDisConfirmedLoading(false);
+    setAvoid(false);
+
   };
 
   return { disConfirmationCount, isDisConfirmed, isDisConfirmedLoading, handleDisConfirmHelp };
