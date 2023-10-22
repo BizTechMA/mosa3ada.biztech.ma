@@ -62,33 +62,6 @@ export default function HelpsPage() {
           </Grid>
           <HelpsFilter setFilters={setHelpsFilter} />
         </Stack>
-        {/* These Grid components might be optional, feel free to check if we still need them! */}
-        {/*<Grid container>
-          <Grid
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              marginTop: 70,
-              alignItems: "center",
-            }}
-          ></Grid>
-          <Grid container>
-            <Grid
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                marginTop: 20,
-                alignItems: "center",
-              }}
-            ></Grid>
-          </Grid>
-          <Grid
-            container
-            style={{
-              justifyContent: "center",
-            }}
-          ></Grid>
-        </Grid>*/}
         <HelpCards filters={helpsFilter} />
       </Container>
     </>
