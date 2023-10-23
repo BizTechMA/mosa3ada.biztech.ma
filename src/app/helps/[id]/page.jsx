@@ -46,7 +46,7 @@ async function getHelp(helpId) {
 
 export default async function HelpPage({ params }) {
   const help = await getHelp(params.id);
-  const urlToShare = `https://www.mosa3ada.ma//helps/${params.id}`;
+  const urlToShare = `https://www.mosa3ada.ma/helps/${params.id}`;
   const {
     date,
     needs,
