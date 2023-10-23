@@ -1,15 +1,24 @@
+"use client";
 import Image from "next/image";
 
-import { Container, Grid, Typography } from "@mui/material";
-
+import { Container, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 import Header from "@/components/Header";
 import { Button } from "@mui/material";
 import Link from "next/link";
 import HelpCards from "./helps/helpCardsPagination";
+import { HelpsFilter } from "./helpsFilter";
+import { useState } from "react";
 export const dynamic = "force-dynamic";
 
+export default function HelpsPage() {
+  const [helpsFilter, setHelpsFilter] = useState({
+    city: null,
+    date: null,
+  });
 
-export default async function HelpsPage() {
+  const isXsScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+
   return (
     <>
       <Header
@@ -24,52 +33,36 @@ export default async function HelpsPage() {
         }
       />
       <Container maxWidth="xl">
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginTop: 50,
-          }}
-        >
-          <Typography variant="h3">قائمة الطلبات</Typography>
-          <Link href={"/helps/create"}>
-            <Button color="primary" variant="contained" size="large">
-              <Typography variant="h6" color={"white"}>
-                إضافة طلب
-              </Typography>
-            </Button>
-          </Link>
-        </div>
-        <Grid container>
-          <Grid
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              marginTop: 70,
-              alignItems: "center",
-            }}
-          ></Grid>
-          <Grid container>
-            <Grid
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                marginTop: 20,
-                alignItems: "center",
-              }}
-            ></Grid>
-          </Grid>
+        <Stack spacing={2}>
           <Grid
             container
-            style={{
-              justifyContent: "center",
-            }}
+            direction={isXsScreen ? "column-reverse" : "row"}
+            justifyContent="space-between"
+            alignItems="flex-start"
+            style={{ marginTop: 50 }}
           >
+            <Typography variant="h3">قائمة الطلبات</Typography>
+            <Grid item style={{ width: isXsScreen ? "100%" : "auto" }}>
+              <Link href={"/helps/create"}>
+                <div style={{ width: isXsScreen ? "100%" : "auto" }}>
+                  <Button
+                    color="error"
+                    variant="contained"
+                    size="large"
+                    startIcon={<AddIcon />}
+                    style={{ width: "100%", marginBottom: isXsScreen ? "20px" : "0px" }}
+                  >
+                    <Typography variant="h6" color={"white"}>
+                      إضافة طلب
+                    </Typography>
+                  </Button>
+                </div>
+              </Link>
+            </Grid>
           </Grid>
-        </Grid>
-        <HelpCards />
+          <HelpsFilter setFilters={setHelpsFilter} />
+        </Stack>
+        <HelpCards filters={helpsFilter} />
       </Container>
     </>
   );
