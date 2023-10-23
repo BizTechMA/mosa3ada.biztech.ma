@@ -2,8 +2,13 @@
 
 import { ThemeProvider } from "@emotion/react";
 import { createTheme, responsiveFontSizes } from "@mui/material";
+import rtlPlugin from "stylis-plugin-rtl";
+import { CacheProvider } from "@emotion/react";
+import createCache from "@emotion/cache";
+import { prefixer } from "stylis";
 
 export const muiTheme = createTheme({
+  direction: "rtl",
   typography: {
     fontFamily: "Alexandria, sans-serif",
   },
@@ -55,11 +60,18 @@ export const muiTheme = createTheme({
   },
 });
 
+const cacheRtl = createCache({
+  key: "muirtl",
+  stylisPlugins: [prefixer, rtlPlugin],
+});
+
 // MaterialUI Theme Provider only runs on the client side, so we need to wrap it in a component that only runs on the client side
 export const MuiProvider = ({ children }) => {
   return (
-    <ThemeProvider theme={responsiveFontSizes(muiTheme)}>
-      {children}
-    </ThemeProvider>
+    <CacheProvider value={cacheRtl}>
+      <ThemeProvider theme={responsiveFontSizes(muiTheme)}>
+        {children}
+      </ThemeProvider>
+    </CacheProvider>
   );
 };
