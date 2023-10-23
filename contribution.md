@@ -20,21 +20,75 @@ Mosa3ada is built with React and Next.js 13. Ensure you have a basic understandi
 
 1.  **Fork & Clone:** Begin by forking the repository and then cloning your fork to your local machine.
 
+    - **Clone the repository:**
+
+    ```
+    git clone <<link-to-your-forked-repository>>
+    ```
+
 2.  **Branching:** We follow the Git Flow branching strategy. Create a new branch based on the type of contribution you're making (e.g., `feature/new-login`, `fix/header-display`).
 
-3.  **Coding Standards:** Our codebase uses Prettier for consistent formatting. Familiarize yourself with some of our existing code and maintain similar coding styles for consistency. If unsure, refer to a few existing files or ask on Discord.
+    - **Create your brach**
 
-4.  **Commit Messages:** Be clear and descriptive in your commit messages. Recommended formats include:
+    ```
+    git checkout -b <<branch name>>
+    ```
+
+    - **Pull latest changes from staging brach :**
+
+    ```
+    git pull origin staging
+    ```
+
+## Local Environment
+
+3.  **Setting Up Your Local Environment:** Before you begin contributing to this project, make sure you set up your local environment. To do this, follow these steps:
+
+- **Navigate to your local repository**
+
+  ```bash
+  cd mosa3ada.biztech.ma
+  ```
+
+- **Install dependencies**
+
+  ```bash
+  npm install
+  ```
+
+- **Create a `.env` file in the root directory**
+
+  ```bash
+  touch .env
+  ```
+
+- **Add the following line to your `.env` file to specify the environment**
+
+  ```bash
+  NEXT_PUBLIC_CURRENT_ENV=LOCAL
+  ```
+
+- **Run the project locally**
+
+  ```bash
+  npm run dev
+  ```
+
+4.  **Coding Standards:** Our codebase uses Prettier for consistent formatting. Familiarize yourself with some of our existing code and maintain similar coding styles for consistency. If unsure, refer to a few existing files or ask on Discord.
+
+5.  **Commit Messages:** Be clear and descriptive in your commit messages. Recommended formats include:
 
 - Feature: Added new user login
 
 - Fix: Corrected header display issue on mobile
 
-5.  **Testing:** We currently don't use any dedicated testing frameworks. However, contributors are expected to manually test their code to ensure functionality and absence of bugs.
+6.  **Testing:** We currently don't use any dedicated testing frameworks. However, contributors are expected to manually test their code to ensure functionality and absence of bugs.
 
-6.  **Documentation:** If introducing a new feature or a complex piece of logic, ensure your code is well-commented and understandable.
+7.  **Documentation:** If introducing a new feature or a complex piece of logic, ensure your code is well-commented and understandable.
 
-7.  **Pull Requests:** Once your changes are ready, create a pull request from your fork to the main repository. Ensure that your PR is detailed, explaining the purpose, changes made, and any other pertinent information.
+## Please make all Pull Requests to the staging branch
+
+8.  **Pull Requests:** Once your changes are ready, create a pull request from your fork to the main repository. Ensure that your PR is detailed, explaining the purpose, changes made, and any other pertinent information.
 
 ## Communication
 

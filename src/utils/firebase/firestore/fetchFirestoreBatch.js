@@ -5,25 +5,31 @@ import {
   limit,
   orderBy,
   query,
-  startAfter
+  startAfter,
+  where,
 } from "firebase/firestore";
 import firebase_app from "../../../../config";
 
 export const db = getFirestore(firebase_app);
 
-async function fetchFirestoreInitialBatch(collectionName) {
+async function fetchFirestoreInitialBatch(collectionName, filters) {
   let results = [];
   let lastKey = "";
   let lastCount = 0;
   let firstCount = 0;
+
   let firstKey = "";
+
   try {
     let q = query(
       collection(db, collectionName),
-      orderBy('confirmation_count', 'desc'),
-      orderBy('date', 'desc'),
-      limit(9)
-    )
+      filters.city !== "null" && filters.city !== "undefined" && filters.city
+        ? where("city", "==", filters.city)
+        : null,
+      orderBy("confirmation_count", "desc"),
+      orderBy("date", "desc"),
+      limit(9),
+    );
     const querySnapshots = await getDocs(q);
     querySnapshots.forEach((doc) => {
       results.push({ id: doc.id, data: doc.data() });
@@ -41,18 +47,22 @@ async function fetchFirestoreInitialBatch(collectionName) {
   return { results, lastKey, firstKey, lastCount, firstCount };
 }
 
-async function fetchFirestoreNextBatch(collectionName, confirmation_count, date) {
+async function fetchFirestoreNextBatch(
+  collectionName,
+  confirmation_count,
+  date,
+) {
   let results = [];
   let lastCount = 0;
   let lastKey = "";
   try {
     let q = query(
       collection(db, collectionName),
-      orderBy('confirmation_count', 'desc'),
-      orderBy('date', 'desc'),
+      orderBy("confirmation_count", "desc"),
+      orderBy("date", "desc"),
       startAfter(confirmation_count, date),
-      limit(9)
-    )
+      limit(9),
+    );
     const querySnapshots = await getDocs(q);
     querySnapshots.forEach((doc) => {
       results.push({ id: doc.id, data: doc.data() });
@@ -66,6 +76,4 @@ async function fetchFirestoreNextBatch(collectionName, confirmation_count, date)
   return { results, lastKey, lastCount };
 }
 
-
 export { fetchFirestoreInitialBatch, fetchFirestoreNextBatch };
-
