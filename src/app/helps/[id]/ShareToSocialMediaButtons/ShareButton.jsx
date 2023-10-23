@@ -46,7 +46,10 @@ export const ButtonShare = ({ shareUrl }) => {
             window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}`, '_blank');
             break;
         case 'WhatsApp':
-            window.open(`whatsapp://send?text=${encodeURIComponent(shareUrl)}`, '_blank');
+          case 'WhatsApp':
+            const encodedShareUrl = encodeURIComponent(shareUrl);
+            const encodedMessage = encodeURIComponent('معلومات كاملة عن طلب المساعدة');
+            window.open(`https://api.whatsapp.com/send?text=${encodedMessage}%20${encodedShareUrl}`, '_blank');
             break;
         case 'LinkedIn':
             window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank');
