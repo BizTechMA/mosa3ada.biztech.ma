@@ -55,7 +55,7 @@ const Header = ({ navComponent }) => {
               <Typography className={styles.typo}>
                 Mosa3ada.ma موقع للتضامن والمساعدة المجتمعية
               </Typography>
-              <Link target="_blank" href={"https://t.co/wZ1Xh0CJLV"}>
+              <Link target="_blank" href={"https://discord.gg/F2sAjBvX"}>
                 <div className={styles.buttonContainer}>
                   <Button
                     style={{
