@@ -106,6 +106,7 @@ export default function HelpCards(helpsFilters) {
     }
   };
 
+  
   useEffect(() => {
     initialData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
