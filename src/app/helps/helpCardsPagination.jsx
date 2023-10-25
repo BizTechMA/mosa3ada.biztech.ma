@@ -106,7 +106,6 @@ export default function HelpCards(helpsFilters) {
     }
   };
 
-  
   useEffect(() => {
     initialData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -202,7 +201,7 @@ export default function HelpCards(helpsFilters) {
               paddingBottom: "2rem",
             }}
           >
-            {helps.length === 9 ? (
+            {/* {helps.length === 9 ? (
               <Pagination
                 count={helpsCount ? helpsCount : 50}
                 page={pageStack.length - 1}
@@ -249,7 +248,7 @@ export default function HelpCards(helpsFilters) {
                   />
                 )}
               />
-            )}
+            )} */}
           </Grid>
         </>
       )}
