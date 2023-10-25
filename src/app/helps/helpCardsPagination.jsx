@@ -23,7 +23,6 @@ export default function HelpCards({ filters, sort }) {
   //!! I suggest opening a new issue to refactor this part, it does the job perfectly
   //!! but it's overly complicated, it takes so much time to make little changes.
 
-  console.log(sort);
   const fetchNextOrPreviousData = async (count, date) => {
     setLoading(true);
     const results = await fetch(
@@ -198,7 +197,7 @@ export default function HelpCards({ filters, sort }) {
               )}
             </ButtonGroup>
           </Grid>
-          <Grid
+          {/* <Grid
             container
             style={{
               justifyContent: "center",
@@ -253,7 +252,7 @@ export default function HelpCards({ filters, sort }) {
                 )}
               />
             )}
-          </Grid>
+          </Grid> */}
         </>
       )}
     </>
