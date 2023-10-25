@@ -15,9 +15,8 @@ import { Container, Stack } from "@mui/system";
 import Image from "next/image";
 import Link from "next/link";
 import "./contactStyle.css";
-// import { useState } from "react";
 import React, { useState } from 'react';
-import axios from 'axios'; 
+import axios from 'axios'
 export default function ContactPage() {
   const discordWebhookUrl = process.env.DISCORD_WEB_HOOK_URL;
   const [formData, setFormData] = useState({
