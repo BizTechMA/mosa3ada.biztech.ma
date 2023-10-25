@@ -23,6 +23,9 @@ import getDocument from "@/utils/firebase/firestore/getDocument";
 import { ConfirmButton } from "./ConfirmButton";
 import { DisConfirmButton } from "./DisConfirmButton";
 import styles from "./page.module.css";
+import {ButtonShare} from "@/app/helps/[id]/ShareToSocialMediaButtons/ShareButton";
+
+
 
 async function getHelp(helpId) {
   if (
@@ -43,7 +46,7 @@ async function getHelp(helpId) {
 
 export default async function HelpPage({ params }) {
   const help = await getHelp(params.id);
-
+  const urlToShare = `https://www.mosa3ada.ma/helps/${params.id}`;
   const {
     date,
     needs,
@@ -160,25 +163,37 @@ export default async function HelpPage({ params }) {
                     width: "100%",
                   }}
                 >
-                  <Typography
+<Typography
                     variant="h6"
                     fontWeight={400}
                     style={{
                       display: "flex",
                       alignItems: "center",
+                      justifyContent:"space-between",
                       gap: 10,
                     }}
                   >
-                    <StarOutlinedIcon color="primary" />
-                    <span> عن طلب المساعدة</span>
+                    <span  style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 10,
+                    }}>
+                      <StarOutlinedIcon color="primary" />
+                      <span> عن طلب المساعدة</span>
+                    </span>
+                    {/* <Grid item xs={12} md={3} mt={3}> */}
+                  <ButtonShare shareUrl={urlToShare} />
                   </Typography>
+
                   <Grid
                     columns={{
                       md: 6,
                       xs: 12,
                     }}
                     container
-                  >
+                  >        
+
+
                     <Grid item xs={12} md={3} mt={3}>
                       <Typography
                         className={styles.helpInfoLabel}
@@ -395,8 +410,8 @@ export default async function HelpPage({ params }) {
           dis_confirmation_count={dis_confirmation_count}
           id={params.id}
         />
-        <ConfirmButton confirmation_count={confirmation_count} id={params.id} />
-      </Container>
+        <ConfirmButton confirmation_count={confirmation_count} id={params.id} /> 
+        </Container>
     </div>
   );
 }
