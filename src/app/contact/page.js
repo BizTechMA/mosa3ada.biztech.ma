@@ -1,9 +1,9 @@
 // import { Button, FormControl, TextareaAutosize } from "@mui/material";
+"use client"
 import { ArrowBack } from "@mui/icons-material";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import ReplyIcon from "@mui/icons-material/Reply";
-
 import {
   Divider,
   OutlinedInput,
@@ -15,8 +15,55 @@ import { Container, Stack } from "@mui/system";
 import Image from "next/image";
 import Link from "next/link";
 import "./contactStyle.css";
-
+// import { useState } from "react";
+import React, { useState } from 'react';
+import axios from 'axios'; 
 export default function ContactPage() {
+  const discordWebhookUrl = process.env.DISCORD_WEB_HOOK_URL;
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const sendToDiscord = async (formData) => {
+    try {
+      const message = `New contact:
+      Name: ${formData.name}
+      Email: ${formData.email}
+      Message: ${formData.message}`;
+
+      await axios.post(discordWebhookUrl, {
+        content: message,
+      });
+
+      console.log('Message sent to Discord successfully');
+    } catch (error) {
+      console.error('Error sending message to Discord:', error);
+    }
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    });
+    alert('تم إرسال الرسالة بنجاح');
+    try {
+      await sendToDiscord(formData);
+    } catch (error) {
+      console.error('Form submission failed:', error);
+      alert('خطأ في إرسال الرسالة');
+    }
+  };
+
   return (
     <div
       style={{
@@ -88,7 +135,7 @@ export default function ContactPage() {
               راسلنا
             </Typography>
 
-            <form action="">
+            <form onSubmit={handleFormSubmit}>
               <Stack
                 spacing={2}
                 style={{ maxWidth: "850px", marginTop: "1rem" }}
@@ -97,6 +144,9 @@ export default function ContactPage() {
                   variant="outlined"
                   type="text"
                   placeholder="الاسم الكامل"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   required
                   autoFocus
                 />
@@ -104,6 +154,9 @@ export default function ContactPage() {
                   variant="outlined"
                   type="email"
                   placeholder="البريد الاكتروني"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
                 />
                 <TextField
@@ -111,6 +164,9 @@ export default function ContactPage() {
                   type="text"
                   variant="outlined"
                   multiline
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows={5}
                   required
                 />
