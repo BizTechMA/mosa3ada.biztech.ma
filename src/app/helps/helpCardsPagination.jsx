@@ -197,7 +197,7 @@ export default function HelpCards({ filters, sort }) {
               )}
             </ButtonGroup>
           </Grid>
-          {/* <Grid
+          <Grid
             container
             style={{
               justifyContent: "center",
@@ -206,6 +206,7 @@ export default function HelpCards({ filters, sort }) {
           >
             {helps.length === 9 ? (
               <Pagination
+                disabled
                 count={helpsCount ? helpsCount : 50}
                 page={pageStack.length - 1}
                 size="small"
@@ -252,7 +253,7 @@ export default function HelpCards({ filters, sort }) {
                 )}
               />
             )}
-          </Grid> */}
+          </Grid>
         </>
       )}
     </>
