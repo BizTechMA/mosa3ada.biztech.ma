@@ -201,7 +201,7 @@ export default function HelpCards(helpsFilters) {
               paddingBottom: "2rem",
             }}
           >
-            {/* {helps.length === 9 ? (
+            {helps.length === 9 ? (
               <Pagination
                 count={helpsCount ? helpsCount : 50}
                 page={pageStack.length - 1}
@@ -221,12 +221,13 @@ export default function HelpCards(helpsFilters) {
                       next: ArrowForwardIosIcon,
                     }}
                     {...item}
+                    disabled={item.page !== pageStack.length - 1}
                   />
                 )}
               />
             ) : (
               <Pagination
-                disabled
+                disabled={item.page !== pageStack.length - 1}
                 count={helpsCount ? helpsCount : 50}
                 page={pageStack.length - 1}
                 size="small"
@@ -248,7 +249,7 @@ export default function HelpCards(helpsFilters) {
                   />
                 )}
               />
-            )} */}
+            )}
           </Grid>
         </>
       )}
