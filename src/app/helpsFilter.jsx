@@ -1,12 +1,5 @@
 "use client";
-import {
-  Autocomplete,
-  Box,
-  Stack,
-  TextField,
-  Typography,
-  debounce,
-} from "@mui/material";
+import { Autocomplete, Box, Stack, TextField, Typography } from "@mui/material";
 import TuneIcon from "@mui/icons-material/Tune";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "@/utils/firebase/firestore/getAllDocuments";
@@ -74,53 +67,38 @@ export const HelpsFilter = ({ setFilters }) => {
     }));
   };
   return (
-    <Stack direction={"column"} spacing={2}>
-      <Typography
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 10,
-          color: "#737373",
+    <Box>
+      <Autocomplete
+        disablePortal
+        loading={isLoadingCities}
+        dir="rtl"
+        loadingText="جاري التحميل"
+        id="combo-box-demo"
+        sx={{
+          width: {
+            xs: 150,
+          },
         }}
-        fontSize={19}
-      >
-        <TuneIcon />
-        <span> تصفية البحث عن الطلب</span>
-      </Typography>
-
-      <Box>
-        <Autocomplete
-          disablePortal
-          loading={isLoadingCities}
-          dir="rtl"
-          loadingText="جاري التحميل"
-          id="combo-box-demo"
-          sx={{
-            width: {
-              xs: 150,
-            },
-          }}
-          isOptionEqualToValue={(option, value) => option.label === value.label}
-          value={autoCompleteValue}
-          noOptionsText="لا يوجد نتائج"
-          filterOptions={handleFilterOptions || serverOptions}
-          options={preDefinedCities.data}
-          disableClearable
-          onChange={handleSelectOption}
-          renderInput={(params) => (
-            <TextField
-              dir="rtl"
-              style={{
-                backgroundColor: "#fff",
-              }}
-              {...params}
-              value={autoCompleteValue}
-              onChange={(e) => setAutoCompleteValue(e.target.value)}
-              label="موقع الضرر"
-            />
-          )}
-        />
-      </Box>
-    </Stack>
+        isOptionEqualToValue={(option, value) => option.label === value.label}
+        value={autoCompleteValue}
+        noOptionsText="لا يوجد نتائج"
+        filterOptions={handleFilterOptions || serverOptions}
+        options={preDefinedCities.data}
+        disableClearable
+        onChange={handleSelectOption}
+        renderInput={(params) => (
+          <TextField
+            dir="rtl"
+            style={{
+              backgroundColor: "#fff",
+            }}
+            {...params}
+            value={autoCompleteValue}
+            onChange={(e) => setAutoCompleteValue(e.target.value)}
+            label="موقع الضرر"
+          />
+        )}
+      />
+    </Box>
   );
 };

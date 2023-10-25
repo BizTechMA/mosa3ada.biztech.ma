@@ -10,7 +10,7 @@ import HelpCard from "./help";
 import LoadingHelps from "./helpLoading";
 import FakeData from "../../../helpsData/fake-data";
 
-export default function HelpCards(helpsFilters) {
+export default function HelpCards({ filters, sort }) {
   const fistElem = useRef(null);
   const [helps, setHelps] = useState([]);
   const [next, setNext] = useState(false);
@@ -23,15 +23,19 @@ export default function HelpCards(helpsFilters) {
   //!! I suggest opening a new issue to refactor this part, it does the job perfectly
   //!! but it's overly complicated, it takes so much time to make little changes.
 
+  console.log(sort);
   const fetchNextOrPreviousData = async (count, date) => {
     setLoading(true);
-    const results = await fetch("/api/nexthelps", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+    const results = await fetch(
+      `/api/nexthelps?${filters.city}&sortBy=${sort}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ count, date }),
       },
-      body: JSON.stringify({ count, date }),
-    });
+    );
     const data = await results.json();
 
     if (data?.lastKey != "" && next) {
@@ -74,7 +78,7 @@ export default function HelpCards(helpsFilters) {
     } else {
       setLoading(true);
       const results = await fetch(
-        `/api/helps?city=${helpsFilters.filters.city}`,
+        `/api/helps?city=${filters.city}&sortBy=${sort}`,
       );
       const data = await results.json();
       if (data?.lastKey != "") {
@@ -106,11 +110,10 @@ export default function HelpCards(helpsFilters) {
     }
   };
 
-  
   useEffect(() => {
     initialData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [helpsFilters]);
+  }, [filters, sort]);
 
   useEffect(() => {
     const myHelpsCount = async () => {
