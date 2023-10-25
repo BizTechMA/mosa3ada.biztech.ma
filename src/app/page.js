@@ -1,7 +1,13 @@
 "use client";
 import Image from "next/image";
 
-import { Container, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
+import {
+  Container,
+  Grid,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import Header from "@/components/Header";
 import { Button } from "@mui/material";
@@ -9,14 +15,17 @@ import Link from "next/link";
 import HelpCards from "./helps/helpCardsPagination";
 import { HelpsFilter } from "./helpsFilter";
 import { useState } from "react";
+import { HelpsSortByDate } from "./helpsSortByDate";
+import { FiltersContainer } from "./filtersContainer";
 export const dynamic = "force-dynamic";
 
 export default function HelpsPage() {
   const [helpsFilter, setHelpsFilter] = useState({
     city: null,
-    date: null,
   });
 
+  // desc, asc
+  const [sortByDate, setSortByDate] = useState("asc");
   const isXsScreen = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
   return (
@@ -50,7 +59,10 @@ export default function HelpsPage() {
                     variant="contained"
                     size="large"
                     startIcon={<AddIcon />}
-                    style={{ width: "100%", marginBottom: isXsScreen ? "20px" : "0px" }}
+                    style={{
+                      width: "100%",
+                      marginBottom: isXsScreen ? "20px" : "0px",
+                    }}
                   >
                     <Typography variant="h6" color={"white"}>
                       إضافة طلب
@@ -60,9 +72,12 @@ export default function HelpsPage() {
               </Link>
             </Grid>
           </Grid>
-          <HelpsFilter setFilters={setHelpsFilter} />
+          <FiltersContainer>
+            <HelpsSortByDate value={sortByDate} setSorting={setSortByDate} />
+            <HelpsFilter setFilters={setHelpsFilter} />
+          </FiltersContainer>
         </Stack>
-        <HelpCards filters={helpsFilter} />
+        <HelpCards sort={sortByDate} filters={helpsFilter} />
       </Container>
     </>
   );
