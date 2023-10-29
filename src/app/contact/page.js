@@ -15,25 +15,11 @@ import Image from "next/image";
 import Link from "next/link";
 import "./contactStyle.css";
 import React, { useState } from "react";
-import axios from "axios";
-import firebase from "firebase/app"; 
-import "firebase/firestore";
-import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/firestore'; 
-import { getApps, initializeApp } from "firebase/app";
-
-const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
-};
-const firebaseApp = initializeApp(firebaseConfig); 
+import { sendToDiscord } from './utils/discordUtils'; 
+import { sendToFirestore } from './utils/firestoreUtils';
 
 export default function ContactPage() {
-  const discordWebhookUrl = process.env.DISCORD_WEB_HOOK_URL;
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -45,44 +31,18 @@ export default function ContactPage() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const sendToDiscord = async (formData) => {
-    try {
-      const message = `New contact:
-      Name: ${formData.name}
-      Email: ${formData.email}
-      Message: ${formData.message}`;
-
-      await axios.post(discordWebhookUrl, {
-        content: message,
-      });
-
-      console.log('Message sent to Discord successfully');
-    } catch (error) {
-      console.error('Error sending message to Discord:', error);
-    }
-  };
-
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
     try {
       await sendToDiscord(formData);
-      const db = getFirestore(firebaseApp);
-      const collectionName = 'contacts';
-
-      await addDoc(collection(db, collectionName), {
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-        // timestamp: serverTimestamp(),
+      await sendToFirestore(formData)
+      alert('تم إرسال الرسالة بنجاح');
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
       });
-
-    alert('تم إرسال الرسالة بنجاح');
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
     } catch (error) {
       console.log('Form submission failed:', error);
       alert('خطأ في إرسال الرسالة');
