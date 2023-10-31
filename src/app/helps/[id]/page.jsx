@@ -23,9 +23,7 @@ import getDocument from "@/utils/firebase/firestore/getDocument";
 import { ConfirmButton } from "./ConfirmButton";
 import { DisConfirmButton } from "./DisConfirmButton";
 import styles from "./page.module.css";
-import {ButtonShare} from "@/app/helps/[id]/ShareToSocialMediaButtons/ShareButton";
-
-
+import { ButtonShare } from "@/app/helps/[id]/ShareToSocialMediaButtons/ShareButton";
 
 async function getHelp(helpId) {
   if (
@@ -42,6 +40,16 @@ async function getHelp(helpId) {
     const help = parsedData.find((item) => item.id == helpId).data;
     return help;
   }
+}
+
+export async function generateMetadata({ params }) {
+  // fetch data
+  const help = await getHelp(params.id);
+
+  const { location } = help;
+  return {
+    title: location,
+  };
 }
 
 export default async function HelpPage({ params }) {
@@ -163,26 +171,28 @@ export default async function HelpPage({ params }) {
                     width: "100%",
                   }}
                 >
-<Typography
+                  <Typography
                     variant="h6"
                     fontWeight={400}
                     style={{
                       display: "flex",
                       alignItems: "center",
-                      justifyContent:"space-between",
+                      justifyContent: "space-between",
                       gap: 10,
                     }}
                   >
-                    <span  style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 10,
-                    }}>
+                    <span
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 10,
+                      }}
+                    >
                       <StarOutlinedIcon color="primary" />
                       <span> عن طلب المساعدة</span>
                     </span>
                     {/* <Grid item xs={12} md={3} mt={3}> */}
-                  <ButtonShare shareUrl={urlToShare} />
+                    <ButtonShare shareUrl={urlToShare} />
                   </Typography>
 
                   <Grid
@@ -191,9 +201,7 @@ export default async function HelpPage({ params }) {
                       xs: 12,
                     }}
                     container
-                  >        
-
-
+                  >
                     <Grid item xs={12} md={3} mt={3}>
                       <Typography
                         className={styles.helpInfoLabel}
@@ -410,8 +418,8 @@ export default async function HelpPage({ params }) {
           dis_confirmation_count={dis_confirmation_count}
           id={params.id}
         />
-        <ConfirmButton confirmation_count={confirmation_count} id={params.id} /> 
-        </Container>
+        <ConfirmButton confirmation_count={confirmation_count} id={params.id} />
+      </Container>
     </div>
   );
 }

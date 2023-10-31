@@ -39,4 +39,4 @@ Mockups:
 
 Please ensure you read our [Contribution Guidelines](/contribution.md) for a seamless collaboration process.
 
-Join our [Discord channel](https://discord.gg/F2sAjBvX) for collaboration and synchronization. We're excited to have you on board. Thank you for your assistance and dedication.
+Join our [Discord channel](https://discord.com/invite/nwWz6UvT) for collaboration and synchronization. We're excited to have you on board. Thank you for your assistance and dedication.
