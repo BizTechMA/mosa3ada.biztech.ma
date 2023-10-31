@@ -1,5 +1,5 @@
-const { getFirestore, collection, addDoc, serverTimestamp } = require('firebase/firestore');
-const { firebaseApp } = require('../../../../config'); 
+import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { firebaseApp } from '../../../config'; 
 const sendToFirestore = async (formData) => {
   try {
     const db = getFirestore(firebaseApp);

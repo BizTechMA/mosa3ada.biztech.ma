@@ -1,5 +1,4 @@
 import { post } from 'axios';
-
 const sendToDiscord = async (formData) => {
   try {
     const webhookUrl = process.env.DISCORD_WEB_HOOK_URL;
@@ -11,5 +10,4 @@ const sendToDiscord = async (formData) => {
     console.error('Error sending message to Discord:', error);
   }
 };
-
-export default { sendToDiscord };
+module.exports = { sendToDiscord };

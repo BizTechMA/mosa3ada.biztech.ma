@@ -15,9 +15,8 @@ import Image from "next/image";
 import Link from "next/link";
 import "./contactStyle.css";
 import React, { useState } from "react";
-import { sendToDiscord } from './utils/discordUtils'; 
-import { sendToFirestore } from './utils/firestoreUtils';
-
+import { sendToDiscord } from './discordUtils';
+// import { sendToFirestore } from './firestoreUtils';
 export default function ContactPage() {
 
   const [formData, setFormData] = useState({
@@ -36,7 +35,7 @@ export default function ContactPage() {
 
     try {
       await sendToDiscord(formData);
-      await sendToFirestore(formData)
+      // await sendToFirestore(formData)
       alert('تم إرسال الرسالة بنجاح');
       setFormData({
         name: '',
