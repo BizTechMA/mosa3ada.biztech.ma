@@ -10,7 +10,7 @@ import HelpCard from "./help";
 import LoadingHelps from "./helpLoading";
 import FakeData from "../../../helpsData/fake-data";
 
-export default function HelpCards({ filters, sort }) {
+export default function HelpCards(helpsFilters) {
   const fistElem = useRef(null);
   const [helps, setHelps] = useState([]);
   const [next, setNext] = useState(false);
@@ -25,16 +25,13 @@ export default function HelpCards({ filters, sort }) {
 
   const fetchNextOrPreviousData = async (count, date) => {
     setLoading(true);
-    const results = await fetch(
-      `/api/nexthelps?${filters.city}&sortBy=${sort}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ count, date }),
+    const results = await fetch("/api/nexthelps", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-    );
+      body: JSON.stringify({ count, date }),
+    });
     const data = await results.json();
 
     if (data?.lastKey != "" && next) {
@@ -77,7 +74,7 @@ export default function HelpCards({ filters, sort }) {
     } else {
       setLoading(true);
       const results = await fetch(
-        `/api/helps?city=${filters.city}&sortBy=${sort}`,
+        `/api/helps?city=${helpsFilters.filters.city}`,
       );
       const data = await results.json();
       if (data?.lastKey != "") {
@@ -112,7 +109,7 @@ export default function HelpCards({ filters, sort }) {
   useEffect(() => {
     initialData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filters, sort]);
+  }, [helpsFilters]);
 
   useEffect(() => {
     const myHelpsCount = async () => {
@@ -206,7 +203,6 @@ export default function HelpCards({ filters, sort }) {
           >
             {helps.length === 9 ? (
               <Pagination
-                disabled
                 count={helpsCount ? helpsCount : 50}
                 page={pageStack.length - 1}
                 size="small"
@@ -218,6 +214,8 @@ export default function HelpCards({ filters, sort }) {
                     setPrevious(true);
                   }
                 }}
+                hideNextButton
+                hidePrevButton
                 renderItem={(item) => (
                   <PaginationItem
                     components={{
@@ -225,6 +223,7 @@ export default function HelpCards({ filters, sort }) {
                       next: ArrowForwardIosIcon,
                     }}
                     {...item}
+                    disabled={item.page !== pageStack.length - 1}
                   />
                 )}
               />
