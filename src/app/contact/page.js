@@ -1,12 +1,11 @@
 // import { Button, FormControl, TextareaAutosize } from "@mui/material";
+"use client"
 import { ArrowBack } from "@mui/icons-material";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import ReplyIcon from "@mui/icons-material/Reply";
-
 import {
   Divider,
-  OutlinedInput,
   TextField,
   Typography,
   Button,
@@ -15,8 +14,40 @@ import { Container, Stack } from "@mui/system";
 import Image from "next/image";
 import Link from "next/link";
 import "./contactStyle.css";
-
+import React, { useState } from "react";
+import { sendToDiscord } from './discordUtils';
+// import { sendToFirestore } from './firestoreUtils'; to use later
 export default function ContactPage() {
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await sendToDiscord(formData);
+      // await sendToFirestore(formData);
+      alert('تم إرسال الرسالة بنجاح');
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+    } catch (error) {
+      console.log('Form submission failed:', error);
+      alert('خطأ في إرسال الرسالة');
+    }
+  };
+
   return (
     <div
       style={{
@@ -31,7 +62,7 @@ export default function ContactPage() {
         }}
       >
         <Container maxWidth="xl">
-          {/* YOU CAN MAKE THIS A COMPONET */}
+
           <Link
             style={{
               display: "flex",
@@ -88,7 +119,7 @@ export default function ContactPage() {
               راسلنا
             </Typography>
 
-            <form action="">
+            <form onSubmit={handleFormSubmit}>
               <Stack
                 spacing={2}
                 style={{ maxWidth: "850px", marginTop: "1rem" }}
@@ -97,6 +128,9 @@ export default function ContactPage() {
                   variant="outlined"
                   type="text"
                   placeholder="الاسم الكامل"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   required
                   autoFocus
                 />
@@ -104,6 +138,9 @@ export default function ContactPage() {
                   variant="outlined"
                   type="email"
                   placeholder="البريد الاكتروني"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
                 />
                 <TextField
@@ -111,6 +148,9 @@ export default function ContactPage() {
                   type="text"
                   variant="outlined"
                   multiline
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows={5}
                   required
                 />
