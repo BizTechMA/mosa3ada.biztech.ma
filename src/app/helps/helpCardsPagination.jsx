@@ -206,7 +206,6 @@ export default function HelpCards({ filters, sort }) {
           >
             {helps.length === 9 ? (
               <Pagination
-                disabled
                 count={helpsCount ? helpsCount : 50}
                 page={pageStack.length - 1}
                 size="small"
@@ -218,6 +217,8 @@ export default function HelpCards({ filters, sort }) {
                     setPrevious(true);
                   }
                 }}
+                hideNextButton
+                hidePrevButton
                 renderItem={(item) => (
                   <PaginationItem
                     components={{
@@ -225,6 +226,7 @@ export default function HelpCards({ filters, sort }) {
                       next: ArrowForwardIosIcon,
                     }}
                     {...item}
+                    disabled={item.page !== pageStack.length - 1}
                   />
                 )}
               />
